@@ -1,0 +1,31 @@
+{
+    "pluginId": "vs.language.lsl",
+    "activationEvents": [
+        "textModel:lsl"
+    ],
+    "mainModule": "./lslMain",
+    "contributes": {
+        "language": [
+            {
+                "id": "lsl",
+                "aliases": [
+                    "Linden Scripting Language",
+                    "Linden Script",
+                    "Second Life"
+                ],
+                "extensions": [".lsl"],
+                "mimetypes": [
+                    "text/plain;charset=utf-8"
+                ]
+            }
+        ]
+    },
+    "_testing": "./tests/lslTests",
+    "scripts": {
+        "compile": "node ../../node_modules/gulp/bin/gulp.js --gulpfile ../gulpfile.js compile --dir vs.language.lsl"
+    },
+    "_bundling": [
+        { "name": "./lslMain" },
+        { "name": "./lslWorker" }
+    ]
+}

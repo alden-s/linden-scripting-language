@@ -1,0 +1,15 @@
+{
+    "scope": "source.lsl",
+    "completions":
+    [
+        { "trigger": "do\tflow control", "contents": "do${LSL_SPACE_OR_NEWLINE}{\n\t$0\n}${LSL_SPACE_OR_NEWLINE}while (${1:condition});" },
+        { "trigger": "else\tflow control", "contents": "else${LSL_SPACE_OR_NEWLINE}{\n\t$0\n}" },
+        { "trigger": "else if\tflow control", "contents": "else if (${1:condition})${LSL_SPACE_OR_NEWLINE}{\n$0\n}" },
+        { "trigger": "for\tflow control", "contents": "for (${1:start}; ${3:condition}; ${3:step})${LSL_SPACE_OR_NEWLINE}{\n$0\n}" },
+        { "trigger": "if\tflow control", "contents": "if (${1:condition})${LSL_SPACE_OR_NEWLINE}{\n$0\n}" },
+        { "trigger": "jump\tflow control", "contents": "jump ${1:target};" },
+        { "trigger": "return\tflow control", "contents": "return ${1:value};" },
+        { "trigger": "while\tflow control", "contents": "while ($1)${LSL_SPACE_OR_NEWLINE}{\n\t$0\n}" },
+        { "trigger": "@\tflow control", "contents": "@${1:label};" }
+    ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0">
+    <Header>
+        <Title>transaction_result (event)</Title>
+        <Shortcut>transaction_result</Shortcut>
+        <Description>transaction_result (event)</Description>
+        <SnippetTypes>
+            <SnippetType>event</SnippetType>
+        </SnippetTypes>
+        <Author>Builder&amp;s Brewery</Author>
+    </Header>
+    <Snippet>
+        <Declarations>
+            <Literal default="true">
+                <ID>id</ID>
+                <ToolTip>key id</ToolTip>
+                <Default>id</Default>
+            </Literal>
+            <Literal default="true">
+                <ID>success</ID>
+                <ToolTip>integer success</ToolTip>
+                <Default>success</Default>
+            </Literal>
+            <Literal default="true">
+                <ID>data</ID>
+                <ToolTip>string data</ToolTip>
+                <Default>data</Default>
+            </Literal>
+        </Declarations>
+        <Code Language="lsl" Format="CData">
+            <![CDATA[transaction_result(key $id$, integer $success$, string $data$)
+{
+    $end$
+}]]>
+        </Code>
+    </Snippet>
+</CodeSnippet>

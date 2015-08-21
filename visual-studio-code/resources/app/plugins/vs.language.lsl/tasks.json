@@ -1,0 +1,53 @@
+{
+    "version": "0.7.0",
+    "command": "python",
+    "isShellCommand": true,
+    "tasks": [
+        {
+            "taskName": "build",
+            "windows": {
+                "command": [
+                    "${cwd}\\bin\\windows\\lslint.exe",
+                    "-p",
+                    "${file}"
+                ]
+            },
+            "linux": {
+                "command": [
+                    "${cwd}/bin/osx/lslint",
+                    "-p",
+                    "${file}"
+                ]
+            },
+            "osx": {
+                "command": [
+                    "${cwd}/bin/linux/lslint",
+                    "-p",
+                    "${file}"
+                ]
+            },
+            "isBuildCommand": true,
+            "problemMatcher": "$msCompile"
+        }
+    ],
+    "problemMatcher": {
+        "owner": "lsl",
+        "fileLocation": [
+            "relative",
+            "${workspaceRoot}"
+        ],
+        "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(error|warning|info):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5,
+//          location
+//          endLine
+//          endColumn
+//          code
+            "loop": true
+        }
+    }
+}
