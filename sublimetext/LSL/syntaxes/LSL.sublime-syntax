@@ -10,13 +10,11 @@ contexts:
     - include: value
   array:
     - match: '\['
-      captures:
-        0: punctuation.definition.array.begin.lsl
+      scope: punctuation.definition.array.begin.lsl
       push:
         - meta_scope: meta.inarray.lsl
         - match: '\]'
-          captures:
-            0: punctuation.definition.array.end.lsl
+          scope: punctuation.definition.array.end.lsl
           pop: true
         - include: infunc
   avoid:
@@ -31,13 +29,11 @@ contexts:
         - include: infunc
   commentblock:
     - match: /\*
-      captures:
-        0: punctuation.definition.comment.block.begin.lsl
+      scope: punctuation.definition.comment.block.begin.lsl
       push:
         - meta_scope: comment.block.lsl
         - match: \*/
-          captures:
-            0: punctuation.definition.comment.block.end.lsl
+          scope: punctuation.definition.comment.block.end.lsl
           pop: true
   commentline:
     - match: (//).*$\n?
@@ -51,13 +47,11 @@ contexts:
       scope: constant.language.string.lsl
   event:
     - match: \b(?:state_(?:entry|exit)|touch(?:_(?:start|end))?|(?:land_)?collision(?:_(?:start|end))?|timer|listen|(?:no_)?sensor|control|(?:not_)?at_(?:rot_)?target|money|email|experience_permissions(?:_denied)?|run_time_permissions|changed|attach|dataserver|moving_(?:start|end)|link_message|(?:on|object)_rez|remote_data|http_re(?:sponse|quest)|path_update|transaction_result)\b
-      captures:
-        0: support.function.event.lsl
+      scope: support.function.event.lsl
       push:
         - meta_scope: meta.event.lsl
         - match: '\}'
-          captures:
-            0: punctuation.definition.event.end.lsl
+          scope: punctuation.definition.event.end.lsl
           pop: true
         - match: \(
           push:
@@ -84,8 +78,7 @@ contexts:
       push:
         - meta_scope: meta.function.lsl
         - match: "}"
-          captures:
-            0: punctuation.definition.function.end.lsl
+          scope: punctuation.definition.function.end.lsl
           pop: true
         - match: \(
           push:
@@ -202,13 +195,11 @@ contexts:
           scope: punctuation.separator.lsl
   quoted:
     - match: '"'
-      captures:
-        0: punctuation.definition.string.begin.lsl
+      scope: punctuation.definition.string.begin.lsl
       push:
         - meta_scope: string.quoted.double.lsl
         - match: '"'
-          captures:
-            0: punctuation.definition.string.end.lsl
+          scope: punctuation.definition.string.end.lsl
           pop: true
         - match: \\\\
           scope: constant.character.escape.back-slash.lsl
@@ -225,13 +216,11 @@ contexts:
       scope: variable.language.lsl
   state:
     - match: ^\s*((?:state)\s+\w+|default)\b
-      captures:
-        0: entity.name.class.state.begin.lsl
+      scope: entity.name.class.state.begin.lsl
       push:
         - meta_scope: meta.state.lsl
         - match: '\}'
-          captures:
-            0: punctuation.definition.state.end.lsl
+          scope: punctuation.definition.state.end.lsl
           pop: true
         - match: "{"
           push:
