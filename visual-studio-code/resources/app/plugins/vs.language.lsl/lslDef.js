@@ -6,7 +6,7 @@ define(["require", "exports"], function (require, exports) {
         displayName: 'Linden Scripting Language (LSL)',
         name: 'lsl',
         mimeTypes: [
-            "text/plain;charset=utf-8"
+            'text/plain;charset=utf-8'
         ],
         fileExtensions: [
             '.lsl'
@@ -110,6 +110,11 @@ define(["require", "exports"], function (require, exports) {
 //          { open: 'touch_start', close: '}', matchCase: true },
 //          { open: 'transaction_result', close: '}', matchCase: true }
 //      ],
+        parenFollows: [
+            'else',
+            'for',
+            'if'
+        ],
         LSL_Event: [
             'at_rot_target',
             'at_target',

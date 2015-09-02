@@ -9,6 +9,12 @@ define(["require", "exports", './lslDef', 'monaco', './features/suggestSupport']
             configurationService: _ctx.configurationService
         }
         monaco.Modes.registerMonarchDefinition('lsl', lslDef.language);
+        var InplaceReplaceSupport = monaco.Modes.InplaceReplaceSupport;
+        InplaceReplaceSupport.register('lsl', InplaceReplaceSupport.create({
+            textReplace: function (value, up) {
+                return InplaceReplaceSupport.valueSetReplace(['TRUE', 'FALSE'], value, up);
+            }
+        }));
         monaco.Modes.SuggestSupport.register('lsl', new SuggestSupport(ctx));
         monaco.Modes.loadInBackgroundWorker(require.toUrl('./lslWorker.js')).then(function (workerPiece) {
             // worker piece loaded OK
