@@ -204,6 +204,7 @@
             <KEYWORD2>llGetAnimationList</KEYWORD2>
             <KEYWORD2>llGetAnimationOverride</KEYWORD2>
             <KEYWORD2>llGetAttached</KEYWORD2>
+            <KEYWORD2>llGetAttachedList</KEYWORD2>
             <KEYWORD2>llGetBoundingBox</KEYWORD2>
             <KEYWORD2>llGetCameraPos</KEYWORD2>
             <KEYWORD2>llGetCameraRot</KEYWORD2>
@@ -810,6 +811,7 @@
             <KEYWORD4>OBJECT_ATTACHED_POINT</KEYWORD4>
             <KEYWORD4>OBJECT_BODY_SHAPE_TYPE</KEYWORD4>
             <KEYWORD4>OBJECT_CHARACTER_TIME</KEYWORD4>
+            <KEYWORD4>OBJECT_CLICK_ACTION</KEYWORD4>
             <KEYWORD4>OBJECT_CREATOR</KEYWORD4>
             <KEYWORD4>OBJECT_DESC</KEYWORD4>
             <KEYWORD4>OBJECT_GROUP</KEYWORD4>

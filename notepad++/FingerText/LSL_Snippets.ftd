@@ -497,6 +497,9 @@ llGetAnimationOverride($[![string anim_state]!])[>END<]!$[FingerTextData FingerT
 llGetAttached
 Ext:lsl
 llGetAttached()[>END<]!$[FingerTextData FingerTextData]@#
+llGetAttachedList
+Ext:lsl
+llGetAttachedList($[![key id]!)[>END<]!$[FingerTextData FingerTextData]@#
 llGetBoundingBox
 Ext:lsl
 llGetBoundingBox($[![key object]!])[>END<]!$[FingerTextData FingerTextData]@#

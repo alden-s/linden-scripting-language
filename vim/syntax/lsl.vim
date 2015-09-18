@@ -272,6 +272,7 @@ syn keyword lslConstant
 \ OBJECT_ATTACHED_POINT
 \ OBJECT_BODY_SHAPE_TYPE
 \ OBJECT_CHARACTER_TIME
+\ OBJECT_CLICK_ACTION
 \ OBJECT_CREATOR
 \ OBJECT_DESC
 \ OBJECT_GROUP
@@ -827,6 +828,7 @@ syn keyword lslFunction
 \ llGetAnimationList
 \ llGetAnimationOverride
 \ llGetAttached
+\ llGetAttachedList
 \ llGetBoundingBox
 \ llGetCameraPos
 \ llGetCameraRot

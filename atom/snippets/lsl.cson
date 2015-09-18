@@ -425,6 +425,9 @@
 	'llGetAttached':
 		'prefix': 'llGetAttached'
 		'body': 'llGetAttached()'
+	'llGetAttachedList':
+		'prefix': 'llGetAttachedList'
+		'body': 'llGetAttachedList(${1:key id})'
 	'llGetBoundingBox':
 		'prefix': 'llGetBoundingBox'
 		'body': 'llGetBoundingBox(${1:key object})'

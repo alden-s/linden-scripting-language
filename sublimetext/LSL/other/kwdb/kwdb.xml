@@ -654,6 +654,10 @@ Used with llGetObjectDetails to get the streaming (download) cost
     <description lang="en">
     </description>
   </constant>
+  <constant name="OBJECT_CLICK_ACTION" type="integer" value="28">
+    <description lang="en">
+    </description>
+  </constant>
   <constant name="OBJECT_ROOT" type="integer" value="18">
     <description lang="en">
     </description>
@@ -4794,6 +4798,11 @@ Returns the ground contour direction below the object position + offset
   <function name="llGetAttached" type="integer" version="1.1.0">
     <description lang="en">
 Returns the object's attachment point, or 0 if not attached
+    </description>
+  </function>
+  <function name="llGetAttachedList" type="list" version="15.09.14.305056">
+    <param type="key" name="id"/>
+    <description lang="en">
     </description>
   </function>
   <function name="llGetFreeMemory" type="integer" version="1.1.0">

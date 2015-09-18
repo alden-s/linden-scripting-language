@@ -215,6 +215,7 @@
                 <string>llGetAnimationList</string>
                 <string>llGetAnimationOverride</string>
                 <string>llGetAttached</string>
+                <string>llGetAttachedList</string>
                 <string>llGetBoundingBox</string>
                 <string>llGetCameraPos</string>
                 <string>llGetCameraRot</string>
@@ -785,6 +786,7 @@
                 <string>OBJECT_ATTACHED_POINT</string>
                 <string>OBJECT_BODY_SHAPE_TYPE</string>
                 <string>OBJECT_CHARACTER_TIME</string>
+                <string>OBJECT_CLICK_ACTION</string>
                 <string>OBJECT_CREATOR</string>
                 <string>OBJECT_DESC</string>
                 <string>OBJECT_GROUP</string>

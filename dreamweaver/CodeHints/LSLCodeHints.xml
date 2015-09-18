@@ -94,6 +94,7 @@
         <function pattern="llGetAnimationList(key avatar)" object="LSL" doctypes="LSL" caseSensitive="true" />
         <function pattern="llGetAnimationOverride(string anim_state)" object="LSL" doctypes="LSL" caseSensitive="true" />
         <function pattern="llGetAttached()" object="LSL" doctypes="LSL" caseSensitive="true" />
+        <function pattern="llGetAttachedList(key id)" object="LSL" doctypes="LSL" caseSensitive="true" />
         <function pattern="llGetBoundingBox(key object)" object="LSL" doctypes="LSL" caseSensitive="true" />
         <function pattern="llGetCameraPos()" object="LSL" doctypes="LSL" caseSensitive="true" />
         <function pattern="llGetCameraRot()" object="LSL" doctypes="LSL" caseSensitive="true" />
@@ -650,6 +651,7 @@
         <string id="OBJECT_ATTACHED_POINT" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_BODY_SHAPE_TYPE" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_CHARACTER_TIME" value="" doctypes="LSL" caseSensitive="true" />
+        <string id="OBJECT_CLICK_ACTION" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_CREATOR" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_DESC" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_GROUP" value="" doctypes="LSL" caseSensitive="true" />

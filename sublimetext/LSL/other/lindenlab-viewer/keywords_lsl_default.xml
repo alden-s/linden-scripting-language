@@ -1570,6 +1570,12 @@
         <key>value</key><integer>17</integer>
         <key>tooltip</key><string>Units in seconds</string>
       </map>
+      <key>OBJECT_CLICK_ACTION</key>
+      <map>
+        <key>type</key><string>integer</string>
+        <key>value</key><integer>28</integer>
+        <key>tooltip</key><string/>
+      </map>
       <key>OBJECT_CREATOR</key>
       <map>
         <key>type</key><string>integer</string>
@@ -6241,6 +6247,23 @@
         <key>return</key><string>integer</string>
         <key>arguments</key><undef/>
         <key>tooltip</key><string>Returns the object's attachment point, or 0 if not attached.\nReturns the object attachment point, or 0 if not attached.</string>
+      </map>
+      <key>llGetAttachedList</key>
+      <map>
+        <key>energy</key><real>10.0</real>
+        <key>sleep</key><real>0.0</real>
+        <key>return</key><string>list</string>
+        <key>arguments</key>
+        <array>
+          <map>
+            <key>ID</key>
+            <map>
+              <key>type</key><string>key</string>
+              <key>tooltip</key><string/>
+            </map>
+          </map>
+        </array>
+        <key>tooltip</key><string/>
       </map>
       <key>llGetBoundingBox</key>
       <map>

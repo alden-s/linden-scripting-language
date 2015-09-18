@@ -245,6 +245,7 @@
         { "trigger": "OBJECT_ATTACHED_POINT\tint (19)", "contents": "OBJECT_ATTACHED_POINT" },
         { "trigger": "OBJECT_BODY_SHAPE_TYPE\tint (26)", "contents": "OBJECT_BODY_SHAPE_TYPE" },
         { "trigger": "OBJECT_CHARACTER_TIME\tint (17)", "contents": "OBJECT_CHARACTER_TIME" },
+        { "trigger": "OBJECT_CLICK_ACTION\tint (28)", "contents": "OBJECT_CLICK_ACTION" },
         { "trigger": "OBJECT_CREATOR\tint (8)", "contents": "OBJECT_CREATOR" },
         { "trigger": "OBJECT_DESC\tint (2)", "contents": "OBJECT_DESC" },
         { "trigger": "OBJECT_GROUP\tint (25)", "contents": "OBJECT_GROUP" },
