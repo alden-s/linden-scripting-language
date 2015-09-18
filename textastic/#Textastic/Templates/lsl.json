@@ -3,14 +3,14 @@
     "name": "LSL",
     "author": "Builder's Brewery",
     "description": "Textastic Templates for LSL (the Linden Scripting Language).",
-    "last_modified": "2014-01-31 11:45:00",
+    "last_modified": "2015-09-19 00:00:00",
     "category": "LSL",
     "templates":
     [
         {
             "name": "LSL - default script",
             "fileExtension": "lsl",
-            "snippet": "default\n{\n\tstate_entry()\n\t{\n\t\tllSay(PUBLIC_CHANNEL, \"Hello, Avatar!\");\n\t}\n\n\ttouch_start(integer num_detected)\n\t{\n\t\tllSay(PUBLIC_CHANNEL, \"Touched.\");\n\t}\n}"
+            "snippet": "default\n{\n\tstate_entry()\n\t{\n\t\tllRegionSayTo(llGetOwner(), PUBLIC_CHANNEL, \"Hello, Avatar!\");\n\t}\n\n\ttouch_start(integer num_detected)\n\t{\n\t\tllRegionSayTo(llGetOwner(), PUBLIC_CHANNEL, \"Touched.\");\n\t}\n}"
         },
         {
             "name": "LSL - set floattext",
@@ -25,7 +25,7 @@
         {
             "name": "LSL - simple tipjar",
             "fileExtension": "lsl",
-            "snippet": "default\n{\n\tchanged(integer change)\n\t{\n\t\tif (change & CHANGED_OWNER)\n\t\t\tllResetScript();\n\t}\n\n\tstate_entry()\n\t{\n\t\tllSetPayPrice(PAY_DEFAULT, [PAY_HIDE, PAY_HIDE, PAY_HIDE, PAY_HIDE]);\n\t}\n\n\tmoney(key id, integer amount)\n\t{\n\t\tllInstantMessage(id, \"Thank you, \" + llKey2Name(id) + \".\");\n\t}\n}"
+            "snippet": "default\n{\n\tchanged(integer change)\n\t{\n\t\tif (change & CHANGED_OWNER)\n\t\t\tllResetScript();\n\t}\n\n\tstate_entry()\n\t{\n\t\tllSetPayPrice(PAY_DEFAULT, [PAY_HIDE, PAY_HIDE, PAY_HIDE, PAY_HIDE]);\n\t}\n\n\tmoney(key id, integer amount)\n\t{\n\t\tllRegionSayTo(id, PUBLIC_CHANNEL, \"Thank you, \" + llKey2Name(id) + \".\");\n\t}\n}"
         },
         {
             "name": "LSL - autoclose dialog menu example",

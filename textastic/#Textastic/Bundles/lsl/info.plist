@@ -4,7 +4,7 @@
 <dict>
     <key>name</key><string>info.plist</string>
     <key>description</key><string>TextMate bundle for LSL (the Linden Scripting Language).</string>
-    <key>last modified</key><string>2013-07-09 13:00:00</string>
+    <key>last modified</key><string>2015-09-19 00:00:00</string>
     <key>scope</key><string>source.lsl</string>
     <key>deleted</key>
     <array>
