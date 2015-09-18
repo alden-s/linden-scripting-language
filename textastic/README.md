@@ -1,7 +1,3 @@
-### About this project:
+## LSL files for Textastic:
 
-Under development:
-* [ ] syntax highlight
-* [x] code completion
-* [x] templates
-* [x] theme
+[Textastic](http://www.textasticapp.com/) is available for iOS and Mac.
