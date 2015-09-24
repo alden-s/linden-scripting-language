@@ -49,6 +49,14 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>name</key><string>escape characters</string>
+			<key>scope</key><string>constant.character.escape</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>#cd4d26</string>
+			</dict>
+		</dict>
+		<dict>
 			<key>name</key><string>string literals</string>
 			<key>scope</key><string>string.quoted.double</string>
 			<key>settings</key>
@@ -102,6 +110,24 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key><string>#0000cd</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>invalid</string>
+			<key>scope</key><string>invalid</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>#f2f0ec</string>
+				<key>background</key><string>#820124</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key><string>reserved</string>
+			<key>scope</key><string>reserved</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>#f2f0ec</string>
+				<key>background</key><string>#cd4d26</string>
 			</dict>
 		</dict>
 	</array>
