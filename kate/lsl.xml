@@ -20,7 +20,7 @@
                   <RegExpr      attribute="LSL_reserved_godmode"         context="#stay"            String="\b(?:ll(?:GodLikeRezObject|Set(?:Inventory|Object)PermMask))\b" />
                   <RegExpr      attribute="LSL_reserved_log"             context="#stay"            String="\b(print)\b" />
                   <RegExpr      attribute="LSL_invalid_illegal"          context="#stay"            String="\b(event)\b" />
-                  <RegExpr      attribute="LSL_invalid_unimplemented"    context="#stay"            String="\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b" />
+                  <RegExpr      attribute="LSL_invalid_unimplemented"    context="#stay"            String="\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|XP_ERROR_REQUEST_PERM_TIMEOUT|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b" />
                   <Int          attribute="decimal_numbers"              context="#stay" />
                   <Float        attribute="float_numbers"                context="#stay" />
                   <HlCOct       attribute="octal_numbers"                context="#stay" />

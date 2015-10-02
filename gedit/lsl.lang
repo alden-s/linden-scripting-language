@@ -49,7 +49,7 @@
             <keyword>event</keyword>
         </context>
         <context id="lsl_invalid_unimplemented" style-ref="invalid_unimplemented" case-sensitive="true">
-            <match>\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b</match>
+            <match>\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|XP_ERROR_REQUEST_PERM_TIMEOUT|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b</match>
         </context>
         <context id="lsl_state" style-ref="state" case-sensitive="true">
             <match>\b(?:(?:state)\s+[A-Za-z_]\w*|default)\b</match>

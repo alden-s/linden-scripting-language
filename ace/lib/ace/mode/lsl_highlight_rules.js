@@ -47,7 +47,7 @@ function LSLHighlightRules() {
         "invalid.broken.lsl": "LAND_LARGE_BRUSH|LAND_MEDIUM_BRUSH|LAND_SMALL_BRUSH",
         "invalid.deprecated.lsl" : "ATTACH_LPEC|ATTACH_RPEC|DATA_RATING|OBJECT_ATTACHMENT_GEOMETRY_BYTES|OBJECT_ATTACHMENT_SURFACE_AREA|PRIM_CAST_SHADOWS|PRIM_MATERIAL_LIGHT|PRIM_TYPE_LEGACY|PSYS_SRC_INNERANGLE|PSYS_SRC_OUTERANGLE|VEHICLE_FLAG_NO_FLY_UP|llClearExperiencePermissions|llCloud|llGetExperienceList|llMakeExplosion|llMakeFire|llMakeFountain|llMakeSmoke|llRemoteDataSetRegion|llSound|llSoundPreload|llXorBase64Strings|llXorBase64StringsCorrect",
         "invalid.illegal.lsl": "event",
-        "invalid.unimplemented.lsl": "CHARACTER_MAX_ANGULAR_ACCEL|CHARACTER_MAX_ANGULAR_SPEED|CHARACTER_TURN_SPEED_MULTIPLIER|PERMISSION_CHANGE_JOINTS|PERMISSION_CHANGE_PERMISSIONS|PERMISSION_EXPERIENCE|PERMISSION_RELEASE_OWNERSHIP|PERMISSION_REMAP_CONTROLS|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|llCollisionSprite|llPointAt|llRefreshPrimURL|llReleaseCamera|llRemoteLoadScript|llSetPrimURL|llStopPointAt|llTakeCamera",
+        "invalid.unimplemented.lsl": "CHARACTER_MAX_ANGULAR_ACCEL|CHARACTER_MAX_ANGULAR_SPEED|CHARACTER_TURN_SPEED_MULTIPLIER|PERMISSION_CHANGE_JOINTS|PERMISSION_CHANGE_PERMISSIONS|PERMISSION_EXPERIENCE|PERMISSION_RELEASE_OWNERSHIP|PERMISSION_REMAP_CONTROLS|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|XP_ERROR_REQUEST_PERM_TIMEOUT|llCollisionSprite|llPointAt|llRefreshPrimURL|llReleaseCamera|llRemoteLoadScript|llSetPrimURL|llStopPointAt|llTakeCamera",
         "reserved.godmode.lsl": "llGodLikeRezObject|llSetInventoryPermMask|llSetObjectPermMask",
         "reserved.log.lsl" : "print",
         "keyword.control.lsl" : "do|else|for|if|jump|return|while",

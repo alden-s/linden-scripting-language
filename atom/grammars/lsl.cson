@@ -22,9 +22,24 @@
                 'include': '#infunc'
             }
         ]
-    'avoid':
-        'match': '\b(?:ll(?:S(?:et(?:(?:Inventory|Object)PermMask|PrimURL)|oun(?:dPreloa)?d|topPointAt)|Re(?:mote(?:DataSetRegion|LoadScript)|freshPrimURL|leaseCamera)|Make(?:F(?:ountain|ire)|Explosion|Smoke)|XorBase64Strings(?:Correct)?|(?:GodLikeRezObjec|PointA)t|C(?:ollisionSprite|l(?:oud|earExperiencePermissions))|TakeCamera|GetExperienceList)|P(?:ERMISSION_(?:RE(?:LEASE_OWNERSHIP|MAP_CONTROLS)|CHANGE_(?:PERMISSION|JOINT)S)|SYS_SRC_(?:O(?:BJ_REL_MASK|UTERANGLE)|INNERANGLE)|RIM_(?:MATERIAL_LIGHT|CAST_SHADOWS))|VEHICLE_FLAG_NO_FLY_UP|ATTACH_[LR]PEC|DATA_RATING|event)\b'
+    'invalid_broken':
+        'match': '\b(?:LAND_(?:LARGE|MEDIUM|SMALL)_BRUSH)\b'
+        'name': 'invalid.broken.lsl'
+    'invalid_deprecated':
+        'match': '\b(?:ATTACH_[LR]PEC|DATA_RATING|OBJECT_ATTACHMENT_(?:GEOMETRY_BYTES|SURFACE_AREA)|PRIM_(?:CAST_SHADOWS|MATERIAL_LIGHT|TYPE_LEGACY)|PSYS_SRC_(?:INNER|OUTER)ANGLE|VEHICLE_FLAG_NO_FLY_UP|ll(?:ClearExperiencePermissions|Cloud|GetExperienceList|Make(?:Explosion|Fountain|Smoke|Fire)|RemoteDataSetRegion|Sound(?:Preload)?|XorBase64Strings(?:Correct)?))\b'
         'name': 'invalid.deprecated.lsl'
+    'invalid_illegal':
+        'match': '\b(?:event)\b'
+        'name': 'invalid.illegal.lsl'
+    'invalid_unimplemented':
+        'match': '\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|XP_ERROR_REQUEST_PERM_TIMEOUT|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b'
+        'name': 'invalid.unimplemented.lsl'
+    'reserved_godmode':
+        'match': '\b(?:ll(?:GodLikeRezObject|Set(?:Inventory|Object)PermMask))\b'
+        'name': 'reserved.godmode.lsl'
+    'reserved_log':
+        'match': '\b(?:print)\b'
+        'name': 'reserved.log.lsl'
     'begin_end':
         'begin': '\{'
         'end': '\}'
@@ -148,9 +163,17 @@
             } {
                 'include': '#llconstant'
             } {
-                'include': '#avoid'
+                'include': '#invalid_broken'
             } {
-                'include': '#reserved'
+                'include': '#invalid_deprecated'
+            } {
+                'include': '#invalid_illegal'
+            } {
+                'include': '#invalid_unimplemented'
+            } {
+                'include': '#reserved_godmode'
+            } {
+                'include': '#reserved_log'
             } {
                 'include': '#llfunction'
             } {
@@ -295,9 +318,6 @@
                 'match': '\\.'
             }
         ]
-    'reserved':
-        'match': '\b(event|print)\b'
-        'name': 'variable.language.lsl'
     'state':
         'begin': '^\s*((?:state)\s+\w+|default)\b'
         'beginCaptures':
@@ -362,7 +382,17 @@
             } {
                 'include': '#constant'
             } {
-                'include': '#reserved'
+                'include': '#invalid_broken'
+            } {
+                'include': '#invalid_deprecated'
+            } {
+                'include': '#invalid_illegal'
+            } {
+                'include': '#invalid_unimplemented'
+            } {
+                'include': '#reserved_godmode'
+            } {
+                'include': '#reserved_log'
             } {
                 'include': '#number'
             } {

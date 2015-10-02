@@ -56,6 +56,7 @@
                 <string>PERMISSION_REMAP_CONTROLS</string>
                 <string>PRIM_PHYSICS_MATERIAL</string>
                 <string>PSYS_SRC_OBJ_REL_MASK</string>
+                <string>XP_ERROR_REQUEST_PERM_TIMEOUT</string>
                 <string>event</string>
                 <string>llCollisionSprite</string>
                 <string>llPointAt</string>

@@ -79,6 +79,7 @@
             <INVALID>PSYS_SRC_OBJ_REL_MASK</INVALID>
             <INVALID>PSYS_SRC_OUTERANGLE</INVALID>
             <INVALID>VEHICLE_FLAG_NO_FLY_UP</INVALID>
+            <INVALID>XP_ERROR_REQUEST_PERM_TIMEOUT</INVALID>
             <INVALID>event</INVALID>
             <INVALID>llClearExperiencePermissions</INVALID>
             <INVALID>llCloud</INVALID>

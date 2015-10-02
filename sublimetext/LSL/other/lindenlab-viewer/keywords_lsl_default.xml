@@ -1,78 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    2015-08-28
+  2015-09-28
 -->
 <llsd>
   <map>
     <key>controls</key>
     <map>
-      <key>do</key>
-      <map>
-        <key>tooltip</key><string>do / while loop\ndo {\n...\n} while (&lt;condition&gt;);</string>
-      </map>
-      <key>else</key>
-      <map>
-        <key>tooltip</key><string>if / else block\nif (&lt;condition&gt;) {\n...\n[} else [if (&lt;condition&gt;) {\n...]]\n}</string>
-      </map>
-      <key>for</key>
-      <map>
-        <key>tooltip</key><string>for loop\nfor (&lt;initializer&gt;; &lt;condition&gt;; &lt;post-iteration-statement&gt;)\n{ ...\n}</string>
-      </map>
-      <key>if</key>
-      <map>
-        <key>tooltip</key><string>if / else block\nif (&lt;condition&gt;) {\n...\n[} else [if (&lt;condition&gt;) {\n...]]\n}</string>
-      </map>
-      <key>jump</key>
-      <map>
-        <key>tooltip</key><string>jump statement\njump &lt;label&gt;</string>
-      </map>
-      <key>return</key>
-      <map>
-        <key>tooltip</key><string>Leave current event or function.\nreturn [&lt;variable&gt;];\nOptionally pass back a variable's value, from a function.</string>
-      </map>
-      <key>state</key>
-      <map>
-        <key>tooltip</key><string>state &lt;target&gt;\nIf the target state is not the same as the current one, change to the target state.</string>
-      </map>
-      <key>while</key>
-      <map>
-        <key>tooltip</key><string>while loop\nwhile (&lt;condition&gt;) {\n,,,\n}</string>
-      </map>
+      <key>do</key><map><key>tooltip</key><string>do / while loop\ndo {\n...\n} while (&lt;condition&gt;);</string></map>
+      <key>else</key><map><key>tooltip</key><string>if / else block\nif (&lt;condition&gt;) {\n...\n[} else [if (&lt;condition&gt;) {\n...]]\n}</string></map>
+      <key>for</key><map><key>tooltip</key><string>for loop\nfor (&lt;initializer&gt;; &lt;condition&gt;; &lt;post-iteration-statement&gt;)\n{ ...\n}</string></map>
+      <key>if</key><map><key>tooltip</key><string>if / else block\nif (&lt;condition&gt;) {\n...\n[} else [if (&lt;condition&gt;) {\n...]]\n}</string></map>
+      <key>jump</key><map><key>tooltip</key><string>jump statement\njump &lt;label&gt;</string></map>
+      <key>return</key><map><key>tooltip</key><string>Leave current event or function.\nreturn [&lt;variable&gt;];\nOptionally pass back a variable's value, from a function.</string></map>
+      <key>state</key><map><key>tooltip</key><string>state &lt;target&gt;\nIf the target state is not the same as the current one, change to the target state.</string></map>
+      <key>while</key><map><key>tooltip</key><string>while loop\nwhile (&lt;condition&gt;) {\n,,,\n}</string></map>
     </map>
     <key>types</key>
     <map>
-      <key>float</key>
-      <map>
-        <key>tooltip</key><string>32 bit floating point value.\nThe range is 1.175494351E-38 to 3.402823466E+38.</string>
-      </map>
-      <key>integer</key>
-      <map>
-        <key>tooltip</key><string>32 bit integer value.\n−2,147,483,648 and +2,147,483,647 (that is 0x80000000 to 0x7FFFFFFF in hex).</string>
-      </map>
-      <key>key</key>
-      <map>
-        <key>tooltip</key><string>A 128 bit unique identifier (UUID).\nThe key is represented as hexidecimal characters (A-F and 0-9), grouped into sections (8,4,4,4,12 characters) and separated by hyphens (for a total of 36 characters). e.g. "A822FF2B-FF02-461D-B45D-DCD10A2DE0C2".</string>
-      </map>
-      <key>list</key>
-      <map>
-        <key>tooltip</key><string>A collection of other data types.\nLists are signified by square brackets surrounding their elements; the elements inside are separated by commas. e.g. [0, 1, 2, 3, 4] or ["Yes", "No", "Perhaps"].</string>
-      </map>
-      <key>quaternion</key>
-      <map>
-        <key>tooltip</key><string>The quaternion type is a left over from way back when LSL was created. It was later renamed to &lt;rotation&gt; to make it more user friendly, but it appears someone forgot to remove it ;-)</string>
-      </map>
-      <key>rotation</key>
-      <map>
-        <key>tooltip</key><string>The rotation type is one of several ways to represent an orientation in 3D.\nIt is a mathematical object called a quaternion. You can think of a quaternion as four numbers (x, y, z, w), three of which represent the direction an object is facing and a fourth that represents the object's banking left or right around that direction.</string>
-      </map>
-      <key>string</key>
-      <map>
-        <key>tooltip</key><string>Text data.\nThe editor accepts UTF-8 encoded text.</string>
-      </map>
-      <key>vector</key>
-      <map>
-        <key>tooltip</key><string>A vector is a data type that contains a set of three float values.\nVectors are used to represent colors (RGB), positions, and directions/velocities.</string>
-      </map>
+      <key>float</key><map><key>tooltip</key><string>32 bit floating point value.\nThe range is 1.175494351E-38 to 3.402823466E+38.</string></map>
+      <key>integer</key><map><key>tooltip</key><string>32 bit integer value.\n−2,147,483,648 and +2,147,483,647 (that is 0x80000000 to 0x7FFFFFFF in hex).</string></map>
+      <key>key</key><map><key>tooltip</key><string>A 128 bit unique identifier (UUID).\nThe key is represented as hexidecimal characters (A-F and 0-9), grouped into sections (8,4,4,4,12 characters) and separated by hyphens (for a total of 36 characters). e.g. "A822FF2B-FF02-461D-B45D-DCD10A2DE0C2".</string></map>
+      <key>list</key><map><key>tooltip</key><string>A collection of other data types.\nLists are signified by square brackets surrounding their elements; the elements inside are separated by commas. e.g. [0, 1, 2, 3, 4] or ["Yes", "No", "Perhaps"].</string></map>
+      <key>quaternion</key><map><key>tooltip</key><string>The quaternion type is a left over from way back when LSL was created. It was later renamed to &lt;rotation&gt; to make it more user friendly, but it appears someone forgot to remove it ;-)</string></map>
+      <key>rotation</key><map><key>tooltip</key><string>The rotation type is one of several ways to represent an orientation in 3D.\nIt is a mathematical object called a quaternion. You can think of a quaternion as four numbers (x, y, z, w), three of which represent the direction an object is facing and a fourth that represents the object's banking left or right around that direction.</string></map>
+      <key>string</key><map><key>tooltip</key><string>Text data.\nThe editor accepts UTF-8 encoded text.</string></map>
+      <key>vector</key><map><key>tooltip</key><string>A vector is a data type that contains a set of three float values.\nVectors are used to represent colors (RGB), positions, and directions/velocities.</string></map>
     </map>
     <key>constants</key>
     <map>
@@ -348,8 +300,7 @@
       </map>
       <key>ATTACH_LPEC</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>type</key><string>integer</string>
         <key>value</key><integer>30</integer>
         <key>tooltip</key><string>Attach to the avatar's right pectoral. (Deprecated, use ATTACH_RIGHT_PEC)</string>
@@ -446,8 +397,7 @@
       </map>
       <key>ATTACH_RPEC</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>type</key><string>integer</string>
         <key>value</key><integer>29</integer>
         <key>tooltip</key><string>Attach to the avatar's left pectoral. (deprecated, use ATTACH_LEFT_PEC)</string>
@@ -961,12 +911,12 @@
         <key>type</key><string>integer</string>
         <key>value</key><integer>4</integer>
         <key>tooltip</key><string>Returns the agent ratings as a comma separated string of six integers. They are:
-        1) Positive rated behaviour
-        2) Negative rated behaviour
-        3) Positive rated appearance
-        4) Negative rated appearance
-        5) Positive rated building
-        6) Negative rated building</string>
+      1) Positive rated behaviour
+      2) Negative rated behaviour
+      3) Positive rated appearance
+      4) Negative rated appearance
+      5) Positive rated building
+      6) Negative rated building</string>
       </map>
       <key>DATA_SIM_POS</key>
       <map>
@@ -995,10 +945,8 @@
       <key>DEG_TO_RAD</key>
       <map>
         <key>type</key><string>float</string>
-        <key>value</key>
-        <real>0.01745329</real>
-        <key>tooltip</key><string>0.01745329 - Number of radians per degree.
-        You can use this to convert degrees to radians by multiplying the degrees by this number.</string>
+        <key>value</key><real>0.01745329</real>
+        <key>tooltip</key><string>0.01745329 - Number of radians per degree. You can use this to convert degrees to radians by multiplying the degrees by this number.</string>
       </map>
       <key>DENSITY</key>
       <map>
@@ -1569,12 +1517,6 @@
         <key>type</key><string>integer</string>
         <key>value</key><integer>17</integer>
         <key>tooltip</key><string>Units in seconds</string>
-      </map>
-      <key>OBJECT_CLICK_ACTION</key>
-      <map>
-        <key>type</key><string>integer</string>
-        <key>value</key><integer>28</integer>
-        <key>tooltip</key><string/>
       </map>
       <key>OBJECT_CREATOR</key>
       <map>
@@ -2197,15 +2139,13 @@
       <key>PI</key>
       <map>
         <key>type</key><string>float</string>
-        <key>value</key>
-        <real>3.14159265</real>
+        <key>value</key><real>3.14159265</real>
         <key>tooltip</key><string>3.14159265 - The number of radians in a semi-circle.</string>
       </map>
       <key>PI_BY_TWO</key>
       <map>
         <key>type</key><string>float</string>
-        <key>value</key>
-        <real>1.57079633</real>
+        <key>value</key><real>1.57079633</real>
         <key>tooltip</key><string>1.57079633 - The number of radians in a quarter circle.</string>
       </map>
       <key>PING_PONG</key>
@@ -2330,8 +2270,7 @@
       </map>
       <key>PRIM_CAST_SHADOWS</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>type</key><string>integer</string>
         <key>value</key><integer>24</integer>
         <key>tooltip</key><string/>
@@ -2658,8 +2597,7 @@
       <map>
         <key>type</key><string>integer</string>
         <key>value</key><integer>30</integer>
-        <key>tooltip</key><string>Allows you to set the physics shape type of a prim via lsl. Permitted values are:
-        PRIM_PHYSICS_SHAPE_NONE, PRIM_PHYSICS_SHAPE_PRIM, PRIM_PHYSICS_SHAPE_CONVEX</string>
+        <key>tooltip</key><string>Allows you to set the physics shape type of a prim via lsl. Permitted values are: PRIM_PHYSICS_SHAPE_NONE, PRIM_PHYSICS_SHAPE_PRIM, PRIM_PHYSICS_SHAPE_CONVEX</string>
       </map>
       <key>PRIM_POINT_LIGHT</key>
       <map>
@@ -3091,8 +3029,7 @@
       <map>
         <key>type</key><string>integer</string>
         <key>value</key><integer>10</integer>
-        <key>tooltip</key><string>Specifies the inner angle of the arc created by the PSYS_SRC_PATTERN_ANGLE or PSYS_SRC_PATTERN_ANGLE_CONE source pattern.
-        The area specified will NOT have particles in it.</string>
+        <key>tooltip</key><string>Specifies the inner angle of the arc created by the PSYS_SRC_PATTERN_ANGLE or PSYS_SRC_PATTERN_ANGLE_CONE source pattern. The area specified will NOT have particles in it.</string>
       </map>
       <key>PSYS_SRC_MAX_AGE</key>
       <map>
@@ -3110,15 +3047,13 @@
       <map>
         <key>type</key><string>integer</string>
         <key>value</key><integer>11</integer>
-        <key>tooltip</key><string>Specifies the outer angle of the arc created by the PSYS_SRC_PATTERN_ANGLE or PSYS_SRC_PATTERN_ANGLE_CONE source pattern.
-        The area between the outer and inner angle will be filled with particles.</string>
+        <key>tooltip</key><string>Specifies the outer angle of the arc created by the PSYS_SRC_PATTERN_ANGLE or PSYS_SRC_PATTERN_ANGLE_CONE source pattern. The area between the outer and inner angle will be filled with particles.</string>
       </map>
       <key>PSYS_SRC_PATTERN</key>
       <map>
         <key>type</key><string>integer</string>
         <key>value</key><integer>9</integer>
-        <key>tooltip</key><string>The pattern which is used to generate particles.
-        Use one of the following values: PSYS_SRC_PATTERN Values.</string>
+        <key>tooltip</key><string>The pattern which is used to generate particles. Use one of the following values: PSYS_SRC_PATTERN Values.</string>
       </map>
       <key>PSYS_SRC_PATTERN_ANGLE</key>
       <map>
@@ -3273,8 +3208,7 @@
       <key>RAD_TO_DEG</key>
       <map>
         <key>type</key><string>float</string>
-        <key>value</key>
-        <real>57.2957795</real>
+        <key>value</key><real>57.2957795</real>
         <key>tooltip</key><string>57.2957795 - Number of degrees per radian. You can use this number to convert radians to degrees by multiplying the radians by this number.</string>
       </map>
       <key>RC_DATA_FLAGS</key>
@@ -3484,8 +3418,7 @@
       <key>SQRT2</key>
       <map>
         <key>type</key><string>float</string>
-        <key>value</key>
-        <real>1.41421356</real>
+        <key>value</key><real>1.41421356</real>
         <key>tooltip</key><string>1.41421356 - The square root of 2.</string>
       </map>
       <key>STATUS_BLOCK_GRAB</key>
@@ -3583,21 +3516,21 @@
         <key>type</key><string>integer</string>
         <key>value</key><string>0x8</string>
         <key>tooltip</key><string>Controls/indicates whether the object can physically rotate around
-        the specific axis or not. This flag has no meaning
-        for non-physical objects. Set the value to FALSE
-        if you want to disable rotation around that axis. The
-        default is TRUE for a physical object.
-        A useful example to think about when visualizing
-        the effect is a sit-and-spin device. They spin around the
-        Z axis (up) but not around the X or Y axis.</string>
+      the specific axis or not. This flag has no meaning
+      for non-physical objects. Set the value to FALSE
+      if you want to disable rotation around that axis. The
+      default is TRUE for a physical object.
+      A useful example to think about when visualizing
+      the effect is a sit-and-spin device. They spin around the
+      Z axis (up) but not around the X or Y axis.</string>
       </map>
       <key>STATUS_SANDBOX</key>
       <map>
         <key>type</key><string>integer</string>
         <key>value</key><string>0x20</string>
         <key>tooltip</key><string>Controls/indicates whether the object can cross region boundaries
-        and move more than 20 meters from its creation
-        point. The default if FALSE.</string>
+      and move more than 20 meters from its creation
+      point. The default if FALSE.</string>
       </map>
       <key>STATUS_TYPE_MISMATCH</key>
       <map>
@@ -3710,8 +3643,7 @@
       <key>TWO_PI</key>
       <map>
         <key>type</key><string>float</string>
-        <key>value</key>
-        <real>6.28318530</real>
+        <key>value</key><real>6.28318530</real>
         <key>tooltip</key><string>6.28318530 - The radians of a circle.</string>
       </map>
       <key>TYPE_FLOAT</key>
@@ -3785,7 +3717,7 @@
         <key>type</key><string>integer</string>
         <key>value</key><integer>17</integer>
         <key>tooltip</key><string>A vector of timescales for exponential decay of the vehicles angular velocity about its preferred axes of motion (at, left, up).
-        Range = [0.07, inf) seconds for each element of the vector.</string>
+      Range = [0.07, inf) seconds for each element of the vector.</string>
       </map>
       <key>VEHICLE_ANGULAR_MOTOR_DECAY_TIMESCALE</key>
       <map>
@@ -3891,8 +3823,7 @@
       </map>
       <key>VEHICLE_FLAG_NO_FLY_UP</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>type</key><string>integer</string>
         <key>value</key><string>0x1</string>
         <key>tooltip</key><string>Old, changed to VEHICLE_FLAG_NO_DEFLECTION_UP</string>
@@ -3932,7 +3863,7 @@
         <key>type</key><string>integer</string>
         <key>value</key><integer>16</integer>
         <key>tooltip</key><string>A vector of timescales for exponential decay of the vehicles linear velocity along its preferred axes of motion (at, left, up).
-        Range = [0.07, inf) seconds for each element of the vector.</string>
+      Range = [0.07, inf) seconds for each element of the vector.</string>
       </map>
       <key>VEHICLE_LINEAR_MOTOR_DECAY_TIMESCALE</key>
       <map>
@@ -3945,7 +3876,7 @@
         <key>type</key><string>integer</string>
         <key>value</key><integer>18</integer>
         <key>tooltip</key><string>The direction and magnitude (in preferred frame) of the vehicles linear motor. The vehicle will accelerate (or decelerate if necessary) to match its velocity to its motor.
-        Range of magnitude = [0, 30] meters/second.</string>
+      Range of magnitude = [0, 30] meters/second.</string>
       </map>
       <key>VEHICLE_LINEAR_MOTOR_OFFSET</key>
       <map>
@@ -4140,8 +4071,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is raised while another object, or avatar, is colliding with the object the script is attached to.
-        The number of detected objects is passed to the script. Information on those objects may be gathered via the llDetected* functions.</string>
+        <key>tooltip</key><string>This event is raised while another object, or avatar, is colliding with the object the script is attached to. The number of detected objects is passed to the script. Information on those objects may be gathered via the llDetected* functions.</string>
       </map>
       <key>collision_end</key>
       <map>
@@ -4155,8 +4085,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is raised when another object, or avatar, stops colliding with the object the script is attached to.
-        The number of detected objects is passed to the script. Information on those objects may be gathered via the llDetected* library functions.</string>
+        <key>tooltip</key><string>This event is raised when another object, or avatar, stops colliding with the object the script is attached to. The number of detected objects is passed to the script. Information on those objects may be gathered via the llDetected* library functions.</string>
       </map>
       <key>collision_start</key>
       <map>
@@ -4170,8 +4099,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is raised when another object, or avatar, starts colliding with the object the script is attached to.
-        The number of detected objects is passed to the script. Information on those objects may be gathered via the llDetected* library functions.</string>
+        <key>tooltip</key><string>This event is raised when another object, or avatar, starts colliding with the object the script is attached to. The number of detected objects is passed to the script. Information on those objects may be gathered via the llDetected* library functions.</string>
       </map>
       <key>control</key>
       <map>
@@ -4199,8 +4127,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>Once a script has the ability to grab control inputs from the avatar, this event will be used to pass the commands into the script.
-        The levels and edges are bit-fields of control constants.</string>
+        <key>tooltip</key><string>Once a script has the ability to grab control inputs from the avatar, this event will be used to pass the commands into the script. The levels and edges are bit-fields of control constants.</string>
       </map>
       <key>dataserver</key>
       <map>
@@ -4221,8 +4148,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is triggered when the requested data is returned to the script.
-        Data may be requested by the llRequestAgentData, llRequestInventoryData, and llGetNotecardLine function calls, for example.</string>
+        <key>tooltip</key><string>This event is triggered when the requested data is returned to the script. Data may be requested by the llRequestAgentData, llRequestInventoryData, and llGetNotecardLine function calls, for example.</string>
       </map>
       <key>email</key>
       <map>
@@ -4264,8 +4190,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is triggered when an email sent to this script arrives.
-        The number remaining tells how many more emails are known to be still pending.</string>
+        <key>tooltip</key><string>This event is triggered when an email sent to this script arrives. The number remaining tells how many more emails are known to be still pending.</string>
       </map>
       <key>http_request</key>
       <map>
@@ -4440,8 +4365,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is raised whenever a chat message matching the constraints set in the llListen command is received. The name and ID of the speaker, as well as the message, are passed in as parameters.
-        Channel 0 is the public chat channel that all avatars see as chat text. Channels 1 through 2,147,483,648 are private channels that are not sent to avatars but other scripts can listen on those channels.</string>
+        <key>tooltip</key><string>This event is raised whenever a chat message matching the constraints set in the llListen command is received. The name and ID of the speaker, as well as the message, are passed in as parameters. Channel 0 is the public chat channel that all avatars see as chat text. Channels 1 through 2,147,483,648 are private channels that are not sent to avatars but other scripts can listen on those channels.</string>
       </map>
       <key>money</key>
       <map>
@@ -4599,8 +4523,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>Scripts need permission from either the owner or the avatar they wish to act on before they may perform certain functions, such as debiting money from their owners account, triggering an animation on an avatar, or capturing control inputs. The llRequestPermissions library function is used to request these permissions and the various permissions integer constants can be supplied.
-        The integer returned to this event handler contains the current set of permissions flags, so if permissions equal 0 then no permissions are set.</string>
+        <key>tooltip</key><string>Scripts need permission from either the owner or the avatar they wish to act on before they may perform certain functions, such as debiting money from their owners account, triggering an animation on an avatar, or capturing control inputs. The llRequestPermissions library function is used to request these permissions and the various permissions integer constants can be supplied. The integer returned to this event handler contains the current set of permissions flags, so if permissions equal 0 then no permissions are set.</string>
       </map>
       <key>sensor</key>
       <map>
@@ -4614,8 +4537,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is raised whenever objects matching the constraints of the llSensor command are detected.
-        The number of detected objects is passed to the script in the parameter. Information on those objects may be gathered via the llDetected* functions.</string>
+        <key>tooltip</key><string>This event is raised whenever objects matching the constraints of the llSensor command are detected. The number of detected objects is passed to the script in the parameter. Information on those objects may be gathered via the llDetected* functions.</string>
       </map>
       <key>state_entry</key>
       <map>
@@ -4644,9 +4566,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is raised while a user is touching the object the script is attached to.
-        The number of touching objects is passed to the script in the parameter.
-        Information on those objects may be gathered via the llDetected* library functions.</string>
+        <key>tooltip</key><string>This event is raised while a user is touching the object the script is attached to. The number of touching objects is passed to the script in the parameter. Information on those objects may be gathered via the llDetected* library functions.</string>
       </map>
       <key>touch_end</key>
       <map>
@@ -4660,8 +4580,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is raised when a user stops touching the object the script is attached to. The number of touches is passed to the script in the parameter.
-        Information on those objects may be gathered via the llDetected* library functions.</string>
+        <key>tooltip</key><string>This event is raised when a user stops touching the object the script is attached to. The number of touches is passed to the script in the parameter. Information on those objects may be gathered via the llDetected* library functions.</string>
       </map>
       <key>touch_start</key>
       <map>
@@ -4675,8 +4594,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>This event is raised when a user first touches the object the script is attached to. The number of touches is passed to the script in the parameter.
-        Information on those objects may be gathered via the llDetected() library functions.</string>
+        <key>tooltip</key><string>This event is raised when a user first touches the object the script is attached to. The number of touches is passed to the script in the parameter. Information on those objects may be gathered via the llDetected() library functions.</string>
       </map>
       <key>transaction_result</key>
       <map>
@@ -5720,7 +5638,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>Returns the type (AGENT, ACTIVE, PASSIVE, SCRIPTED) of detected object.\nReturns 0 if number is not a valid index.\nNote that number is a bit-field, so comparisons need to be a bitwise checked. e.g.:\ninteger iType = llDetectedType(0);\n{\n    // ...do stuff with the agent\n}</string>
+        <key>tooltip</key><string>Returns the type (AGENT, ACTIVE, PASSIVE, SCRIPTED) of detected object.\nReturns 0 if number is not a valid index.\nNote that number is a bit-field, so comparisons need to be a bitwise checked. e.g.:\ninteger iType = llDetectedType(0);\n{\n  // ...do stuff with the agent\n}</string>
       </map>
       <key>llDetectedVel</key>
       <map>
@@ -5776,15 +5694,15 @@
           </map>
         </array>
         <key>tooltip</key><string>Shows a dialog box on the avatar's screen with the message.\n
-           Up to 12 strings in the list form buttons.\n
-           If a button is clicked, the name is chatted on Channel.\nOpens a "notify box" in the given avatars screen displaying the message.\n
-        Up to twelve buttons can be specified in a list of strings. When the user clicks a button, the name of the button is said on the specified channel.\n
-        Channels work just like llSay(), so channel 0 can be heard by everyone.\n
-        The chat originates at the object's position, not the avatar's position, even though it is said as the avatar (uses avatar's UUID and Name etc.).\n
-        Examples:\n
-        llDialog(who, "Are you a boy or a girl?", [ "Boy", "Girl" ], -4913);\n
-        llDialog(who, "This shows only an OK button.", [], -192);\n
-        llDialog(who, "This chats so you can 'hear' it.", ["Hooray"], 0);</string>
+        Up to 12 strings in the list form buttons.\n
+        If a button is clicked, the name is chatted on Channel.\nOpens a "notify box" in the given avatars screen displaying the message.\n
+      Up to twelve buttons can be specified in a list of strings. When the user clicks a button, the name of the button is said on the specified channel.\n
+      Channels work just like llSay(), so channel 0 can be heard by everyone.\n
+      The chat originates at the object's position, not the avatar's position, even though it is said as the avatar (uses avatar's UUID and Name etc.).\n
+      Examples:\n
+      llDialog(who, "Are you a boy or a girl?", [ "Boy", "Girl" ], -4913);\n
+      llDialog(who, "This shows only an OK button.", [], -192);\n
+      llDialog(who, "This chats so you can 'hear' it.", ["Hooray"], 0);</string>
       </map>
       <key>llDie</key>
       <map>
@@ -5905,8 +5823,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>Returns an escaped/encoded version of url, replacing spaces with %20 etc.\nReturns the string that is the URL-escaped version of URL (replacing spaces with %20, etc.).\n
-        This function returns the UTF-8 encoded escape codes for selected characters.</string>
+        <key>tooltip</key><string>Returns an escaped/encoded version of url, replacing spaces with %20 etc.\nReturns the string that is the URL-escaped version of URL (replacing spaces with %20, etc.).\nThis function returns the UTF-8 encoded escape codes for selected characters.</string>
       </map>
       <key>llEuler2Rot</key>
       <map>
@@ -6103,8 +6020,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>Returns an integer bit-field containing the agent information about id.\n
-           Returns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_SITTING, AGENT_ON_OBJECT, AGENT_MOUSELOOK, AGENT_AWAY, AGENT_BUSY, AGENT_TYPING, AGENT_CROUCHING, AGENT_ALWAYS_RUN, AGENT_WALKING and/or AGENT_IN_AIR.\nReturns information about the given agent ID as a bit-field of agent info constants.</string>
+        <key>tooltip</key><string>Returns an integer bit-field containing the agent information about id.\nReturns AGENT_FLYING, AGENT_ATTACHMENTS, AGENT_SCRIPTED, AGENT_SITTING, AGENT_ON_OBJECT, AGENT_MOUSELOOK, AGENT_AWAY, AGENT_BUSY, AGENT_TYPING, AGENT_CROUCHING, AGENT_ALWAYS_RUN, AGENT_WALKING and/or AGENT_IN_AIR.\nReturns information about the given agent ID as a bit-field of agent info constants.</string>
       </map>
       <key>llGetAgentLanguage</key>
       <map>
@@ -6247,23 +6163,6 @@
         <key>return</key><string>integer</string>
         <key>arguments</key><undef/>
         <key>tooltip</key><string>Returns the object's attachment point, or 0 if not attached.\nReturns the object attachment point, or 0 if not attached.</string>
-      </map>
-      <key>llGetAttachedList</key>
-      <map>
-        <key>energy</key><real>10.0</real>
-        <key>sleep</key><real>0.0</real>
-        <key>return</key><string>list</string>
-        <key>arguments</key>
-        <array>
-          <map>
-            <key>ID</key>
-            <map>
-              <key>type</key><string>key</string>
-              <key>tooltip</key><string/>
-            </map>
-          </map>
-        </array>
-        <key>tooltip</key><string/>
       </map>
       <key>llGetBoundingBox</key>
       <map>
@@ -7690,8 +7589,7 @@
       </map>
       <key>llGodLikeRezObject</key>
       <map>
-        <key>god-mode</key>
-        <boolean>true</boolean>
+        <key>god-mode</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>void</string>
@@ -7795,8 +7693,8 @@
           </map>
         </array>
         <key>tooltip</key><string>Critically damps to height if within height * 0.5 of level (either above ground level or above the higher of land and water if water == TRUE).\nCritically damps to fHeight if within fHeight * 0.5 of ground or water level.\n
-           The height is above ground level if iWater is FALSE or above the higher of land and water if iWater is TRUE.\n
-           Do not use with vehicles. Only works in physics-enabled objects.</string>
+        The height is above ground level if iWater is FALSE or above the higher of land and water if iWater is TRUE.\n
+        Do not use with vehicles. Only works in physics-enabled objects.</string>
       </map>
       <key>llGroundSlope</key>
       <map>
@@ -8651,7 +8549,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>Shows dialog to avatar AvatarID offering to load web page at URL.   If user clicks yes, launches their web browser.\nllLoadURL displays a dialogue box to the user, offering to load the specified web page using the default web browser.</string>
+        <key>tooltip</key><string>Shows dialog to avatar AvatarID offering to load web page at URL. If user clicks yes, launches their web browser.\nllLoadURL displays a dialogue box to the user, offering to load the specified web page using the default web browser.</string>
       </map>
       <key>llLog</key>
       <map>
@@ -8792,8 +8690,7 @@
       </map>
       <key>llMakeExplosion</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.1</real>
         <key>return</key><string>void</string>
@@ -8853,8 +8750,7 @@
       </map>
       <key>llMakeFire</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.1</real>
         <key>return</key><string>void</string>
@@ -8914,8 +8810,7 @@
       </map>
       <key>llMakeFountain</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.1</real>
         <key>return</key><string>void</string>
@@ -8975,8 +8870,7 @@
       </map>
       <key>llMakeSmoke</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.1</real>
         <key>return</key><string>void</string>
@@ -9304,8 +9198,7 @@
       </map>
       <key>llOpenRemoteDataChannel</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>1.0</real>
         <key>return</key><string>void</string>
@@ -9733,8 +9626,7 @@
       </map>
       <key>llReleaseCamera</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>void</string>
@@ -9777,8 +9669,7 @@
       </map>
       <key>llRemoteDataReply</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>3.0</real>
         <key>return</key><string>void</string>
@@ -9817,8 +9708,7 @@
       </map>
       <key>llRemoteDataSetRegion</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>void</string>
@@ -10638,8 +10528,7 @@
       </map>
       <key>llSendRemoteData</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>3.0</real>
         <key>return</key><string>key</string>
@@ -11001,7 +10890,7 @@
             </map>
           </map>
         </array>
-        <key>tooltip</key><string>Sets the amount of damage that will be done to an avatar that this task hits.   Task will be killed.\nSets the amount of damage that will be done to an avatar that this object hits. This object will be destroyed on damaging an avatar, and no collision event is triggered.</string>
+        <key>tooltip</key><string>Sets the amount of damage that will be done to an avatar that this task hits. Task will be killed.\nSets the amount of damage that will be done to an avatar that this object hits. This object will be destroyed on damaging an avatar, and no collision event is triggered.</string>
       </map>
       <key>llSetForce</key>
       <map>
@@ -11091,8 +10980,7 @@
       </map>
       <key>llSetInventoryPermMask</key>
       <map>
-        <key>god-mode</key>
-        <boolean>true</boolean>
+        <key>god-mode</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>void</string>
@@ -11485,8 +11373,7 @@
       </map>
       <key>llSetObjectPermMask</key>
       <map>
-        <key>god-mode</key>
-        <boolean>true</boolean>
+        <key>god-mode</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>void</string>
@@ -11655,8 +11542,7 @@
       </map>
       <key>llSetPrimURL</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>20.0</real>
         <key>return</key><string>void</string>
@@ -12242,8 +12128,7 @@
       </map>
       <key>llSound</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>void</string>
@@ -12282,8 +12167,7 @@
       </map>
       <key>llSoundPreload</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>void</string>
@@ -12466,8 +12350,7 @@
       </map>
       <key>llTakeCamera</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>void</string>
@@ -13088,8 +12971,7 @@
       </map>
       <key>llXorBase64Strings</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.3</real>
         <key>return</key><string>string</string>
@@ -13114,8 +12996,7 @@
       </map>
       <key>llXorBase64StringsCorrect</key>
       <map>
-        <key>deprecated</key>
-        <boolean>true</boolean>
+        <key>deprecated</key><boolean>true</boolean>
         <key>energy</key><real>10.0</real>
         <key>sleep</key><real>0.0</real>
         <key>return</key><string>string</string>

@@ -1181,6 +1181,7 @@ syn keyword lslInvalid
 \ PSYS_SRC_OBJ_REL_MASK
 \ PSYS_SRC_OUTERANGLE
 \ VEHICLE_FLAG_NO_FLY_UP
+\ XP_ERROR_REQUEST_PERM_TIMEOUT
 \ event
 \ llClearExperiencePermissions
 \ llCloud

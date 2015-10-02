@@ -887,7 +887,8 @@ define(["require", "exports"], function (require, exports) {
             'PERMISSION_RELEASE_OWNERSHIP',
             'PERMISSION_REMAP_CONTROLS',
             'PRIM_PHYSICS_MATERIAL',
-            'PSYS_SRC_OBJ_REL_MASK'
+            'PSYS_SRC_OBJ_REL_MASK',
+            'XP_ERROR_REQUEST_PERM_TIMEOUT'
         ],
         LSL_FunctionBuiltinFloat: [
             'llAcos',

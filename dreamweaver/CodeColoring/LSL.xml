@@ -18,14 +18,17 @@
         <keywords id="CodeColor_LSLInvalidDeprecated">
             <match>\b(?:ATTACH_[LR]PEC|DATA_RATING|OBJECT_ATTACHMENT_(?:GEOMETRY_BYTES|SURFACE_AREA)|PRIM_(?:CAST_SHADOWS|MATERIAL_LIGHT|TYPE_LEGACY)|PSYS_SRC_(?:INNER|OUTER)ANGLE|VEHICLE_FLAG_NO_FLY_UP|ll(?:ClearExperiencePermissions|Cloud|GetExperienceList|Make(?:Explosion|Fountain|Smoke|Fire)|RemoteDataSetRegion|Sound(?:Preload)?|XorBase64Strings(?:Correct)?))\b</match>
         </keywords>
-        <keywords id="CodeColor_LSLInvalidGodmode">
-            <match>\b(?:ll(?:GodLikeRezObject|Set(?:Inventory|Object)PermMask))\b</match>
-        </keywords>
         <keywords id="CodeColor_LSLInvalidIllegal">
-            <match>\b(?:print)\b</match>
+            <match>\b(?:event)\b</match>
         </keywords>
         <keywords id="CodeColor_LSLInvalidUnimplemented">
-            <match>\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|event|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b</match>
+            <match>\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|XP_ERROR_REQUEST_PERM_TIMEOUT|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b</match>
+        </keywords>
+        <keywords id="CodeColor_LSLReservedGodmode">
+            <match>\b(?:ll(?:GodLikeRezObject|Set(?:Inventory|Object)PermMask))\b</match>
+        </keywords>
+        <keywords id="CodeColor_LSLReservedLog">
+            <match>\b(?:print)\b</match>
         </keywords>
         <keywords id="CodeColor_LSLState">
             <match>\b(?:(state)\s+([A-Za-z_]\w*)|(default))\b</match>

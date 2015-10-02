@@ -3180,6 +3180,10 @@ Triggered when a character failed to enter a parcel because it is not allowed to
     <description lang="en">
     </description>
   </constant>
+  <constant name="XP_ERROR_REQUEST_PERM_TIMEOUT" type="integer" value="18" grid="sl" version="sl:15.01.23.298475" status="unimplemented">
+    <description lang="en">
+    </description>
+  </constant>
   <constant name="PASS_IF_NOT_HANDLED" type="integer" value="0" version="1.40.0">
     <description lang="en">
 Used with llPassTouches to only pass touches to the root if the touch event was not handled.

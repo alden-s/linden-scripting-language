@@ -37,10 +37,35 @@
 				<dict><key>include</key><string>#infunc</string></dict>
 			</array>
 		</dict>
-		<key>avoid</key>
+		<key>invalid-broken</key>
 		<dict>
-			<key>name</key><string>invalid.deprecated.lsl</string>
-			<key>match</key><string>\b(?:ll(?:S(?:et(?:(?:Inventory|Object)PermMask|PrimURL)|oun(?:dPreloa)?d|topPointAt)|Re(?:mote(?:DataSetRegion|LoadScript)|freshPrimURL|leaseCamera)|Make(?:F(?:ountain|ire)|Explosion|Smoke)|XorBase64Strings(?:Correct)?|(?:GodLikeRezObjec|PointA)t|C(?:ollisionSprite|l(?:oud|earExperiencePermissions))|TakeCamera|GetExperienceList)|P(?:ERMISSION_(?:RE(?:LEASE_OWNERSHIP|MAP_CONTROLS)|CHANGE_(?:PERMISSION|JOINT)S)|SYS_SRC_(?:O(?:BJ_REL_MASK|UTERANGLE)|INNERANGLE)|RIM_(?:MATERIAL_LIGHT|CAST_SHADOWS))|VEHICLE_FLAG_NO_FLY_UP|ATTACH_[LR]PEC|DATA_RATING|event)\b</string>
+			<key>name</key><string>\b(?:LAND_(?:LARGE|MEDIUM|SMALL)_BRUSH)\b</string>
+			<key>match</key><string>invalid.broken.lsl</string>
+		</dict>
+		<key>invalid-deprecated</key>
+		<dict>
+			<key>name</key><string>\b(?:ATTACH_[LR]PEC|DATA_RATING|OBJECT_ATTACHMENT_(?:GEOMETRY_BYTES|SURFACE_AREA)|PRIM_(?:CAST_SHADOWS|MATERIAL_LIGHT|TYPE_LEGACY)|PSYS_SRC_(?:INNER|OUTER)ANGLE|VEHICLE_FLAG_NO_FLY_UP|ll(?:ClearExperiencePermissions|Cloud|GetExperienceList|Make(?:Explosion|Fountain|Smoke|Fire)|RemoteDataSetRegion|Sound(?:Preload)?|XorBase64Strings(?:Correct)?))\b</string>
+			<key>match</key><string>invalid.deprecated.lsl</string>
+		</dict>
+		<key>invalid-illegal</key>
+		<dict>
+			<key>name</key><string>\b(?:event)\b</string>
+			<key>match</key><string>invalid.illegal.lsl</string>
+		</dict>
+		<key>invalid-unimplemented</key>
+		<dict>
+			<key>name</key><string>\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|XP_ERROR_REQUEST_PERM_TIMEOUT|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b</string>
+			<key>match</key><string>invalid.unimplemented.lsl</string>
+		</dict>
+		<key>reserved-godmode</key>
+		<dict>
+			<key>name</key><string>\b(?:ll(?:GodLikeRezObject|Set(?:Inventory|Object)PermMask))\b</string>
+			<key>match</key><string>reserved.godmode.lsl</string>
+		</dict>
+		<key>reserved-log</key>
+		<dict>
+			<key>name</key><string>\b(?:print)\b</string>
+			<key>match</key><string>reserved.log.lsl</string>
 		</dict>
 		<key>begin_end</key>
 		<dict>
@@ -197,8 +222,12 @@
 				<dict><key>include</key><string>#constant</string></dict>
 				<dict><key>include</key><string>#storage_type</string></dict>
 				<dict><key>include</key><string>#llconstant</string></dict>
-				<dict><key>include</key><string>#avoid</string></dict>
-				<dict><key>include</key><string>#reserved</string></dict>
+				<dict><key>include</key><string>#invalid-broken</string></dict>
+				<dict><key>include</key><string>#invalid-deprecated</string></dict>
+				<dict><key>include</key><string>#invalid-illegal</string></dict>
+				<dict><key>include</key><string>#invalid-unimplemented</string></dict>
+				<dict><key>include</key><string>#reserved-godmode</string></dict>
+				<dict><key>include</key><string>#reserved-log</string></dict>
 				<dict><key>include</key><string>#llfunction</string></dict>
 				<dict><key>include</key><string>#number</string></dict>
 				<dict><key>include</key><string>#operator</string></dict>
@@ -315,11 +344,6 @@
 				<dict><key>name</key><string>invalid.illegal.constant.character.escape.lsl</string><key>match</key><string>\\.</string></dict>
 			</array>
 		</dict>
-		<key>reserved</key>
-		<dict>
-			<key>name</key><string>variable.language.lsl</string>
-			<key>match</key><string>\b(event|print)\b</string>
-		</dict>
 		<key>state</key>
 		<dict>
 			<key>name</key><string>meta.state.lsl</string>
@@ -392,7 +416,12 @@
 				<dict><key>include</key><string>#storage_type</string></dict>
 				<dict><key>include</key><string>#quoted</string></dict>
 				<dict><key>include</key><string>#constant</string></dict>
-				<dict><key>include</key><string>#reserved</string></dict>
+				<dict><key>include</key><string>#invalid-broken</string></dict>
+				<dict><key>include</key><string>#invalid-deprecated</string></dict>
+				<dict><key>include</key><string>#invalid-illegal</string></dict>
+				<dict><key>include</key><string>#invalid-unimplemented</string></dict>
+				<dict><key>include</key><string>#reserved-godmode</string></dict>
+				<dict><key>include</key><string>#reserved-log</string></dict>
 				<dict><key>include</key><string>#number</string></dict>
 				<dict><key>include</key><string>#operator</string></dict>
 				<dict><key>include</key><string>#array</string></dict>

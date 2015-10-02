@@ -21,8 +21,9 @@
         <syntaxColor id="CodeColor_LSLConstantVector"         text="#663366ff" bgcolor="#ffffffff" />
         <syntaxColor id="CodeColor_LSLInvalidBroken"          text="#ffffffff" bgcolor="#ff0000ff" bold="true" />
         <syntaxColor id="CodeColor_LSLInvalidDeprecated"      text="#ffffffff" bgcolor="#ff0000ff" bold="true" />
-        <syntaxColor id="CodeColor_LSLInvalidGodmode"         text="#ffffffff" bgcolor="#ff0000ff" bold="true" />
         <syntaxColor id="CodeColor_LSLInvalidIllegal"         text="#ffffffff" bgcolor="#ff0000ff" bold="true" />
         <syntaxColor id="CodeColor_LSLInvalidUnimplemented"   text="#ffffffff" bgcolor="#ff0000ff" bold="true" />
+        <syntaxColor id="CodeColor_LSLReservedGodmode"        text="#ffffffff" bgcolor="#ff0000ff" bold="true" />
+        <syntaxColor id="CodeColor_LSLReservedLog"            text="#ffffffff" bgcolor="#ff0000ff" bold="true" />
     </colorGroup>
 </codeColors>
