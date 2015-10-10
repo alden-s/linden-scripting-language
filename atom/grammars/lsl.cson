@@ -3,9 +3,8 @@
 'fileTypes': [
     'lsl'
 ]
-'patterns': [ {
-        'include': '#value'
-    }
+'patterns': [
+    { 'include': '#value' }
 ]
 'repository' :
     'array':
@@ -18,9 +17,8 @@
             '0':
                 'name': 'punctuation.definition.array.end.lsl'
         'name': 'meta.inarray.lsl'
-        'patterns': [ {
-                'include': '#infunc'
-            }
+        'patterns': [
+            { 'include': '#infunc' }
         ]
     'invalid_broken':
         'match': '\b(?:LAND_(?:LARGE|MEDIUM|SMALL)_BRUSH)\b'
@@ -44,9 +42,8 @@
         'begin': '\{'
         'end': '\}'
         'name': 'meta.incode.lsl'
-        'patterns': [ {
-                'include': '#infunc'
-            }
+        'patterns': [
+            { 'include': '#infunc' }
         ]
     'commentblock':
         'begin': '/\*'
@@ -87,24 +84,20 @@
                 'begin': '\('
                 'end': '\)'
                 'name': 'meta.event.parameters.lsl'
-                'patterns': [ {
-                        'include': '#parameters'
-                    }
+                'patterns': [
+                    { 'include': '#parameters' }
                 ]
             }
             {
                 'begin': '{'
                 'end': '(?=})'
                 'name': 'meta.event.body.lsl'
-                'patterns': [ {
-                        'include': '#infunc'
-                    }
+                'patterns': [
+                    { 'include': '#infunc' }
                 ]
-            } {
-                'include': '#commentblock'
-            } {
-                'include': '#commentline'
             }
+            { 'include': '#commentblock' }
+            { 'include': '#commentline' }
         ]
     'flow_control' :
         'match': '\b(jump|return|if|else|for|do|while|@)\b'
@@ -125,62 +118,40 @@
                 'begin': '\('
                 'end': '\)'
                 'name': 'meta.function.parameters.lsl'
-                'patterns': [ {
-                        'include': '#parameters'
-                    }
+                'patterns': [
+                    { 'include': '#parameters' }
                 ]
             } {
                 'begin': '{'
                 'end': '(?=})'
                 'name': 'meta.function.body.lsl'
-                'patterns': [ {
-                        'include': '#infunc'
-                    }
+                'patterns': [
+                    { 'include': '#infunc' }
                 ]
-            } {
-                'include': '#commentblock'
-            } {
-                'include': '#commentline'
             }
+            { 'include': '#commentblock' }
+            { 'include': '#commentline' }
         ]
     'infunc':
-        'patterns': [ {
-                'include': '#begin_end'
-            } {
-                'include': '#commentblock'
-            } {
-                'include': '#commentline'
-            } {
-                'include': '#array'
-            } {
-                'include': '#quoted'
-            } {
-                'include': '#flow_control'
-            } {
-                'include': '#constant'
-            } {
-                'include': '#storage_type'
-            } {
-                'include': '#llconstant'
-            } {
-                'include': '#invalid_broken'
-            } {
-                'include': '#invalid_deprecated'
-            } {
-                'include': '#invalid_illegal'
-            } {
-                'include': '#invalid_unimplemented'
-            } {
-                'include': '#reserved_godmode'
-            } {
-                'include': '#reserved_log'
-            } {
-                'include': '#llfunction'
-            } {
-                'include': '#number'
-            } {
-                'include': '#operator'
-            }
+        'patterns': [
+            { 'include': '#begin_end' }
+            { 'include': '#commentblock' }
+            { 'include': '#commentline' }
+            { 'include': '#array' }
+            { 'include': '#quoted' }
+            { 'include': '#flow_control' }
+            { 'include': '#constant' }
+            { 'include': '#storage_type' }
+            { 'include': '#llconstant' }
+            { 'include': '#invalid_broken' }
+            { 'include': '#invalid_deprecated' }
+            { 'include': '#invalid_illegal' }
+            { 'include': '#invalid_unimplemented' }
+            { 'include': '#reserved_godmode' }
+            { 'include': '#reserved_log' }
+            { 'include': '#llfunction' }
+            { 'include': '#number' }
+            { 'include': '#operator' }
         ]
     'llconstant':
         'patterns': [ {
@@ -332,19 +303,14 @@
                 'begin': '{'
                 'end': '(?=})'
                 'name': 'meta.state.body.lsl'
-                'patterns': [ {
-                        'include': '#commentblock'
-                    } {
-                        'include': '#commentline'
-                    } {
-                        'include': '#event'
-                    }
+                'patterns': [
+                    { 'include': '#commentblock' }
+                    { 'include': '#commentline' }
+                    { 'include': '#event' }
                 ]
-            } {
-                'include': '#commentblock'
-            } {
-                'include': '#commentline'
             }
+            { 'include': '#commentblock' }
+            { 'include': '#commentline' }
         ]
     'parameters':
         'begin': '\b(integer|float|string|key|vector|quaternion|rotation|list)\b'
@@ -369,37 +335,21 @@
         'match': '\b(integer|float|string|key|vector|quaternion|rotation|list)\b'
         'name': 'storage.type.lsl'
     'value':
-        'patterns': [ {
-                'include': '#commentblock'
-            } {
-                'include': '#commentline'
-            } {
-                'include': '#state'
-            } {
-                'include': '#storage_type'
-            } {
-                'include': '#quoted'
-            } {
-                'include': '#constant'
-            } {
-                'include': '#invalid_broken'
-            } {
-                'include': '#invalid_deprecated'
-            } {
-                'include': '#invalid_illegal'
-            } {
-                'include': '#invalid_unimplemented'
-            } {
-                'include': '#reserved_godmode'
-            } {
-                'include': '#reserved_log'
-            } {
-                'include': '#number'
-            } {
-                'include': '#operator'
-            } {
-                'include': '#array'
-            } {
-                'include': '#functiondef'
-            }
+        'patterns': [
+            { 'include': '#commentblock' }
+            { 'include': '#commentline' }
+            { 'include': '#state' }
+            { 'include': '#storage_type' }
+            { 'include': '#quoted' }
+            { 'include': '#constant' }
+            { 'include': '#invalid_broken' }
+            { 'include': '#invalid_deprecated' }
+            { 'include': '#invalid_illegal' }
+            { 'include': '#invalid_unimplemented' }
+            { 'include': '#reserved_godmode' }
+            { 'include': '#reserved_log' }
+            { 'include': '#number' }
+            { 'include': '#operator' }
+            { 'include': '#array' }
+            { 'include': '#functiondef' }
         ]
