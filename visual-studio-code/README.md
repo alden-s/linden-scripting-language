@@ -5,3 +5,7 @@ Please copy the [./.vscode/extensions/LSL/](./.vscode/extensions/LSL/) subfolder
 * `$HOME/.vscode/extensions` on Linux
 * `$HOME/.vscode/extensions` on MacOS
 * `%USERPROFILE%\.vscode\extensions` on Windows
+
+### Requirements:
+
+Requires Visual Studio Code version `>=0.9.1`.
