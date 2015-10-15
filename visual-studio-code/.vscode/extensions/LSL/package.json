@@ -1,0 +1,40 @@
+{
+    "name": "LSL",
+    "version": "0.0.0",
+    "engines": {
+        "vscode": ">=0.9.1"
+    },
+//  "extensionDependencies": [],
+    "publisher": "none",
+    "contributes": {
+        "grammars": [
+            {
+                "language": "lsl",
+                "scopeName": "source.lsl",
+                "path": "./syntaxes/LSL.tmLanguage"
+            }
+        ],
+        "languages": [
+            {
+                "id": "lsl",
+                "aliases": [
+                    "LSL",
+                    "Linden Script",
+                    "Linden Scripting Language",
+                    "Second Life",
+                    "Second Life Script"
+                ],
+                "extensions": [
+                    ".lsl"
+                ]
+            }
+        ],
+        "themes": [
+            {
+                "label": "Linden Lab Viewer Theme",
+                "uiTheme": "vs-light",
+                "path": "./themes/LSL.tmTheme"
+            }
+        ]
+    }
+}
