@@ -1,5 +1,7 @@
 ### Usage
 
-Apart from this [README.md](#) file, all files within this folder go into the main folder of the current Visual Studio Code installation.
+Please copy the [LSL](./LSL) subfolder into the extensions folder of your current Visual Studio Code installation which can be found at:
 
-On Windows that would be `%appdata%..\Local\Code\app-{version}`.
+* `$HOME/.vscode/extensions` on Linux
+* `$HOME/.vscode/extensions` on MacOS
+* `%USERPROFILE%\.vscode\extensions` on Windows
