@@ -3379,17 +3379,17 @@
         },
         "llAddToLandBanList": {
             "prefix": "llAddToLandBanList",
-            "body": "llAddToLandBanList(${key avatar}, ${float hours});\n$0",
+            "body": "llAddToLandBanList(${key avatar}, ${float hours});",
             "description": "(void) func"
         },
         "llAddToLandPassList": {
             "prefix": "llAddToLandPassList",
-            "body": "llAddToLandPassList(${key avatar}, ${float hours});\n$0",
+            "body": "llAddToLandPassList(${key avatar}, ${float hours});",
             "description": "(void) func"
         },
         "llAdjustSoundVolume": {
             "prefix": "llAdjustSoundVolume",
-            "body": "llAdjustSoundVolume(${float volume});\n$0",
+            "body": "llAdjustSoundVolume(${float volume});",
             "description": "(void) func"
         },
         "llAgentInExperience": {
@@ -3399,7 +3399,7 @@
         },
         "llAllowInventoryDrop": {
             "prefix": "llAllowInventoryDrop",
-            "body": "llAllowInventoryDrop(${integer add});\n$0",
+            "body": "llAllowInventoryDrop(${integer add});",
             "description": "(void) func"
         },
         "llAngleBetween": {
@@ -3409,12 +3409,12 @@
         },
         "llApplyImpulse": {
             "prefix": "llApplyImpulse",
-            "body": "llApplyImpulse(${vector force}, ${integer local});\n$0",
+            "body": "llApplyImpulse(${vector force}, ${integer local});",
             "description": "(void) func"
         },
         "llApplyRotationalImpulse": {
             "prefix": "llApplyRotationalImpulse",
-            "body": "llApplyRotationalImpulse(${vector force}, ${integer local});\n$0",
+            "body": "llApplyRotationalImpulse(${vector force}, ${integer local});",
             "description": "(void) func"
         },
         "llAsin": {
@@ -3429,12 +3429,12 @@
         },
         "llAttachToAvatar": {
             "prefix": "llAttachToAvatar",
-            "body": "llAttachToAvatar(${integer attach_point});\n$0",
+            "body": "llAttachToAvatar(${integer attach_point});",
             "description": "(void) func"
         },
         "llAttachToAvatarTemp": {
             "prefix": "llAttachToAvatarTemp",
-            "body": "llAttachToAvatarTemp(${integer attach_point});\n$0",
+            "body": "llAttachToAvatarTemp(${integer attach_point});",
             "description": "(void) func"
         },
         "llAvatarOnLinkSitTarget": {
@@ -3469,12 +3469,12 @@
         },
         "llBreakAllLinks": {
             "prefix": "llBreakAllLinks",
-            "body": "llBreakAllLinks();\n$0",
+            "body": "llBreakAllLinks();",
             "description": "(void) func"
         },
         "llBreakLink": {
             "prefix": "llBreakLink",
-            "body": "llBreakLink(${integer linknum});\n$0",
+            "body": "llBreakLink(${integer linknum});",
             "description": "(void) func"
         },
         "llCSV2List": {
@@ -3494,7 +3494,7 @@
         },
         "llClearCameraParams": {
             "prefix": "llClearCameraParams",
-            "body": "llClearCameraParams();\n$0",
+            "body": "llClearCameraParams();",
             "description": "(void) func"
         },
         "llClearLinkMedia": {
@@ -3509,17 +3509,17 @@
         },
         "llCloseRemoteDataChannel": {
             "prefix": "llCloseRemoteDataChannel",
-            "body": "llCloseRemoteDataChannel(${key channel});\n$0",
+            "body": "llCloseRemoteDataChannel(${key channel});",
             "description": "(void) func"
         },
         "llCollisionFilter": {
             "prefix": "llCollisionFilter",
-            "body": "llCollisionFilter(${string name}, ${key id}, ${integer accept});\n$0",
+            "body": "llCollisionFilter(${string name}, ${key id}, ${integer accept});",
             "description": "(void) func"
         },
         "llCollisionSound": {
             "prefix": "llCollisionSound",
-            "body": "llCollisionSound(${string impact_sound}, ${float impact_volume});\n$0",
+            "body": "llCollisionSound(${string impact_sound}, ${float impact_volume});",
             "description": "(void) func"
         },
         "llCos": {
@@ -3529,7 +3529,7 @@
         },
         "llCreateCharacter": {
             "prefix": "llCreateCharacter",
-            "body": "llCreateCharacter(${list options});\n$0",
+            "body": "llCreateCharacter(${list options});",
             "description": "(void) func"
         },
         "llCreateKeyValue": {
@@ -3539,7 +3539,7 @@
         },
         "llCreateLink": {
             "prefix": "llCreateLink",
-            "body": "llCreateLink(${key target}, ${integer parent});\n$0",
+            "body": "llCreateLink(${key target}, ${integer parent});",
             "description": "(void) func"
         },
         "llDataSizeKeyValue": {
@@ -3549,7 +3549,7 @@
         },
         "llDeleteCharacter": {
             "prefix": "llDeleteCharacter",
-            "body": "llDeleteCharacter();\n$0",
+            "body": "llDeleteCharacter();",
             "description": "(void) func"
         },
         "llDeleteKeyValue": {
@@ -3569,7 +3569,7 @@
         },
         "llDetachFromAvatar": {
             "prefix": "llDetachFromAvatar",
-            "body": "llDetachFromAvatar();\n$0",
+            "body": "llDetachFromAvatar();",
             "description": "(void) func"
         },
         "llDetectedGrab": {
@@ -3654,12 +3654,12 @@
         },
         "llDialog": {
             "prefix": "llDialog",
-            "body": "llDialog(${key avatar}, ${string message}, ${list buttons}, ${integer chat_channel});\n$0",
+            "body": "llDialog(${key avatar}, ${string message}, ${list buttons}, ${integer chat_channel});",
             "description": "(void) func"
         },
         "llDie": {
             "prefix": "llDie",
-            "body": "llDie();\n$0",
+            "body": "llDie();",
             "description": "(void) func"
         },
         "llDumpList2String": {
@@ -3674,12 +3674,12 @@
         },
         "llEjectFromLand": {
             "prefix": "llEjectFromLand",
-            "body": "llEjectFromLand(${key avatar});\n$0",
+            "body": "llEjectFromLand(${key avatar});",
             "description": "(void) func"
         },
         "llEmail": {
             "prefix": "llEmail",
-            "body": "llEmail(${string address}, ${string subject}, ${string message});\n$0",
+            "body": "llEmail(${string address}, ${string subject}, ${string message});",
             "description": "(void) func"
         },
         "llEscapeURL": {
@@ -3694,12 +3694,12 @@
         },
         "llEvade": {
             "prefix": "llEvade",
-            "body": "llEvade(${key target}, ${list options});\n$0",
+            "body": "llEvade(${key target}, ${list options});",
             "description": "(void) func"
         },
         "llExecCharacterCmd": {
             "prefix": "llExecCharacterCmd",
-            "body": "llExecCharacterCmd(${integer cmd}, ${list options});\n$0",
+            "body": "llExecCharacterCmd(${integer cmd}, ${list options});",
             "description": "(void) func"
         },
         "llFabs": {
@@ -3709,7 +3709,7 @@
         },
         "llFleeFrom": {
             "prefix": "llFleeFrom",
-            "body": "llFleeFrom(${vector source}, ${float radius}, ${list options});\n$0",
+            "body": "llFleeFrom(${vector source}, ${float radius}, ${list options});",
             "description": "(void) func"
         },
         "llFloor": {
@@ -3719,7 +3719,7 @@
         },
         "llForceMouselook": {
             "prefix": "llForceMouselook",
-            "body": "llForceMouselook(${integer mouselook});\n$0",
+            "body": "llForceMouselook(${integer mouselook});",
             "description": "(void) func"
         },
         "llFrand": {
@@ -4004,7 +4004,7 @@
         },
         "llGetNextEmail": {
             "prefix": "llGetNextEmail",
-            "body": "llGetNextEmail(${string address}, ${string subject});\n$0",
+            "body": "llGetNextEmail(${string address}, ${string subject});",
             "description": "(void) func"
         },
         "llGetNotecardLine": {
@@ -4299,12 +4299,12 @@
         },
         "llGiveInventory": {
             "prefix": "llGiveInventory",
-            "body": "llGiveInventory(${key destination}, ${string inventory});\n$0",
+            "body": "llGiveInventory(${key destination}, ${string inventory});",
             "description": "(void) func"
         },
         "llGiveInventoryList": {
             "prefix": "llGiveInventoryList",
-            "body": "llGiveInventoryList(${key target}, ${string folder}, ${list inventory});\n$0",
+            "body": "llGiveInventoryList(${key target}, ${string folder}, ${list inventory});",
             "description": "(void) func"
         },
         "llGiveMoney": {
@@ -4329,7 +4329,7 @@
         },
         "llGroundRepel": {
             "prefix": "llGroundRepel",
-            "body": "llGroundRepel(${float height}, ${integer water}, ${float tau});\n$0",
+            "body": "llGroundRepel(${float height}, ${integer water}, ${float tau});",
             "description": "(void) func"
         },
         "llGroundSlope": {
@@ -4344,7 +4344,7 @@
         },
         "llHTTPResponse": {
             "prefix": "llHTTPResponse",
-            "body": "llHTTPResponse(${key request_id}, ${integer status}, ${string body});\n$0",
+            "body": "llHTTPResponse(${key request_id}, ${integer status}, ${string body});",
             "description": "(void) func"
         },
         "llInsertString": {
@@ -4354,7 +4354,7 @@
         },
         "llInstantMessage": {
             "prefix": "llInstantMessage",
-            "body": "llInstantMessage(${key user}, ${string message});\n$0",
+            "body": "llInstantMessage(${key user}, ${string message});",
             "description": "(void) func"
         },
         "llIntegerToBase64": {
@@ -4399,12 +4399,12 @@
         },
         "llLinkParticleSystem": {
             "prefix": "llLinkParticleSystem",
-            "body": "llLinkParticleSystem(${integer linknumber}, ${list rules});\n$0",
+            "body": "llLinkParticleSystem(${integer linknumber}, ${list rules});",
             "description": "(void) func"
         },
         "llLinkSitTarget": {
             "prefix": "llLinkSitTarget",
-            "body": "llLinkSitTarget(${integer link}, ${vector offset}, ${rotation rot});\n$0",
+            "body": "llLinkSitTarget(${integer link}, ${vector offset}, ${rotation rot});",
             "description": "(void) func"
         },
         "llList2CSV": {
@@ -4494,17 +4494,17 @@
         },
         "llListenControl": {
             "prefix": "llListenControl",
-            "body": "llListenControl(${integer number}, ${integer active});\n$0",
+            "body": "llListenControl(${integer number}, ${integer active});",
             "description": "(void) func"
         },
         "llListenRemove": {
             "prefix": "llListenRemove",
-            "body": "llListenRemove(${integer number});\n$0",
+            "body": "llListenRemove(${integer number});",
             "description": "(void) func"
         },
         "llLoadURL": {
             "prefix": "llLoadURL",
-            "body": "llLoadURL(${key avatar}, ${string message}, ${string url});\n$0",
+            "body": "llLoadURL(${key avatar}, ${string message}, ${string url});",
             "description": "(void) func"
         },
         "llLog": {
@@ -4519,22 +4519,22 @@
         },
         "llLookAt": {
             "prefix": "llLookAt",
-            "body": "llLookAt(${vector target}, ${float strength}, ${float damping});\n$0",
+            "body": "llLookAt(${vector target}, ${float strength}, ${float damping});",
             "description": "(void) func"
         },
         "llLoopSound": {
             "prefix": "llLoopSound",
-            "body": "llLoopSound(${string sound}, ${float volume});\n$0",
+            "body": "llLoopSound(${string sound}, ${float volume});",
             "description": "(void) func"
         },
         "llLoopSoundMaster": {
             "prefix": "llLoopSoundMaster",
-            "body": "llLoopSoundMaster(${string sound}, ${float volume});\n$0",
+            "body": "llLoopSoundMaster(${string sound}, ${float volume});",
             "description": "(void) func"
         },
         "llLoopSoundSlave": {
             "prefix": "llLoopSoundSlave",
-            "body": "llLoopSoundSlave(${string sound}, ${float volume});\n$0",
+            "body": "llLoopSoundSlave(${string sound}, ${float volume});",
             "description": "(void) func"
         },
         "llMD5String": {
@@ -4549,17 +4549,17 @@
         },
         "llMapDestination": {
             "prefix": "llMapDestination",
-            "body": "llMapDestination(${string simname}, ${vector pos}, ${vector look_at});\n$0",
+            "body": "llMapDestination(${string simname}, ${vector pos}, ${vector look_at});",
             "description": "(void) func"
         },
         "llMessageLinked": {
             "prefix": "llMessageLinked",
-            "body": "llMessageLinked(${integer linknum}, ${integer num}, ${string str}, ${key id});\n$0",
+            "body": "llMessageLinked(${integer linknum}, ${integer num}, ${string str}, ${key id});",
             "description": "(void) func"
         },
         "llMinEventDelay": {
             "prefix": "llMinEventDelay",
-            "body": "llMinEventDelay(${float delay});\n$0",
+            "body": "llMinEventDelay(${float delay});",
             "description": "(void) func"
         },
         "llModPow": {
@@ -4569,27 +4569,27 @@
         },
         "llModifyLand": {
             "prefix": "llModifyLand",
-            "body": "llModifyLand(${integer action}, ${integer brush});\n$0",
+            "body": "llModifyLand(${integer action}, ${integer brush});",
             "description": "(void) func"
         },
         "llMoveToTarget": {
             "prefix": "llMoveToTarget",
-            "body": "llMoveToTarget(${vector target}, ${float tau});\n$0",
+            "body": "llMoveToTarget(${vector target}, ${float tau});",
             "description": "(void) func"
         },
         "llNavigateTo": {
             "prefix": "llNavigateTo",
-            "body": "llNavigateTo(${vector point}, ${list options});\n$0",
+            "body": "llNavigateTo(${vector point}, ${list options});",
             "description": "(void) func"
         },
         "llOffsetTexture": {
             "prefix": "llOffsetTexture",
-            "body": "llOffsetTexture(${float u}, ${float v}, ${integer face});\n$0",
+            "body": "llOffsetTexture(${float u}, ${float v}, ${integer face});",
             "description": "(void) func"
         },
         "llOpenRemoteDataChannel": {
             "prefix": "llOpenRemoteDataChannel",
-            "body": "llOpenRemoteDataChannel();\n$0",
+            "body": "llOpenRemoteDataChannel();",
             "description": "(void) func"
         },
         "llOverMyLand": {
@@ -4599,12 +4599,12 @@
         },
         "llOwnerSay": {
             "prefix": "llOwnerSay",
-            "body": "llOwnerSay(${string msg});\n$0",
+            "body": "llOwnerSay(${string msg});",
             "description": "(void) func"
         },
         "llParcelMediaCommandList": {
             "prefix": "llParcelMediaCommandList",
-            "body": "llParcelMediaCommandList(${list command});\n$0",
+            "body": "llParcelMediaCommandList(${list command});",
             "description": "(void) func"
         },
         "llParcelMediaQuery": {
@@ -4624,32 +4624,32 @@
         },
         "llParticleSystem": {
             "prefix": "llParticleSystem",
-            "body": "llParticleSystem(${list rules});\n$0",
+            "body": "llParticleSystem(${list rules});",
             "description": "(void) func"
         },
         "llPassCollisions": {
             "prefix": "llPassCollisions",
-            "body": "llPassCollisions(${integer pass});\n$0",
+            "body": "llPassCollisions(${integer pass});",
             "description": "(void) func"
         },
         "llPassTouches": {
             "prefix": "llPassTouches",
-            "body": "llPassTouches(${integer pass});\n$0",
+            "body": "llPassTouches(${integer pass});",
             "description": "(void) func"
         },
         "llPatrolPoints": {
             "prefix": "llPatrolPoints",
-            "body": "llPatrolPoints(${list points}, ${list options});\n$0",
+            "body": "llPatrolPoints(${list points}, ${list options});",
             "description": "(void) func"
         },
         "llPlaySound": {
             "prefix": "llPlaySound",
-            "body": "llPlaySound(${string sound}, ${float volume});\n$0",
+            "body": "llPlaySound(${string sound}, ${float volume});",
             "description": "(void) func"
         },
         "llPlaySoundSlave": {
             "prefix": "llPlaySoundSlave",
-            "body": "llPlaySoundSlave(${string sound}, ${float volume});\n$0",
+            "body": "llPlaySoundSlave(${string sound}, ${float volume});",
             "description": "(void) func"
         },
         "llPow": {
@@ -4659,17 +4659,17 @@
         },
         "llPreloadSound": {
             "prefix": "llPreloadSound",
-            "body": "llPreloadSound(${string sound});\n$0",
+            "body": "llPreloadSound(${string sound});",
             "description": "(void) func"
         },
         "llPursue": {
             "prefix": "llPursue",
-            "body": "llPursue(${key target}, ${list options});\n$0",
+            "body": "llPursue(${key target}, ${list options});",
             "description": "(void) func"
         },
         "llPushObject": {
             "prefix": "llPushObject",
-            "body": "llPushObject(${key id}, ${vector impulse}, ${vector ang_impulse}, ${integer local});\n$0",
+            "body": "llPushObject(${key id}, ${vector impulse}, ${vector ang_impulse}, ${integer local});",
             "description": "(void) func"
         },
         "llReadKeyValue": {
@@ -4679,52 +4679,52 @@
         },
         "llRegionSay": {
             "prefix": "llRegionSay",
-            "body": "llRegionSay(${integer channel}, ${string msg});\n$0",
+            "body": "llRegionSay(${integer channel}, ${string msg});",
             "description": "(void) func"
         },
         "llRegionSayTo": {
             "prefix": "llRegionSayTo",
-            "body": "llRegionSayTo(${key target}, ${integer channel}, ${string msg});\n$0",
+            "body": "llRegionSayTo(${key target}, ${integer channel}, ${string msg});",
             "description": "(void) func"
         },
         "llReleaseControls": {
             "prefix": "llReleaseControls",
-            "body": "llReleaseControls();\n$0",
+            "body": "llReleaseControls();",
             "description": "(void) func"
         },
         "llReleaseURL": {
             "prefix": "llReleaseURL",
-            "body": "llReleaseURL(${string url});\n$0",
+            "body": "llReleaseURL(${string url});",
             "description": "(void) func"
         },
         "llRemoteDataReply": {
             "prefix": "llRemoteDataReply",
-            "body": "llRemoteDataReply(${key channel}, ${key message_id}, ${string sdata}, ${integer idata});\n$0",
+            "body": "llRemoteDataReply(${key channel}, ${key message_id}, ${string sdata}, ${integer idata});",
             "description": "(void) func"
         },
         "llRemoteLoadScriptPin": {
             "prefix": "llRemoteLoadScriptPin",
-            "body": "llRemoteLoadScriptPin(${key target}, ${string name}, ${integer pin}, ${integer running}, ${integer start_param});\n$0",
+            "body": "llRemoteLoadScriptPin(${key target}, ${string name}, ${integer pin}, ${integer running}, ${integer start_param});",
             "description": "(void) func"
         },
         "llRemoveFromLandBanList": {
             "prefix": "llRemoveFromLandBanList",
-            "body": "llRemoveFromLandBanList(${key avatar});\n$0",
+            "body": "llRemoveFromLandBanList(${key avatar});",
             "description": "(void) func"
         },
         "llRemoveFromLandPassList": {
             "prefix": "llRemoveFromLandPassList",
-            "body": "llRemoveFromLandPassList(${key avatar});\n$0",
+            "body": "llRemoveFromLandPassList(${key avatar});",
             "description": "(void) func"
         },
         "llRemoveInventory": {
             "prefix": "llRemoveInventory",
-            "body": "llRemoveInventory(${string item});\n$0",
+            "body": "llRemoveInventory(${string item});",
             "description": "(void) func"
         },
         "llRemoveVehicleFlags": {
             "prefix": "llRemoveVehicleFlags",
-            "body": "llRemoveVehicleFlags(${integer flags});\n$0",
+            "body": "llRemoveVehicleFlags(${integer flags});",
             "description": "(void) func"
         },
         "llRequestAgentData": {
@@ -4739,7 +4739,7 @@
         },
         "llRequestExperiencePermissions": {
             "prefix": "llRequestExperiencePermissions",
-            "body": "llRequestExperiencePermissions(${key agent}, ${string name});\n$0",
+            "body": "llRequestExperiencePermissions(${key agent}, ${string name});",
             "description": "(void) func"
         },
         "llRequestInventoryData": {
@@ -4749,7 +4749,7 @@
         },
         "llRequestPermissions": {
             "prefix": "llRequestPermissions",
-            "body": "llRequestPermissions(${key agent}, ${integer perm});\n$0",
+            "body": "llRequestPermissions(${key agent}, ${integer perm});",
             "description": "(void) func"
         },
         "llRequestSecureURL": {
@@ -4774,32 +4774,32 @@
         },
         "llResetAnimationOverride": {
             "prefix": "llResetAnimationOverride",
-            "body": "llResetAnimationOverride(${string anim_state});\n$0",
+            "body": "llResetAnimationOverride(${string anim_state});",
             "description": "(void) func"
         },
         "llResetLandBanList": {
             "prefix": "llResetLandBanList",
-            "body": "llResetLandBanList();\n$0",
+            "body": "llResetLandBanList();",
             "description": "(void) func"
         },
         "llResetLandPassList": {
             "prefix": "llResetLandPassList",
-            "body": "llResetLandPassList();\n$0",
+            "body": "llResetLandPassList();",
             "description": "(void) func"
         },
         "llResetOtherScript": {
             "prefix": "llResetOtherScript",
-            "body": "llResetOtherScript(${string name});\n$0",
+            "body": "llResetOtherScript(${string name});",
             "description": "(void) func"
         },
         "llResetScript": {
             "prefix": "llResetScript",
-            "body": "llResetScript();\n$0",
+            "body": "llResetScript();",
             "description": "(void) func"
         },
         "llResetTime": {
             "prefix": "llResetTime",
-            "body": "llResetTime();\n$0",
+            "body": "llResetTime();",
             "description": "(void) func"
         },
         "llReturnObjectsByID": {
@@ -4814,12 +4814,12 @@
         },
         "llRezAtRoot": {
             "prefix": "llRezAtRoot",
-            "body": "llRezAtRoot(${string inventory}, ${vector pos}, ${vector vel}, ${rotation rot}, ${integer param});\n$0",
+            "body": "llRezAtRoot(${string inventory}, ${vector pos}, ${vector vel}, ${rotation rot}, ${integer param});",
             "description": "(void) func"
         },
         "llRezObject": {
             "prefix": "llRezObject",
-            "body": "llRezObject(${string inventory}, ${vector pos}, ${vector vel}, ${rotation rot}, ${integer param});\n$0",
+            "body": "llRezObject(${string inventory}, ${vector pos}, ${vector vel}, ${rotation rot}, ${integer param});",
             "description": "(void) func"
         },
         "llRot2Angle": {
@@ -4859,7 +4859,7 @@
         },
         "llRotLookAt": {
             "prefix": "llRotLookAt",
-            "body": "llRotLookAt(${rotation target}, ${float strength}, ${float damping});\n$0",
+            "body": "llRotLookAt(${rotation target}, ${float strength}, ${float damping});",
             "description": "(void) func"
         },
         "llRotTarget": {
@@ -4869,12 +4869,12 @@
         },
         "llRotTargetRemove": {
             "prefix": "llRotTargetRemove",
-            "body": "llRotTargetRemove(${integer number});\n$0",
+            "body": "llRotTargetRemove(${integer number});",
             "description": "(void) func"
         },
         "llRotateTexture": {
             "prefix": "llRotateTexture",
-            "body": "llRotateTexture(${float angle}, ${integer face});\n$0",
+            "body": "llRotateTexture(${float angle}, ${integer face});",
             "description": "(void) func"
         },
         "llRound": {
@@ -4894,7 +4894,7 @@
         },
         "llSay": {
             "prefix": "llSay",
-            "body": "llSay(${integer channel}, ${string msg});\n$0",
+            "body": "llSay(${integer channel}, ${string msg});",
             "description": "(void) func"
         },
         "llScaleByFactor": {
@@ -4904,7 +4904,7 @@
         },
         "llScaleTexture": {
             "prefix": "llScaleTexture",
-            "body": "llScaleTexture(${float u}, ${float v}, ${integer face});\n$0",
+            "body": "llScaleTexture(${float u}, ${float v}, ${integer face});",
             "description": "(void) func"
         },
         "llScriptDanger": {
@@ -4914,7 +4914,7 @@
         },
         "llScriptProfiler": {
             "prefix": "llScriptProfiler",
-            "body": "llScriptProfiler(${integer flags});\n$0",
+            "body": "llScriptProfiler(${integer flags});",
             "description": "(void) func"
         },
         "llSendRemoteData": {
@@ -4924,107 +4924,107 @@
         },
         "llSensor": {
             "prefix": "llSensor",
-            "body": "llSensor(${string name}, ${key id}, ${integer type}, ${float range}, ${float arc});\n$0",
+            "body": "llSensor(${string name}, ${key id}, ${integer type}, ${float range}, ${float arc});",
             "description": "(void) func"
         },
         "llSensorRemove": {
             "prefix": "llSensorRemove",
-            "body": "llSensorRemove();\n$0",
+            "body": "llSensorRemove();",
             "description": "(void) func"
         },
         "llSensorRepeat": {
             "prefix": "llSensorRepeat",
-            "body": "llSensorRepeat(${string name}, ${key id}, ${integer type}, ${float range}, ${float arc}, ${float rate});\n$0",
+            "body": "llSensorRepeat(${string name}, ${key id}, ${integer type}, ${float range}, ${float arc}, ${float rate});",
             "description": "(void) func"
         },
         "llSetAlpha": {
             "prefix": "llSetAlpha",
-            "body": "llSetAlpha(${float alpha}, ${integer face});\n$0",
+            "body": "llSetAlpha(${float alpha}, ${integer face});",
             "description": "(void) func"
         },
         "llSetAngularVelocity": {
             "prefix": "llSetAngularVelocity",
-            "body": "llSetAngularVelocity(${vector angular_velocity}, ${integer local});\n$0",
+            "body": "llSetAngularVelocity(${vector angular_velocity}, ${integer local});",
             "description": "(void) func"
         },
         "llSetAnimationOverride": {
             "prefix": "llSetAnimationOverride",
-            "body": "llSetAnimationOverride(${string anim_state}, ${string anim});\n$0",
+            "body": "llSetAnimationOverride(${string anim_state}, ${string anim});",
             "description": "(void) func"
         },
         "llSetBuoyancy": {
             "prefix": "llSetBuoyancy",
-            "body": "llSetBuoyancy(${float buoyancy});\n$0",
+            "body": "llSetBuoyancy(${float buoyancy});",
             "description": "(void) func"
         },
         "llSetCameraAtOffset": {
             "prefix": "llSetCameraAtOffset",
-            "body": "llSetCameraAtOffset(${vector offset});\n$0",
+            "body": "llSetCameraAtOffset(${vector offset});",
             "description": "(void) func"
         },
         "llSetCameraEyeOffset": {
             "prefix": "llSetCameraEyeOffset",
-            "body": "llSetCameraEyeOffset(${vector offset});\n$0",
+            "body": "llSetCameraEyeOffset(${vector offset});",
             "description": "(void) func"
         },
         "llSetCameraParams": {
             "prefix": "llSetCameraParams",
-            "body": "llSetCameraParams(${list rules});\n$0",
+            "body": "llSetCameraParams(${list rules});",
             "description": "(void) func"
         },
         "llSetClickAction": {
             "prefix": "llSetClickAction",
-            "body": "llSetClickAction(${integer action});\n$0",
+            "body": "llSetClickAction(${integer action});",
             "description": "(void) func"
         },
         "llSetColor": {
             "prefix": "llSetColor",
-            "body": "llSetColor(${vector color}, ${integer face});\n$0",
+            "body": "llSetColor(${vector color}, ${integer face});",
             "description": "(void) func"
         },
         "llSetContentType": {
             "prefix": "llSetContentType",
-            "body": "llSetContentType(${key request_id}, ${integer content_type});\n$0",
+            "body": "llSetContentType(${key request_id}, ${integer content_type});",
             "description": "(void) func"
         },
         "llSetDamage": {
             "prefix": "llSetDamage",
-            "body": "llSetDamage(${float damage});\n$0",
+            "body": "llSetDamage(${float damage});",
             "description": "(void) func"
         },
         "llSetForce": {
             "prefix": "llSetForce",
-            "body": "llSetForce(${vector force}, ${integer local});\n$0",
+            "body": "llSetForce(${vector force}, ${integer local});",
             "description": "(void) func"
         },
         "llSetForceAndTorque": {
             "prefix": "llSetForceAndTorque",
-            "body": "llSetForceAndTorque(${vector force}, ${vector torque}, ${integer local});\n$0",
+            "body": "llSetForceAndTorque(${vector force}, ${vector torque}, ${integer local});",
             "description": "(void) func"
         },
         "llSetHoverHeight": {
             "prefix": "llSetHoverHeight",
-            "body": "llSetHoverHeight(${float height}, ${integer water}, ${float tau});\n$0",
+            "body": "llSetHoverHeight(${float height}, ${integer water}, ${float tau});",
             "description": "(void) func"
         },
         "llSetKeyframedMotion": {
             "prefix": "llSetKeyframedMotion",
-            "body": "llSetKeyframedMotion(${list keyframes}, ${list options});\n$0",
+            "body": "llSetKeyframedMotion(${list keyframes}, ${list options});",
             "description": "(void) func"
         },
         "llSetLinkAlpha": {
             "prefix": "llSetLinkAlpha",
-            "body": "llSetLinkAlpha(${integer linknumber}, ${float alpha}, ${integer face});\n$0",
+            "body": "llSetLinkAlpha(${integer linknumber}, ${float alpha}, ${integer face});",
             "description": "(void) func"
         },
         "llSetLinkCamera": {
             "prefix": "llSetLinkCamera",
-            "body": "llSetLinkCamera(${integer link}, ${vector eye}, ${vector at});\n$0",
+            "body": "llSetLinkCamera(${integer link}, ${vector eye}, ${vector at});",
             "description": "(void) func"
         },
         "llSetLinkColor": {
             "prefix": "llSetLinkColor",
-            "body": "llSetLinkColor(${integer linknumber}, ${vector color}, ${integer face});\n$0",
+            "body": "llSetLinkColor(${integer linknumber}, ${vector color}, ${integer face});",
             "description": "(void) func"
         },
         "llSetLinkMedia": {
@@ -5034,27 +5034,27 @@
         },
         "llSetLinkPrimitiveParams": {
             "prefix": "llSetLinkPrimitiveParams",
-            "body": "llSetLinkPrimitiveParams(${integer linknumber}, ${list rules});\n$0",
+            "body": "llSetLinkPrimitiveParams(${integer linknumber}, ${list rules});",
             "description": "(void) func"
         },
         "llSetLinkPrimitiveParamsFast": {
             "prefix": "llSetLinkPrimitiveParamsFast",
-            "body": "llSetLinkPrimitiveParamsFast(${integer linknumber}, ${list rules});\n$0",
+            "body": "llSetLinkPrimitiveParamsFast(${integer linknumber}, ${list rules});",
             "description": "(void) func"
         },
         "llSetLinkTexture": {
             "prefix": "llSetLinkTexture",
-            "body": "llSetLinkTexture(${integer linknumber}, ${string texture}, ${integer face});\n$0",
+            "body": "llSetLinkTexture(${integer linknumber}, ${string texture}, ${integer face});",
             "description": "(void) func"
         },
         "llSetLinkTextureAnim": {
             "prefix": "llSetLinkTextureAnim",
-            "body": "llSetLinkTextureAnim(${integer link}, ${integer mode}, ${integer face}, ${integer sizex}, ${integer sizey}, ${float start}, ${float length}, ${float rate});\n$0",
+            "body": "llSetLinkTextureAnim(${integer link}, ${integer mode}, ${integer face}, ${integer sizex}, ${integer sizey}, ${float start}, ${float length}, ${float rate});",
             "description": "(void) func"
         },
         "llSetLocalRot": {
             "prefix": "llSetLocalRot",
-            "body": "llSetLocalRot(${rotation rot});\n$0",
+            "body": "llSetLocalRot(${rotation rot});",
             "description": "(void) func"
         },
         "llSetMemoryLimit": {
@@ -5064,32 +5064,32 @@
         },
         "llSetObjectDesc": {
             "prefix": "llSetObjectDesc",
-            "body": "llSetObjectDesc(${string desc});\n$0",
+            "body": "llSetObjectDesc(${string desc});",
             "description": "(void) func"
         },
         "llSetObjectName": {
             "prefix": "llSetObjectName",
-            "body": "llSetObjectName(${string name});\n$0",
+            "body": "llSetObjectName(${string name});",
             "description": "(void) func"
         },
         "llSetParcelMusicURL": {
             "prefix": "llSetParcelMusicURL",
-            "body": "llSetParcelMusicURL(${string url});\n$0",
+            "body": "llSetParcelMusicURL(${string url});",
             "description": "(void) func"
         },
         "llSetPayPrice": {
             "prefix": "llSetPayPrice",
-            "body": "llSetPayPrice(${integer price}, ${list quick_pay_buttons});\n$0",
+            "body": "llSetPayPrice(${integer price}, ${list quick_pay_buttons});",
             "description": "(void) func"
         },
         "llSetPhysicsMaterial": {
             "prefix": "llSetPhysicsMaterial",
-            "body": "llSetPhysicsMaterial(${integer flags}, ${float gravity_multiplier}, ${float restitution}, ${float friction}, ${float density});\n$0",
+            "body": "llSetPhysicsMaterial(${integer flags}, ${float gravity_multiplier}, ${float restitution}, ${float friction}, ${float density});",
             "description": "(void) func"
         },
         "llSetPos": {
             "prefix": "llSetPos",
-            "body": "llSetPos(${vector pos});\n$0",
+            "body": "llSetPos(${vector pos});",
             "description": "(void) func"
         },
         "llSetPrimMediaParams": {
@@ -5099,7 +5099,7 @@
         },
         "llSetPrimitiveParams": {
             "prefix": "llSetPrimitiveParams",
-            "body": "llSetPrimitiveParams(${list rules});\n$0",
+            "body": "llSetPrimitiveParams(${list rules});",
             "description": "(void) func"
         },
         "llSetRegionPos": {
@@ -5109,107 +5109,107 @@
         },
         "llSetRemoteScriptAccessPin": {
             "prefix": "llSetRemoteScriptAccessPin",
-            "body": "llSetRemoteScriptAccessPin(${integer pin});\n$0",
+            "body": "llSetRemoteScriptAccessPin(${integer pin});",
             "description": "(void) func"
         },
         "llSetRot": {
             "prefix": "llSetRot",
-            "body": "llSetRot(${rotation rot});\n$0",
+            "body": "llSetRot(${rotation rot});",
             "description": "(void) func"
         },
         "llSetScale": {
             "prefix": "llSetScale",
-            "body": "llSetScale(${vector scale});\n$0",
+            "body": "llSetScale(${vector scale});",
             "description": "(void) func"
         },
         "llSetScriptState": {
             "prefix": "llSetScriptState",
-            "body": "llSetScriptState(${string name}, ${integer run});\n$0",
+            "body": "llSetScriptState(${string name}, ${integer run});",
             "description": "(void) func"
         },
         "llSetSitText": {
             "prefix": "llSetSitText",
-            "body": "llSetSitText(${string text});\n$0",
+            "body": "llSetSitText(${string text});",
             "description": "(void) func"
         },
         "llSetSoundQueueing": {
             "prefix": "llSetSoundQueueing",
-            "body": "llSetSoundQueueing(${integer queue});\n$0",
+            "body": "llSetSoundQueueing(${integer queue});",
             "description": "(void) func"
         },
         "llSetSoundRadius": {
             "prefix": "llSetSoundRadius",
-            "body": "llSetSoundRadius(${float radius});\n$0",
+            "body": "llSetSoundRadius(${float radius});",
             "description": "(void) func"
         },
         "llSetStatus": {
             "prefix": "llSetStatus",
-            "body": "llSetStatus(${integer status}, ${integer value});\n$0",
+            "body": "llSetStatus(${integer status}, ${integer value});",
             "description": "(void) func"
         },
         "llSetText": {
             "prefix": "llSetText",
-            "body": "llSetText(${string text}, ${vector color}, ${float alpha});\n$0",
+            "body": "llSetText(${string text}, ${vector color}, ${float alpha});",
             "description": "(void) func"
         },
         "llSetTexture": {
             "prefix": "llSetTexture",
-            "body": "llSetTexture(${string texture}, ${integer face});\n$0",
+            "body": "llSetTexture(${string texture}, ${integer face});",
             "description": "(void) func"
         },
         "llSetTextureAnim": {
             "prefix": "llSetTextureAnim",
-            "body": "llSetTextureAnim(${integer mode}, ${integer face}, ${integer sizex}, ${integer sizey}, ${float start}, ${float length}, ${float rate});\n$0",
+            "body": "llSetTextureAnim(${integer mode}, ${integer face}, ${integer sizex}, ${integer sizey}, ${float start}, ${float length}, ${float rate});",
             "description": "(void) func"
         },
         "llSetTimerEvent": {
             "prefix": "llSetTimerEvent",
-            "body": "llSetTimerEvent(${float sec});\n$0",
+            "body": "llSetTimerEvent(${float sec});",
             "description": "(void) func"
         },
         "llSetTorque": {
             "prefix": "llSetTorque",
-            "body": "llSetTorque(${vector torque}, ${integer local});\n$0",
+            "body": "llSetTorque(${vector torque}, ${integer local});",
             "description": "(void) func"
         },
         "llSetTouchText": {
             "prefix": "llSetTouchText",
-            "body": "llSetTouchText(${string text});\n$0",
+            "body": "llSetTouchText(${string text});",
             "description": "(void) func"
         },
         "llSetVehicleFlags": {
             "prefix": "llSetVehicleFlags",
-            "body": "llSetVehicleFlags(${integer flags});\n$0",
+            "body": "llSetVehicleFlags(${integer flags});",
             "description": "(void) func"
         },
         "llSetVehicleFloatParam": {
             "prefix": "llSetVehicleFloatParam",
-            "body": "llSetVehicleFloatParam(${integer param}, ${float value});\n$0",
+            "body": "llSetVehicleFloatParam(${integer param}, ${float value});",
             "description": "(void) func"
         },
         "llSetVehicleRotationParam": {
             "prefix": "llSetVehicleRotationParam",
-            "body": "llSetVehicleRotationParam(${integer param}, ${rotation rot});\n$0",
+            "body": "llSetVehicleRotationParam(${integer param}, ${rotation rot});",
             "description": "(void) func"
         },
         "llSetVehicleType": {
             "prefix": "llSetVehicleType",
-            "body": "llSetVehicleType(${integer type});\n$0",
+            "body": "llSetVehicleType(${integer type});",
             "description": "(void) func"
         },
         "llSetVehicleVectorParam": {
             "prefix": "llSetVehicleVectorParam",
-            "body": "llSetVehicleVectorParam(${integer param}, ${vector vec});\n$0",
+            "body": "llSetVehicleVectorParam(${integer param}, ${vector vec});",
             "description": "(void) func"
         },
         "llSetVelocity": {
             "prefix": "llSetVelocity",
-            "body": "llSetVelocity(${vector velocity}, ${integer local});\n$0",
+            "body": "llSetVelocity(${vector velocity}, ${integer local});",
             "description": "(void) func"
         },
         "llShout": {
             "prefix": "llShout",
-            "body": "llShout(${integer channel}, ${string msg});\n$0",
+            "body": "llShout(${integer channel}, ${string msg});",
             "description": "(void) func"
         },
         "llSin": {
@@ -5219,12 +5219,12 @@
         },
         "llSitTarget": {
             "prefix": "llSitTarget",
-            "body": "llSitTarget(${vector offset}, ${rotation rot});\n$0",
+            "body": "llSitTarget(${vector offset}, ${rotation rot});",
             "description": "(void) func"
         },
         "llSleep": {
             "prefix": "llSleep",
-            "body": "llSleep(${float sec});\n$0",
+            "body": "llSleep(${float sec});",
             "description": "(void) func"
         },
         "llSqrt": {
@@ -5234,32 +5234,32 @@
         },
         "llStartAnimation": {
             "prefix": "llStartAnimation",
-            "body": "llStartAnimation(${string anim});\n$0",
+            "body": "llStartAnimation(${string anim});",
             "description": "(void) func"
         },
         "llStopAnimation": {
             "prefix": "llStopAnimation",
-            "body": "llStopAnimation(${string anim});\n$0",
+            "body": "llStopAnimation(${string anim});",
             "description": "(void) func"
         },
         "llStopHover": {
             "prefix": "llStopHover",
-            "body": "llStopHover();\n$0",
+            "body": "llStopHover();",
             "description": "(void) func"
         },
         "llStopLookAt": {
             "prefix": "llStopLookAt",
-            "body": "llStopLookAt();\n$0",
+            "body": "llStopLookAt();",
             "description": "(void) func"
         },
         "llStopMoveToTarget": {
             "prefix": "llStopMoveToTarget",
-            "body": "llStopMoveToTarget();\n$0",
+            "body": "llStopMoveToTarget();",
             "description": "(void) func"
         },
         "llStopSound": {
             "prefix": "llStopSound",
-            "body": "llStopSound();\n$0",
+            "body": "llStopSound();",
             "description": "(void) func"
         },
         "llStringLength": {
@@ -5284,7 +5284,7 @@
         },
         "llTakeControls": {
             "prefix": "llTakeControls",
-            "body": "llTakeControls(${integer controls}, ${integer accept}, ${integer pass_on});\n$0",
+            "body": "llTakeControls(${integer controls}, ${integer accept}, ${integer pass_on});",
             "description": "(void) func"
         },
         "llTan": {
@@ -5299,32 +5299,32 @@
         },
         "llTargetOmega": {
             "prefix": "llTargetOmega",
-            "body": "llTargetOmega(${vector axis}, ${float spinrate}, ${float gain});\n$0",
+            "body": "llTargetOmega(${vector axis}, ${float spinrate}, ${float gain});",
             "description": "(void) func"
         },
         "llTargetRemove": {
             "prefix": "llTargetRemove",
-            "body": "llTargetRemove(${integer number});\n$0",
+            "body": "llTargetRemove(${integer number});",
             "description": "(void) func"
         },
         "llTeleportAgent": {
             "prefix": "llTeleportAgent",
-            "body": "llTeleportAgent(${key avatar}, ${string landmark}, ${vector position}, ${vector look_at});\n$0",
+            "body": "llTeleportAgent(${key avatar}, ${string landmark}, ${vector position}, ${vector look_at});",
             "description": "(void) func"
         },
         "llTeleportAgentGlobalCoords": {
             "prefix": "llTeleportAgentGlobalCoords",
-            "body": "llTeleportAgentGlobalCoords(${key agent}, ${vector global_coordinates}, ${vector region_coordinates}, ${vector look_at});\n$0",
+            "body": "llTeleportAgentGlobalCoords(${key agent}, ${vector global_coordinates}, ${vector region_coordinates}, ${vector look_at});",
             "description": "(void) func"
         },
         "llTeleportAgentHome": {
             "prefix": "llTeleportAgentHome",
-            "body": "llTeleportAgentHome(${key id});\n$0",
+            "body": "llTeleportAgentHome(${key id});",
             "description": "(void) func"
         },
         "llTextBox": {
             "prefix": "llTextBox",
-            "body": "llTextBox(${key avatar}, ${string message}, ${integer chat_channel});\n$0",
+            "body": "llTextBox(${key avatar}, ${string message}, ${integer chat_channel});",
             "description": "(void) func"
         },
         "llToLower": {
@@ -5344,17 +5344,17 @@
         },
         "llTriggerSound": {
             "prefix": "llTriggerSound",
-            "body": "llTriggerSound(${string sound}, ${float volume});\n$0",
+            "body": "llTriggerSound(${string sound}, ${float volume});",
             "description": "(void) func"
         },
         "llTriggerSoundLimited": {
             "prefix": "llTriggerSoundLimited",
-            "body": "llTriggerSoundLimited(${string sound}, ${float volume}, ${vector top_north_east}, ${vector bottom_south_west});\n$0",
+            "body": "llTriggerSoundLimited(${string sound}, ${float volume}, ${vector top_north_east}, ${vector bottom_south_west});",
             "description": "(void) func"
         },
         "llUnSit": {
             "prefix": "llUnSit",
-            "body": "llUnSit(${key id});\n$0",
+            "body": "llUnSit(${key id});",
             "description": "(void) func"
         },
         "llUnescapeURL": {
@@ -5364,7 +5364,7 @@
         },
         "llUpdateCharacter": {
             "prefix": "llUpdateCharacter",
-            "body": "llUpdateCharacter(${list options});\n$0",
+            "body": "llUpdateCharacter(${list options});",
             "description": "(void) func"
         },
         "llUpdateKeyValue": {
@@ -5389,12 +5389,12 @@
         },
         "llVolumeDetect": {
             "prefix": "llVolumeDetect",
-            "body": "llVolumeDetect(${integer detect});\n$0",
+            "body": "llVolumeDetect(${integer detect});",
             "description": "(void) func"
         },
         "llWanderWithin": {
             "prefix": "llWanderWithin",
-            "body": "llWanderWithin(${vector center}, ${vector radius}, ${list options});\n$0",
+            "body": "llWanderWithin(${vector center}, ${vector radius}, ${list options});",
             "description": "(void) func"
         },
         "llWater": {
@@ -5404,7 +5404,7 @@
         },
         "llWhisper": {
             "prefix": "llWhisper",
-            "body": "llWhisper(${integer channel}, ${string msg});\n$0",
+            "body": "llWhisper(${integer channel}, ${string msg});",
             "description": "(void) func"
         },
         "llWind": {

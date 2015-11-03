@@ -29,4 +29,4 @@ In this repository you can find the syntax grammar, syntax highlighting and snip
 
 ### Bugs, issues & feature requests
 
-* Please search for [existing issues and pull requests](https://github.com/buildersbrewery/linden-scripting-language/issues/?q=is%3Aopen) before [opening a new issue](https://github.com/buildersbrewery/linden-scripting-language/issues/new/).
+* Please [search for existing issues and pull requests](https://github.com/buildersbrewery/linden-scripting-language/issues/?q=is%3Aopen) before [using this link to open a new issue](https://github.com/buildersbrewery/linden-scripting-language/issues/new/?title=Bug%3A&body=%23%23%23%20Issue%20Summary%0A%0A%23%23%23%20Steps%20to%20Reproduce%0A%0A1.%20This%20is%20the%20first%20step%0A2.%20This%20is%20the%20second%20step%0A3.%20This%20is%20the%20third%20step%0A%0AThis%20is%20a%20bug%20because...%0A%0A%23%23%23%20Technical%20details%0A%0A*%20Editor%3A%0A*%20Version%3A%0A*%20Operating%20System%3A&labels[]=discussion&labels[]=watchlist&assignee=buildersbrewery).
