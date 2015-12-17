@@ -1251,6 +1251,11 @@
             "body": "OBJECT_NAME",
             "description": "int (1)"
         },
+        "OBJECT_OMEGA": {
+            "prefix": "OBJECT_OMEGA",
+            "body": "OBJECT_OMEGA",
+            "description": "int (29)"
+        },
         "OBJECT_OWNER": {
             "prefix": "OBJECT_OWNER",
             "body": "OBJECT_OWNER",

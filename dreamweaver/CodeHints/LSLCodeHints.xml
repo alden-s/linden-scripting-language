@@ -658,6 +658,7 @@
         <string id="OBJECT_HOVER_HEIGHT" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_LAST_OWNER_ID" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_NAME" value="" doctypes="LSL" caseSensitive="true" />
+        <string id="OBJECT_OMEGA" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_OWNER" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_PATHFINDING_TYPE" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_PHANTOM" value="" doctypes="LSL" caseSensitive="true" />
