@@ -1,5 +1,14 @@
 # [Linden Scripting Language (LSL)](https://wiki.secondlife.com/wiki/LSL_Portal) syntax grammar, syntax highlighting and snippet files.
 
+[![GitHub total downloads](https://img.shields.io/github/downloads/buildersbrewery/linden-scripting-language/total.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language)
+[![GitHub latest downloads](https://img.shields.io/github/downloads/buildersbrewery/linden-scripting-language/latest/total.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language)
+[![GitHub tag](https://img.shields.io/github/tag/buildersbrewery/linden-scripting-language.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/buildersbrewery/linden-scripting-language.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language/releases)
+[![GitHub issues](https://img.shields.io/github/issues/buildersbrewery/linden-scripting-language.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language/issues?utf8=✓&q=is%3Aissue+is%3Aopen)
+[![GitHub forks](https://img.shields.io/github/forks/buildersbrewery/linden-scripting-language.svg?style=social&label=Fork)](https://github.com/buildersbrewery/linden-scripting-language/network)
+[![GitHub stars](https://img.shields.io/github/stars/buildersbrewery/linden-scripting-language.svg?style=social&label=Star)](https://github.com/buildersbrewery/linden-scripting-language/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/buildersbrewery/linden-scripting-language.svg?style=social&label=Watch)](https://github.com/buildersbrewery/linden-scripting-language/watchers)
+
 ## Readme contents
 
 * [About](#about)
