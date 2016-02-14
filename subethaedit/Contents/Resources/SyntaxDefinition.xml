@@ -801,11 +801,13 @@
                 <string>OBJECT_PHYSICS</string>
                 <string>OBJECT_PHYSICS_COST</string>
                 <string>OBJECT_POS</string>
+                <string>OBJECT_PRIM_COUNT</string>
                 <string>OBJECT_PRIM_EQUIVALENCE</string>
                 <string>OBJECT_RENDER_WEIGHT</string>
                 <string>OBJECT_RETURN_PARCEL</string>
                 <string>OBJECT_RETURN_PARCEL_OWNER</string>
                 <string>OBJECT_RETURN_REGION</string>
+                <string>OBJECT_REZZER_KEY</string>
                 <string>OBJECT_ROOT</string>
                 <string>OBJECT_ROT</string>
                 <string>OBJECT_RUNNING_SCRIPT_COUNT</string>
@@ -814,6 +816,7 @@
                 <string>OBJECT_SERVER_COST</string>
                 <string>OBJECT_STREAMING_COST</string>
                 <string>OBJECT_TEMP_ON_REZ</string>
+                <string>OBJECT_TOTAL_INVENTORY_COUNT</string>
                 <string>OBJECT_TOTAL_SCRIPT_COUNT</string>
                 <string>OBJECT_UNKNOWN_DETAIL</string>
                 <string>OBJECT_VELOCITY</string>

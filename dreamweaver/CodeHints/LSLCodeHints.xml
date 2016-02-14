@@ -665,11 +665,13 @@
         <string id="OBJECT_PHYSICS" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_PHYSICS_COST" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_POS" value="" doctypes="LSL" caseSensitive="true" />
+        <string id="OBJECT_PRIM_COUNT" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_PRIM_EQUIVALENCE" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_RENDER_WEIGHT" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_RETURN_PARCEL" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_RETURN_PARCEL_OWNER" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_RETURN_REGION" value="" doctypes="LSL" caseSensitive="true" />
+        <string id="OBJECT_REZZER_KEY" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_ROOT" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_ROT" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_RUNNING_SCRIPT_COUNT" value="" doctypes="LSL" caseSensitive="true" />
@@ -678,6 +680,7 @@
         <string id="OBJECT_SERVER_COST" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_STREAMING_COST" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_TEMP_ON_REZ" value="" doctypes="LSL" caseSensitive="true" />
+        <string id="OBJECT_TOTAL_INVENTORY_COUNT" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_TOTAL_SCRIPT_COUNT" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_UNKNOWN_DETAIL" value="" doctypes="LSL" caseSensitive="true" />
         <string id="OBJECT_VELOCITY" value="" doctypes="LSL" caseSensitive="true" />

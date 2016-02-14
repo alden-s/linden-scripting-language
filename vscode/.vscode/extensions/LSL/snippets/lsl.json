@@ -1286,6 +1286,11 @@
             "body": "OBJECT_POS",
             "description": "int (3)"
         },
+        "OBJECT_PRIM_COUNT": {
+            "prefix": "OBJECT_PRIM_COUNT",
+            "body": "OBJECT_PRIM_COUNT",
+            "description": "int (30)"
+        },
         "OBJECT_PRIM_EQUIVALENCE": {
             "prefix": "OBJECT_PRIM_EQUIVALENCE",
             "body": "OBJECT_PRIM_EQUIVALENCE",
@@ -1310,6 +1315,11 @@
             "prefix": "OBJECT_RETURN_REGION",
             "body": "OBJECT_RETURN_REGION",
             "description": "int (4)"
+        },
+        "OBJECT_REZZER_KEY": {
+            "prefix": "OBJECT_REZZER_KEY",
+            "body": "OBJECT_REZZER_KEY",
+            "description": "int (32)"
         },
         "OBJECT_ROOT": {
             "prefix": "OBJECT_ROOT",
@@ -1350,6 +1360,11 @@
             "prefix": "OBJECT_TEMP_ON_REZ",
             "body": "OBJECT_TEMP_ON_REZ",
             "description": "int (23)"
+        },
+        "OBJECT_TOTAL_INVENTORY_COUNT": {
+            "prefix": "OBJECT_TOTAL_INVENTORY_COUNT",
+            "body": "OBJECT_TOTAL_INVENTORY_COUNT",
+            "description": "int (31)"
         },
         "OBJECT_TOTAL_SCRIPT_COUNT": {
             "prefix": "OBJECT_TOTAL_SCRIPT_COUNT",

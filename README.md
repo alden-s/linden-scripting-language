@@ -4,9 +4,9 @@
 [![GitHub latest downloads](https://img.shields.io/github/downloads/buildersbrewery/linden-scripting-language/latest/total.svg?style=flat-square&label=downloads%20latest%20release)](https://github.com/buildersbrewery/linden-scripting-language/archive/master.zip)
 [![GitHub release](https://img.shields.io/github/release/buildersbrewery/linden-scripting-language.svg?style=flat-square&label=latest%20release)](https://github.com/buildersbrewery/linden-scripting-language/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/buildersbrewery/linden-scripting-language.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language/issues?utf8=✓&q=is%3Aissue+is%3Aopen)
-[![GitHub watchers](https://img.shields.io/github/watchers/buildersbrewery/linden-scripting-language.svg?style=social&label=Watch)](https://github.com/buildersbrewery/linden-scripting-language/watchers)
-[![GitHub stars](https://img.shields.io/github/stars/buildersbrewery/linden-scripting-language.svg?style=social&label=Star)](https://github.com/buildersbrewery/linden-scripting-language/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/buildersbrewery/linden-scripting-language.svg?style=social&label=Fork)](https://github.com/buildersbrewery/linden-scripting-language/network)
+[![GitHub watchers](https://img.shields.io/github/watchers/buildersbrewery/linden-scripting-language.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language/watchers)
+[![GitHub stars](https://img.shields.io/github/stars/buildersbrewery/linden-scripting-language.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/buildersbrewery/linden-scripting-language.svg?style=flat-square)](https://github.com/buildersbrewery/linden-scripting-language/network)
 
 ## Readme contents
 
