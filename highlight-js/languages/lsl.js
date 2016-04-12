@@ -53,8 +53,13 @@ function(hljs) {
                         end: '\\)',
                         contains: [
                           'self',
-                          ...
-                          ...
+                          'constant.float',
+                          'constant.integer',
+                          'constant.quaternion',
+                          'constant.string',
+                          'constant.vector',
+                          'string',
+                          'number'
                         ]
                     }
                 ]
