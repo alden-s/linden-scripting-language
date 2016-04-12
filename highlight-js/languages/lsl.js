@@ -15,7 +15,7 @@ function(hljs) {
             'Second Life'
         ],
         illegal: ':',
-        contains: [
+        contains: EXPRESSION_CONTAINS.concat([
             hljs.C_LINE_COMMENT_MODE,
             hljs.C_BLOCK_COMMENT_MODE,
             {
@@ -108,6 +108,6 @@ function(hljs) {
                 className: 'type',
                 keywords: 'float integer key list quaternion rotation string vector'
             }
-        ]
+        ])
     };
 }
