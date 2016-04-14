@@ -1,6 +1,7 @@
 %YAML 1.2
 ---
 name: LSL
+# hidden: true
 file_extensions:
   - lsl
 scope: source.lsl
