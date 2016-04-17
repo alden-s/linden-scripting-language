@@ -21,7 +21,8 @@
                             },
                             {
                                 "caption": "Settings – User",
-                                "command": "open_lsl_user_settings",
+                                "command": "open_file",
+                                "args": {"file": "${packages}/User/LSL.sublime-settings"},
                                 "mnemonic": "U"
                             },
                             { "caption": "-" },
