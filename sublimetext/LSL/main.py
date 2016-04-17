@@ -31,6 +31,29 @@ def plugin_loaded():
     chmod_lslint()
     set_default_lsl_indent_style()
 
+class OpenLSLDefaultSettingsCommand(sublime_plugin.WindowCommand):
+    def __init__(self, *args, **kwargs):
+        super(OpenLSLDefaultSettingsCommand, self).__init__(*args, **kwargs)
+        self.view = None
+
+    def run(self):
+        self.view = sublime.active_window().open_file(
+            os.path.join(
+                sublime.packages_path(),
+                "LSL",
+                "LSL.sublime-settings"
+            )
+        )
+
+        sublime.set_timeout(self.set_view_readonly, 1)
+
+    def set_view_readonly(self):
+        if self.view is None or self.view.is_loading():
+            sublime.set_timeout(self.set_view_readonly, 1)
+            return
+
+        self.view.set_read_only(True)
+
 class ChangeEditorSchemeCommand(sublime_plugin.WindowCommand):
     _is_checked = False
 
