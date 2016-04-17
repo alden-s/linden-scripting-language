@@ -15,6 +15,17 @@
                         "children":
                         [
                             {
+                                "caption": "Settings – Default (read-only)",
+                                "command": "open_lsl_default_settings",
+                                "mnemonic": "D"
+                            },
+                            {
+                                "caption": "Settings – User",
+                                "command": "open_lsl_user_settings",
+                                "mnemonic": "U"
+                            },
+                            { "caption": "-" },
+                            {
                                 "command": "change_editor_scheme",
                                 "caption": "Use LindenLab Viewer color scheme",
                                 "mnemonic": "T",
