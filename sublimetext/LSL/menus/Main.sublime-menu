@@ -29,13 +29,13 @@
                             {
                                 "command": "change_editor_scheme",
                                 "caption": "Use LindenLab Viewer color scheme",
-                                "mnemonic": "T",
+                                "mnemonic": "S",
                                 "checkbox": false
                             },
                             {
                                 "command": "change_style",
                                 "caption": "Use K&R Indent Style instead of Allman Style",
-                                "mnemonic": "S",
+                                "mnemonic": "I",
                                 "checkbox": false
                             }
                         ]
