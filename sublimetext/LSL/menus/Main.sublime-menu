@@ -16,26 +16,22 @@
                         [
                             {
                                 "caption": "Settings – Default (read-only)",
-                                "command": "open_lsl_default_settings",
-                                "mnemonic": "D"
+                                "command": "open_lsl_default_settings"
                             },
                             {
                                 "caption": "Settings – User",
                                 "command": "open_file",
-                                "args": {"file": "${packages}/User/LSL.sublime-settings"},
-                                "mnemonic": "U"
+                                "args": {"file": "${packages}/User/LSL.sublime-settings"}
                             },
                             { "caption": "-" },
                             {
                                 "command": "change_editor_scheme",
                                 "caption": "Use LindenLab Viewer color scheme",
-                                "mnemonic": "S",
                                 "checkbox": false
                             },
                             {
                                 "command": "change_style",
                                 "caption": "Use K&R Indent Style instead of Allman Style",
-                                "mnemonic": "I",
                                 "checkbox": false
                             }
                         ]
