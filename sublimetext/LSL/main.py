@@ -31,9 +31,9 @@ def plugin_loaded():
     chmod_lslint()
     set_default_lsl_indent_style()
 
-class OpenLSLDefaultSettingsCommand(sublime_plugin.WindowCommand):
+class OpenLslDefaultSettingsCommand(sublime_plugin.WindowCommand):
     def __init__(self, *args, **kwargs):
-        super(OpenLSLDefaultSettingsCommand, self).__init__(*args, **kwargs)
+        super(OpenLslDefaultSettingsCommand, self).__init__(*args, **kwargs)
         self.view = None
 
     def run(self):
@@ -41,6 +41,7 @@ class OpenLSLDefaultSettingsCommand(sublime_plugin.WindowCommand):
             os.path.join(
                 sublime.packages_path(),
                 "LSL",
+                "settings",
                 "LSL.sublime-settings"
             )
         )
