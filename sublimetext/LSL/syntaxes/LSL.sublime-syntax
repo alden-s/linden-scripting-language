@@ -28,42 +28,45 @@ contexts:
   main:
     - include: value
   inlist:
+    - match: '\]'
+      scope: punctuation.definition.list.end.lsl
+      pop: true
     - match: '\['
       scope: punctuation.definition.list.begin.lsl
       push:
         - meta_scope: meta.inlist.lsl
-        - match: '\]'
-          scope: punctuation.definition.list.end.lsl
+        - match: '(?=\])'
           pop: true
         - include: infunc
-  invalid-broken:
+  lsl_invalid:
     - match: '{{lsl_invalid_broken}}'
       scope: invalid.broken.lsl
-  invalid-deprecated:
     - match: '{{lsl_invalid_deprecated}}'
       scope: invalid.deprecated.lsl
-  invalid-illegal:
     - match: '{{lsl_invalid_illegal}}'
       scope: invalid.illegal.lsl
-  invalid-unimplemented:
     - match: '{{lsl_invalid_unimplemented}}'
       scope: invalid.unimplemented.lsl
-  reserved-godmode:
+  lsl_reserved:
     - match: '{{lsl_reserved_godmode}}'
       scope: reserved.godmode.lsl
-  reserved-log:
     - match: '{{lsl_reserved_log}}'
       scope: reserved.log.lsl
   incodeblock:
-    - match: '\{'
+    - match: '{'
       scope: punctuation.definition.codeblock.begin.lsl
       push:
         - meta_scope: meta.incodeblock.lsl
-        - match: '\}'
+        - match: '}'
           scope: punctuation.definition.codeblock.end.lsl
           pop: true
         - include: infunc
-  comment-block:
+  lsl_comment_line:
+    - match: (//).*$\n?
+      scope: comment.line.double-slash.lsl
+      captures:
+        1: punctuation.definition.comment.lsl
+  lsl_comment_block:
     - match: /\*
       scope: punctuation.definition.comment.block.begin.lsl
       push:
@@ -71,73 +74,68 @@ contexts:
         - match: \*/
           scope: punctuation.definition.comment.block.end.lsl
           pop: true
-  comment-line:
-    - match: (//).*$\n?
-      scope: comment.line.double-slash.lsl
-      captures:
-        1: punctuation.definition.comment.lsl
+  lsl_comments:
+    - include: lsl_comment_line
+    - include: lsl_comment_block
   event:
-    - match: '{{lsl_event}}'
-      scope: support.function.event.lsl
+    - match: '({{lsl_event}})(?=\s*\(.*?\))'
+      captures:
+        1: support.function.event.lsl
       push:
         - meta_scope: meta.event.lsl
-        - match: '\}'
-          scope: punctuation.definition.event.end.lsl
-          pop: true
         - match: '\('
+          scope: punctuation.definition.parameters.begin.lsl
           push:
-            - meta_scope: meta.event.parameters.lsl
             - match: '\)'
+              scope: punctuation.definition.parameters.end.lsl
               pop: true
+            - meta_scope: meta.event.parameters.lsl
             - include: parameters
+        - match: '}'
+          scope: punctuation.definition.meta.event.body.end.lsl
+          pop: true
         - match: '{'
+          scope: punctuation.definition.meta.event.body.begin.lsl
           push:
             - meta_scope: meta.event.body.lsl
             - match: '(?=})'
               pop: true
             - include: infunc
-        - include: comment-line
-        - include: comment-block
+        - include: lsl_comments
   flow_control:
     - match: '{{lsl_control_flow}}'
       scope: keyword.control.flow.lsl
   functiondef:
-    - match: (?:{{lsl_storage_type}}\s+)?(\w+)?\s*(?=\(.*?\))
+    - match: (?:({{lsl_storage_type}})\s+)?([a-zA-Z_]\w*)(?=\s*\(.*?\))
       captures:
-        0: punctuation.definition.function.begin.lsl
-        1: entity.name.function.lsl
+        1: storage.type.lsl
+        2: entity.name.function.lsl
       push:
         - meta_scope: meta.function.lsl
-        - match: '}'
-          scope: punctuation.definition.function.end.lsl
-          pop: true
         - match: '\('
           scope: punctuation.definition.parameters.begin.lsl
           push:
-            - meta_scope: meta.function.parameters.lsl
             - match: '\)'
               scope: punctuation.definition.parameters.end.lsl
               pop: true
+            - meta_scope: meta.function.parameters.lsl
             - include: parameters
+        - match: '}'
+          scope: punctuation.definition.meta.function.user-defined.end.lsl
+          pop: true
         - match: '{'
-          scope: punctuation.definition.function.begin.lsl
+          scope: punctuation.definition.meta.function.user-defined.begin.lsl
           push:
             - meta_scope: meta.infunction.lsl
             - match: '(?=})'
               pop: true
             - include: infunc
-        - include: comment-line
-        - include: comment-block
+        - include: lsl_comments
   infunc:
-    - include: comment-line
-    - include: comment-block
-    - include: quoted
-    - include: invalid-broken
-    - include: invalid-deprecated
-    - include: invalid-illegal
-    - include: invalid-unimplemented
-    - include: reserved-godmode
-    - include: reserved-log
+    - include: lsl_comments
+    - include: lsl_strings
+    - include: lsl_invalid
+    - include: lsl_reserved
     - include: incodeblock
     - include: inlist
     - include: flow_control
@@ -184,7 +182,7 @@ contexts:
       scope: keyword.operator.shift.left.lsl
     - match: '>>'
       scope: keyword.operator.shift.right.lsl
-    - match: <=
+    - match: '<='
       scope: keyword.operator.comparison.less-equal.lsl
     - match: '>='
       scope: keyword.operator.comparison.greater-equal.lsl
@@ -206,7 +204,7 @@ contexts:
       scope: keyword.operator.comparison.not.lsl
     - match: '!'
       scope: keyword.operator.logical.not.lsl
-    - match: <
+    - match: '<'
       scope: keyword.operator.comparison.less.lsl
     - match: '>'
       scope: keyword.operator.comparison.greater.lsl
@@ -219,20 +217,14 @@ contexts:
     - match: ':'
       scope: invalid.illegal.keyword.operator.unrecognized.wrong-division.lsl
   parameters:
-    - match: '{{lsl_storage_type}}'
+    - match: '(?:\b({{lsl_storage_type}})\b\s+(?:\b([a-zA-Z_]\w*)\b))(?:(,)\s*(?:\b({{lsl_storage_type}})\b\s+(?:\b([a-zA-Z_]\w*)\b)))?'
       captures:
         1: storage.type.lsl
-      push:
-        - match: \b([_a-zA-Z]\w*)\b
-          captures:
-            1: entity.name.variable.lsl
-          pop: true
-        - include: storage_type
-        - match: \b([_a-zA-Z]\w*)\b
-          scope: entity.name.variable.lsl
-        - match: ','
-          scope: punctuation.separator.lsl
-  quoted:
+        2: entity.name.variable.lsl
+        3: punctuation.definition.separator.komma.lsl
+        4: storage.type.lsl
+        5: entity.name.variable.lsl
+  lsl_strings:
     - match: '"'
       scope: punctuation.definition.string.quoted.begin.lsl
       push:
@@ -251,36 +243,32 @@ contexts:
         - match: '\\.'
           scope: invalid.illegal.constant.character.escape.lsl
   state:
-    - match: ^\s*((?:state)\s+\w+|default)\b
-      scope: entity.name.class.state.begin.lsl
+    - match: ^\s*(?:(?:state)\s+([a-zA-Z_]\w*)|(default))\b
+      captures:
+        1: entity.name.state.lsl
+        2: entity.name.state.lsl
       push:
         - meta_scope: meta.state.lsl
-        - match: '\}'
+        - match: '}'
           scope: punctuation.definition.state.end.lsl
           pop: true
         - match: '{'
+          scope: punctuation.definition.state.begin.lsl
           push:
             - meta_scope: meta.state.body.lsl
             - match: '(?=})'
               pop: true
-            - include: comment-line
-            - include: comment-block
+            - include: lsl_comments
             - include: event
-        - include: comment-line
-        - include: comment-block
+        - include: lsl_comments
   storage_type:
-    - match: \b(?:integer|float|string|key|vector|quaternion|rotation|list)\b
+    - match: '{{lsl_storage_type}}'
       scope: storage.type.lsl
   value:
-    - include: comment-line
-    - include: comment-block
-    - include: quoted
-    - include: invalid-broken
-    - include: invalid-deprecated
-    - include: invalid-illegal
-    - include: invalid-unimplemented
-    - include: reserved-godmode
-    - include: reserved-log
+    - include: lsl_comments
+    - include: lsl_strings
+    - include: lsl_invalid
+    - include: lsl_reserved
     - include: state
     - include: storage_type
     - include: number
