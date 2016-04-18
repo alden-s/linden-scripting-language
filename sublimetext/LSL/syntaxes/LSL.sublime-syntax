@@ -243,7 +243,7 @@ contexts:
         - match: '\\.'
           scope: invalid.illegal.constant.character.escape.lsl
   state:
-    - match: ^\s*(?:(?:state)\s+([a-zA-Z_]\w*)|(default))\b
+    - match: (?:\b(?:state)\s+([a-zA-Z_]\w*)|(default))\b
       captures:
         1: entity.name.class.state.lsl
         2: entity.name.class.state.lsl
