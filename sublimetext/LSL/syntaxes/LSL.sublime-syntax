@@ -245,8 +245,8 @@ contexts:
   state:
     - match: ^\s*(?:(?:state)\s+([a-zA-Z_]\w*)|(default))\b
       captures:
-        1: entity.name.state.lsl
-        2: entity.name.state.lsl
+        1: entity.name.class.state.lsl
+        2: entity.name.class.state.lsl
       push:
         - meta_scope: meta.state.lsl
         - match: '}'
