@@ -37,22 +37,22 @@ contexts:
           pop: true
         - include: infunc
   invalid-broken:
-    - match: {{lsl_invalid_broken}}
+    - match: '{{lsl_invalid_broken}}'
       scope: invalid.broken.lsl
   invalid-deprecated:
-    - match: {{lsl_invalid_deprecated}}
+    - match: '{{lsl_invalid_deprecated}}'
       scope: invalid.deprecated.lsl
   invalid-illegal:
-    - match: {{lsl_invalid_illegal}}
+    - match: '{{lsl_invalid_illegal}}'
       scope: invalid.illegal.lsl
   invalid-unimplemented:
-    - match: {{lsl_invalid_unimplemented}}
+    - match: '{{lsl_invalid_unimplemented}}'
       scope: invalid.unimplemented.lsl
   reserved-godmode:
-    - match: {{lsl_reserved_godmode}}
+    - match: '{{lsl_reserved_godmode}}'
       scope: reserved.godmode.lsl
   reserved-log:
-    - match: {{lsl_reserved_log}}
+    - match: '{{lsl_reserved_log}}'
       scope: reserved.log.lsl
   incodeblock:
     - match: '\{'
@@ -77,7 +77,7 @@ contexts:
       captures:
         1: punctuation.definition.comment.lsl
   event:
-    - match: {{lsl_event}}
+    - match: '{{lsl_event}}'
       scope: support.function.event.lsl
       push:
         - meta_scope: meta.event.lsl
@@ -99,7 +99,7 @@ contexts:
         - include: comment-line
         - include: comment-block
   flow_control:
-    - match: {{lsl_control_flow}}
+    - match: '{{lsl_control_flow}}'
       scope: keyword.control.flow.lsl
   functiondef:
     - match: (?:{{lsl_storage_type}}\s+)?(\w+)?\s*(?=\(.*?\))
@@ -147,20 +147,20 @@ contexts:
     - include: number
     - include: operator
   llconstant:
-    - match: {{lsl_constant_integer}}
+    - match: '{{lsl_constant_integer}}'
       scope: constant.language.built-in.integer.lsl
-    - match: {{lsl_constant_integer_boolean}}
+    - match: '{{lsl_constant_integer_boolean}}'
       scope: constant.language.built-in.integer.boolean.lsl
-    - match: {{lsl_constant_string}}
+    - match: '{{lsl_constant_string}}'
       scope: constant.language.built-in.string.lsl
-    - match: {{lsl_constant_float}}
+    - match: '{{lsl_constant_float}}'
       scope: constant.language.built-in.float.lsl
-    - match: {{lsl_constant_vector}}
+    - match: '{{lsl_constant_vector}}'
       scope: constant.language.built-in.vector.lsl
-    - match: {{lsl_constant_rotation}}
+    - match: '{{lsl_constant_rotation}}'
       scope: constant.language.built-in.rotation.lsl
   llfunction:
-    - match: {{lsl_function}}
+    - match: '{{lsl_function}}'
       scope: support.function.built-in.lsl
   number:
     - match: \b(?i:(\d+\.\d*(e[\-\+]?\d+)?))(?=[^a-zA-Z_])
@@ -219,7 +219,7 @@ contexts:
     - match: ':'
       scope: invalid.illegal.keyword.operator.unrecognized.wrong-division.lsl
   parameters:
-    - match: {{lsl_storage_type}}
+    - match: '{{lsl_storage_type}}'
       captures:
         1: storage.type.lsl
       push:
