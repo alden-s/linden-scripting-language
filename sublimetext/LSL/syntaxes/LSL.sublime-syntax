@@ -62,16 +62,16 @@ contexts:
           pop: true
         - include: infunc
   lsl_comment_line:
-    - match: (//).*$\n?
+    - match: '(//).*$\n?'
       scope: comment.line.double-slash.lsl
       captures:
         1: punctuation.definition.comment.lsl
   lsl_comment_block:
-    - match: /\*
+    - match: '/\*'
       scope: punctuation.definition.comment.block.begin.lsl
       push:
         - meta_scope: comment.block.lsl
-        - match: \*/
+        - match: '\*/'
           scope: punctuation.definition.comment.block.end.lsl
           pop: true
   lsl_comments:
@@ -106,7 +106,7 @@ contexts:
     - match: '{{lsl_control_flow}}'
       scope: keyword.control.flow.lsl
   functiondef:
-    - match: (?:({{lsl_storage_type}})\s+)?([[:alpha:]_]\w*)(?=\s*\(.*?\))
+    - match: (?:({{lsl_storage_type}})\s+)?([[:alpha:]_][:word:]*)(?=\s*\(.*?\))
       captures:
         1: storage.type.lsl
         2: entity.name.function.lsl
@@ -163,7 +163,7 @@ contexts:
   number:
     - match: \b(?i:(\d+\.\d*(e[\-\+]?\d+)?))(?=[^[:alpha:]_])
       scope: constant.numeric.float.lsl
-    - match: (?<=[^[:alnum:]_])(?i:(\.\d+(e[\-\+]?\d+)?))
+    - match: (?<=[^[:word:]])(?i:(\.\d+(e[\-\+]?\d+)?))
       scope: constant.numeric.float.lsl
     - match: \b(?i:(\d+e[\-\+]?\d+))
       scope: constant.numeric.float.lsl
@@ -171,10 +171,10 @@ contexts:
       scope: constant.numeric.integer.hexadecimal.lsl
     - match: \b(0[0-7]+)
       scope: constant.numeric.integer.octal.lsl
-    - match: \b([1-9]+[0-9]*|0)
+    - match: \b([1-9][:digit:]*|0)
       scope: constant.numeric.integer.decimal.lsl
   operator:
-    - match: \+\+
+    - match: '\+\+'
       scope: keyword.operator.increment.lsl
     - match: '--'
       scope: keyword.operator.decrement.lsl
@@ -188,17 +188,17 @@ contexts:
       scope: keyword.operator.comparison.greater-equal.lsl
     - match: '&&'
       scope: keyword.operator.logical.and.lsl
-    - match: \|\|
+    - match: '\|\|'
       scope: keyword.operator.logical.or.lsl
     - match: '~'
       scope: keyword.operator.bit-wise.not.lsl
-    - match: \^
+    - match: '\^'
       scope: keyword.operator.bit-wise.xor.lsl
     - match: '&'
       scope: keyword.operator.bit-wise.and.lsl
-    - match: \|
+    - match: '\|'
       scope: keyword.operator.bit-wise.or.lsl
-    - match: ==
+    - match: '=='
       scope: keyword.operator.comparison.equal.lsl
     - match: '!='
       scope: keyword.operator.comparison.not.lsl
@@ -217,7 +217,7 @@ contexts:
     - match: ':'
       scope: invalid.illegal.keyword.operator.unrecognized.wrong-division.lsl
   parameters:
-    - match: '(?:\b({{lsl_storage_type}})\b\s+(?:\b([[:alpha:]_]\w*)\b))(?:(,)\s*(?:\b({{lsl_storage_type}})\b\s+(?:\b([[:alpha:]_]\w*)\b)))?'
+    - match: '(?:\b({{lsl_storage_type}})\b\s+(?:\b([[:alpha:]_][:word:]*)\b))(?:(,)\s*(?:\b({{lsl_storage_type}})\b\s+(?:\b([[:alpha:]_][:word:]*)\b)))?'
       captures:
         1: storage.type.lsl
         2: entity.name.variable.lsl
@@ -243,7 +243,7 @@ contexts:
         - match: '\\.'
           scope: invalid.illegal.constant.character.escape.lsl
   state:
-    - match: (?:\b(?:state)\s+([[:alpha:]_]\w*)|(default))\b
+    - match: (?:\b(?:state)\s+([[:alpha:]_][:word:]*)|(default))\b
       captures:
         1: entity.name.class.state.lsl
         2: entity.name.class.state.lsl
