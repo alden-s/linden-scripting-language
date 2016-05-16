@@ -61,7 +61,6 @@ contexts:
       captures:
         1: support.function.event.lsl
       push:
-        - meta_scope: meta.event.lsl
         - match: '\('
           scope: punctuation.definition.event.parameters.begin.lsl
           push:
@@ -92,7 +91,6 @@ contexts:
         1: storage.type.lsl
         2: entity.name.function.user-defined.lsl
       push:
-        - meta_scope: meta.function.user-defined.lsl
         - match: '\('
           scope: punctuation.definition.function.user-defined.parameters.begin.lsl
           push:
@@ -255,7 +253,6 @@ contexts:
       captures:
         1: entity.name.class.state.lsl
       push:
-        - meta_scope: meta.state.lsl
         - match: '\}'
           scope: punctuation.definition.state.end.lsl
           pop: true
