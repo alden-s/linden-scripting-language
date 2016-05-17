@@ -91,10 +91,11 @@ contexts:
       captures:
         1: keyword.control.flow.lsl
   user_defined_functions:
-    - match: '(?:(?:\b({{lsl_storage_type}})\b\s+)?(?:\b({{lsl_word}})\b)(?=\s*\())'
+    - match: '(?:((?:\b({{lsl_storage_type}})\b\s+)?(?:\b({{lsl_word}})\b))(?=\s*\())'
       captures:
-        1: storage.type.lsl
-        2: entity.name.function.user-defined.lsl
+        1: meta.function.user-defined.lsl
+        2: storage.type.lsl
+        3: entity.name.function.user-defined.lsl
       push:
         - match: '\('
           scope: punctuation.definition.function.user-defined.parameters.begin.lsl
