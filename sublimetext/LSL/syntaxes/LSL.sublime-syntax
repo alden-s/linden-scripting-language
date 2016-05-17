@@ -30,17 +30,19 @@ contexts:
     - include: value
   lsl_lists:
     - match: '\['
-      scope: punctuation.definition.lsl-list.begin.lsl
+      scope: punctuation.definition.list.begin.lsl
       push:
-        - meta_scope: meta.lsl-list.lsl
+        - meta_scope: list.lsl
+        - meta_content_scope: meta.contents.list.lsl
         - match: '\]'
-          scope: punctuation.definition.lsl-list.end.lsl
+          scope: punctuation.definition.list.end.lsl
           pop: true
         - include: infunc
   begin_end:
     - match: '\{'
       push:
-        - meta_scope: meta.incode.lsl
+        - meta_scope: scope.lsl
+        - meta_content_scope: meta.contents.scope.lsl
         - match: '\}'
           pop: true
         - include: infunc
@@ -53,6 +55,7 @@ contexts:
       scope: punctuation.definition.comment.block.begin.lsl
       push:
         - meta_scope: comment.block.lsl
+        - meta_content_scope: meta.contents.comment.block.lsl
         - match: '\*/'
           scope: punctuation.definition.comment.block.end.lsl
           pop: true
@@ -64,20 +67,20 @@ contexts:
         - match: '\('
           scope: punctuation.definition.event.parameters.begin.lsl
           push:
-            - meta_scope: meta.event.parameters.lsl
+            - meta_content_scope: meta.parameters.event.lsl
             - match: '\)'
               scope: punctuation.definition.event.parameters.end.lsl
               pop: true
             - include: parameters
         - match: '\}'
-          scope: punctuation.definition.meta.event.body.end.lsl
+          scope: punctuation.definition.meta.event.contents.end.lsl
           pop: true
         - match: '{'
-          scope: punctuation.definition.meta.event.body.begin.lsl
+          scope: punctuation.definition.meta.event.contents.begin.lsl
           push:
-            - meta_scope: meta.event.body.lsl
+            - meta_content_scope: meta.contents.event.lsl
             - match: '(?=})'
-              scope: punctuation.definition.meta.event.body.end.lsl
+              scope: punctuation.definition.meta.event.contents.end.lsl
               pop: true
             - include: infunc
         - include: comments
@@ -94,7 +97,7 @@ contexts:
         - match: '\('
           scope: punctuation.definition.function.user-defined.parameters.begin.lsl
           push:
-            - meta_scope: meta.function.user-defined.parameters.lsl
+            - meta_content_scope: meta.parameters.function.user-defined.lsl
             - match: '\)'
               scope: punctuation.definition.function.user-defined.parameters.end.lsl
               pop: true
@@ -105,7 +108,7 @@ contexts:
         - match: '{'
           scope: punctuation.definition.meta.function.user-defined.begin.lsl
           push:
-            - meta_scope: meta.function.user-defined.body.lsl
+            - meta_content_scope: meta.contents.function.user-defined.lsl
             - match: '(?=})'
               scope: punctuation.definition.meta.function.user-defined.end.lsl
               pop: true
@@ -235,6 +238,7 @@ contexts:
       scope: punctuation.definition.string.quoted.begin.lsl
       push:
         - meta_scope: string.quoted.double.lsl
+        - meta_content_scope: meta.contents.string.quoted.double.lsl
         - match: '"'
           scope: punctuation.definition.string.quoted.end.lsl
           pop: true
@@ -248,20 +252,22 @@ contexts:
           scope: constant.character.escape.double-quote.lsl
         - match: '\\.'
           scope: invalid.illegal.constant.character.escape.lsl
+#       - include: 'scope:source.json'
+#       - include: 'scope:source.html'
   state:
     - match: '\b((?:state)\s+{{lsl_word}}|default)\b'
       captures:
         1: entity.name.class.state.lsl
       push:
         - match: '\}'
-          scope: punctuation.definition.state.end.lsl
+          scope: punctuation.definition.class.state.end.lsl
           pop: true
         - match: '{'
-          scope: punctuation.definition.state.begin.lsl
+          scope: punctuation.definition.class.state.begin.lsl
           push:
-            - meta_scope: meta.state.body.lsl
+            - meta_content_scope: meta.class.state.body.lsl
             - match: '(?=})'
-              scope: punctuation.definition.state.end.lsl
+              scope: punctuation.definition.class.state.end.lsl
               pop: true
             - include: comments
             - include: event
