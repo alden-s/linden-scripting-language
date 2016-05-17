@@ -41,7 +41,7 @@ contexts:
       scope: punctuation.definition.list.begin.lsl
       push:
         - meta_scope: list.lsl
-        - meta_content_scope: meta.contents.list.lsl
+        - meta_content_scope: meta.list.body.lsl
         - match: '\]'
           scope: punctuation.definition.list.end.lsl
           pop: true
@@ -55,7 +55,7 @@ contexts:
       scope: punctuation.definition.comment.block.begin.lsl
       push:
         - meta_scope: comment.block.lsl
-        - meta_content_scope: meta.contents.comment.block.lsl
+        - meta_content_scope: meta.comment.block.body.lsl
         - match: '\*/'
           scope: punctuation.definition.comment.block.end.lsl
           pop: true
@@ -68,7 +68,7 @@ contexts:
         - match: '\('
           scope: punctuation.definition.event.parameters.begin.lsl
           push:
-            - meta_content_scope: meta.parameters.event.lsl
+            - meta_content_scope: meta.event.parameters.lsl
             - match: '\)'
               scope: punctuation.definition.event.parameters.end.lsl
               pop: true
@@ -79,7 +79,7 @@ contexts:
         - match: '{'
           scope: punctuation.definition.meta.event.contents.begin.lsl
           push:
-            - meta_content_scope: meta.contents.event.lsl
+            - meta_content_scope: meta.event.body.lsl
             - match: '(?=})'
               scope: punctuation.definition.meta.event.contents.end.lsl
               pop: true
@@ -93,14 +93,14 @@ contexts:
   user_defined_functions:
     - match: '(?:((?:\b({{lsl_storage_type}})\b\s+)?(?:\b({{lsl_word}})\b))(?=\s*\())'
       captures:
-        1: meta.function.user-defined.lsl
+        1: meta.function.user-defined.declaration.lsl
         2: storage.type.lsl
         3: entity.name.function.user-defined.lsl
       push:
         - match: '\('
           scope: punctuation.definition.function.user-defined.parameters.begin.lsl
           push:
-            - meta_content_scope: meta.parameters.function.user-defined.lsl
+            - meta_content_scope: meta.function.user-defined.parameters.lsl
             - match: '\)'
               scope: punctuation.definition.function.user-defined.parameters.end.lsl
               pop: true
@@ -111,7 +111,7 @@ contexts:
         - match: '{'
           scope: punctuation.definition.meta.function.user-defined.begin.lsl
           push:
-            - meta_content_scope: meta.contents.function.user-defined.lsl
+            - meta_content_scope: meta.function.user-defined.body.lsl
             - match: '(?=})'
               scope: punctuation.definition.meta.function.user-defined.end.lsl
               pop: true
@@ -129,12 +129,12 @@ contexts:
     - include: operators
     - match: '(?:\b((?:state)\s+{{lsl_word}})\b)(;)'
       captures:
-        1: entity.name.class.state.lsl
+        1: meta.target.class.state.lsl
         2: punctuation.separator.lsl
     - match: '\{'
       push:
         - meta_scope: scope.lsl
-        - meta_content_scope: meta.contents.scope.lsl
+        - meta_content_scope: meta.scope.body.lsl
         - match: '\}'
           pop: true
         - include: infunc
@@ -253,7 +253,7 @@ contexts:
       scope: punctuation.definition.string.quoted.begin.lsl
       push:
         - meta_scope: string.quoted.double.lsl
-        - meta_content_scope: meta.contents.string.quoted.double.lsl
+        - meta_content_scope: meta.string.quoted.double.body.lsl
         - match: '"'
           scope: punctuation.definition.string.quoted.end.lsl
           pop: true
