@@ -3,7 +3,7 @@
 <plist version="1.0">
 	<dict>
 		<key>name</key><string>symbols</string>
-		<key>scope</key><string>punctuation.definition.function.begin.lsl</string>
+		<key>scope</key><string>meta.function.user-defined.lsl</string>
 		<key>settings</key>
 		<dict>
 			<key>showInSymbolList</key><integer>1</integer>
