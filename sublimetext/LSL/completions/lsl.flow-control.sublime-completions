@@ -1,5 +1,5 @@
 {
-    "scope": "source.lsl",
+    "scope": "meta.function.user-defined.body.lsl, meta.event.body.lsl",
     "completions":
     [
         { "trigger": "do\tflow control", "contents": "do${LSL_SPACE_OR_NEWLINE}{\n\t$0\n}${LSL_SPACE_OR_NEWLINE}while (${1:condition});" },
