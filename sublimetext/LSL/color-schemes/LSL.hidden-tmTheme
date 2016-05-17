@@ -50,6 +50,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key><string>#cd4d26</string>
+                <key>fontStyle</key><string>italic</string>
             </dict>
         </dict>
         <dict>
@@ -58,6 +59,7 @@
             <key>settings</key>
             <dict>
                 <key>foreground</key><string>#cd4d26</string>
+                <key>fontStyle</key><string>bold</string>
             </dict>
         </dict>
         <dict>
