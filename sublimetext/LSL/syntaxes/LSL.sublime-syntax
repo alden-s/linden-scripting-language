@@ -27,8 +27,16 @@ variables:
   lsl_word: '(?:[A-Za-z_]\w*)'
 contexts:
   main:
-    - include: value
-  lsl_lists:
+    - include: comments
+    - include: lsl_strings
+    - include: user_defined_functions
+    - include: lsl_states
+    - include: lsl_types
+    - include: lsl_constants
+    - include: numbers
+    - include: operators
+    - include: lists
+  lists:
     - match: '\['
       scope: punctuation.definition.list.begin.lsl
       push:
@@ -36,14 +44,6 @@ contexts:
         - meta_content_scope: meta.contents.list.lsl
         - match: '\]'
           scope: punctuation.definition.list.end.lsl
-          pop: true
-        - include: infunc
-  begin_end:
-    - match: '\{'
-      push:
-        - meta_scope: scope.lsl
-        - meta_content_scope: meta.contents.scope.lsl
-        - match: '\}'
           pop: true
         - include: infunc
   comments:
@@ -61,6 +61,7 @@ contexts:
           pop: true
   event:
     - match: '\b({{lsl_event}})\b'
+      comment: 'https://wiki.secondlife.com/wiki/Category:LSL_Events'
       captures:
         1: support.function.event.lsl
       push:
@@ -86,9 +87,10 @@ contexts:
         - include: comments
   flow_control:
     - match: '\b({{lsl_control_flow}})\b'
+      comment: 'https://wiki.secondlife.com/wiki/Category:LSL_Flow_Control'
       captures:
         1: keyword.control.flow.lsl
-  functiondef:
+  user_defined_functions:
     - match: '(?:(?:\b({{lsl_storage_type}})\b\s+)?(?:\b({{lsl_word}})\b)(?=\s*\())'
       captures:
         1: storage.type.lsl
@@ -115,20 +117,26 @@ contexts:
             - include: infunc
         - include: comments
   infunc:
-    - include: begin_end
     - include: comments
-    - include: lsl_lists
-    - include: quoted
+    - include: lists
+    - include: lsl_strings
     - include: flow_control
     - include: lsl_types
     - include: lsl_constants
     - include: lsl_functions
-    - include: number
-    - include: operator
+    - include: numbers
+    - include: operators
     - match: '(?:\b((?:state)\s+{{lsl_word}})\b)(;)'
       captures:
         1: entity.name.class.state.lsl
         2: punctuation.separator.lsl
+    - match: '\{'
+      push:
+        - meta_scope: scope.lsl
+        - meta_content_scope: meta.contents.scope.lsl
+        - match: '\}'
+          pop: true
+        - include: infunc
   lsl_constants:
     - match: '\b({{lsl_invalid_broken}})\b'
       captures:
@@ -149,27 +157,33 @@ contexts:
       captures:
         1: reserved.log.lsl
     - match: '\b({{lsl_constant_float}})\b'
+      comment: 'https://wiki.secondlife.com/wiki/Category:LSL_Float'
       captures:
         1: constant.language.built-in.float.lsl
     - match: '\b({{lsl_constant_integer}})\b'
+      comment: 'https://wiki.secondlife.com/wiki/Category:LSL_Integer'
       captures:
         1: constant.language.built-in.integer.lsl
     - match: '\b({{lsl_constant_integer_boolean}})\b'
       captures:
         1: constant.language.built-in.integer.boolean.lsl
     - match: '\b({{lsl_constant_rotation}})\b'
+      comment: 'https://wiki.secondlife.com/wiki/Category:LSL_Rotation'
       captures:
         1: constant.language.built-in.rotation.lsl
     - match: '\b({{lsl_constant_string}})\b'
+      comment: 'https://wiki.secondlife.com/wiki/Category:LSL_String'
       captures:
         1: constant.language.built-in.string.lsl
     - match: '\b({{lsl_constant_vector}})\b'
+      comment: 'https://wiki.secondlife.com/wiki/Category:LSL_Vector'
       captures:
         1: constant.language.built-in.vector.lsl
   lsl_functions:
     - match: '\b({{lsl_function}})\b'
+      comment: 'https://wiki.secondlife.com/wiki/Category:LSL_Functions'
       scope: support.function.built-in.lsl
-  number:
+  numbers:
     - match: \b(?i:(\d+\.\d*(e[\-\+]?\d+)?))(?=[^A-Za-z_])
       scope: constant.numeric.float.lsl
     - match: (?<=[^\w])(?i:(\.\d+(e[\-\+]?\d+)?))
@@ -182,7 +196,7 @@ contexts:
       scope: constant.numeric.integer.octal.lsl
     - match: \b([1-9]+[0-9]*|0)
       scope: constant.numeric.integer.decimal.lsl
-  operator:
+  operators:
     - match: '\+\+'
       scope: keyword.operator.increment.lsl
     - match: '--'
@@ -233,7 +247,7 @@ contexts:
     - match: '(,)'
       scope: punctuation.definition.separator.komma.lsl
     - include: comments
-  quoted:
+  lsl_strings:
     - match: '"'
       scope: punctuation.definition.string.quoted.begin.lsl
       push:
@@ -254,8 +268,9 @@ contexts:
           scope: invalid.illegal.constant.character.escape.lsl
 #       - include: 'scope:source.json'
 #       - include: 'scope:source.html'
-  state:
+  lsl_states:
     - match: '\b((?:state)\s+{{lsl_word}}|default)\b'
+      comment: 'https://wiki.secondlife.com/wiki/State'
       captures:
         1: entity.name.class.state.lsl
       push:
@@ -276,13 +291,3 @@ contexts:
     - match: '\b({{lsl_storage_type}})\b'
       captures:
         1: storage.type.lsl
-  value:
-    - include: comments
-    - include: functiondef
-    - include: state
-    - include: lsl_types
-    - include: quoted
-    - include: lsl_constants
-    - include: number
-    - include: operator
-    - include: lsl_lists
