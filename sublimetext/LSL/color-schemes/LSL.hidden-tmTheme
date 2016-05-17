@@ -18,10 +18,20 @@
                 <key>inactiveSelection</key><string>#d3d0c8</string>
                 <key>findHighlight</key><string>#cd4d26</string>
                 <key>findHighlightForeground</key><string>#2d2d2d</string>
+                <key>guide</key><string>#474747</string>
+                <key>activeGuide</key><string>#2d2d2d</string>
+                <key>stackGuide</key><string>#f6eeda</string>
+                <key>bracketContentsOptions</key><string>underline</string>
+                <key>bracketContentsForeground</key><string>#d3d0c8</string>
+                <key>bracketsOptions</key><string>underline</string>
+                <key>bracketsForeground</key><string>#d3d0c8</string>
+                <key>gutterForeground</key><string>#968f7c</string>
+                <key>highlight</key><string>#f1e8a4</string>
+                <key>highlightForeground</key><string>#f1e8a4</string>
+                <key>tagsOptions</key><string>underline</string>
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>sections</string>
             <key>scope</key><string>entity.name.class.state</string>
             <key>settings</key>
             <dict>
@@ -29,7 +39,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>data types</string>
             <key>scope</key><string>storage.type</string>
             <key>settings</key>
             <dict>
@@ -37,7 +46,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>events</string>
             <key>scope</key><string>support.function.event</string>
             <key>settings</key>
             <dict>
@@ -45,7 +53,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>comment</string>
             <key>scope</key><string>comment.block, comment.line.double-slash</string>
             <key>settings</key>
             <dict>
@@ -54,7 +61,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>escape characters</string>
             <key>scope</key><string>constant.character.escape</string>
             <key>settings</key>
             <dict>
@@ -63,7 +69,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>string literals</string>
             <key>scope</key><string>string.quoted.double</string>
             <key>settings</key>
             <dict>
@@ -71,7 +76,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>functions</string>
             <key>scope</key><string>support.function.built-in</string>
             <key>settings</key>
             <dict>
@@ -79,7 +83,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>float constants</string>
             <key>scope</key><string>constant.language.built-in.float</string>
             <key>settings</key>
             <dict>
@@ -87,7 +90,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>integer constants</string>
             <key>scope</key><string>constant.language.integer, constant.language.built-in.integer, constant.language.built-in.integer.boolean</string>
             <key>settings</key>
             <dict>
@@ -95,7 +97,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>string constants</string>
             <key>scope</key><string>constant.language.string, constant.language.built-in.string</string>
             <key>settings</key>
             <dict>
@@ -103,7 +104,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>compound constants</string>
             <key>scope</key><string>constant.language.built-in.rotation, constant.language.built-in.vector</string>
             <key>settings</key>
             <dict>
@@ -111,7 +111,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>flow control keywords</string>
             <key>scope</key><string>keyword.control.flow</string>
             <key>settings</key>
             <dict>
@@ -119,7 +118,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>invalid</string>
             <key>scope</key><string>invalid</string>
             <key>settings</key>
             <dict>
@@ -128,7 +126,6 @@
             </dict>
         </dict>
         <dict>
-            <key>name</key><string>reserved</string>
             <key>scope</key><string>reserved</string>
             <key>settings</key>
             <dict>
@@ -136,6 +133,34 @@
                 <key>background</key><string>#cd4d26</string>
             </dict>
         </dict>
+        <dict>
+            <key>scope</key><string>markup.deleted</string>
+            <key>settings</key>
+            <dict>
+              <key>foreground</key><string>#820124</string>
+            </dict>
+          </dict>
+          <dict>
+            <key>scope</key><string>markup.inserted</string>
+            <key>settings</key>
+            <dict>
+              <key>foreground</key><string>#006600</string>
+            </dict>
+          </dict>
+          <dict>
+            <key>scope</key><string>markup.changed</string>
+            <key>settings</key>
+            <dict>
+              <key>foreground</key><string>#cd4d26</string>
+            </dict>
+          </dict>
+          <dict>
+            <key>scope</key><string>markup.ignored, markup.untracked</string>
+            <key>settings</key>
+            <dict>
+              <key>foreground</key><string>#474747</string>
+            </dict>
+          </dict>
     </array>
 </dict>
 </plist>
