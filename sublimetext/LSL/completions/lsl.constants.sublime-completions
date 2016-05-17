@@ -1,5 +1,5 @@
 {
-    "scope": "source.lsl - meta.state.body.lsl, meta.function.body.lsl, meta.event.body.lsl",
+    "scope": "source.lsl - meta.class.state.body.lsl, meta.contents.function.user-defined.lsl, meta.contents.event.lsl",
     "completions":
     [
        
