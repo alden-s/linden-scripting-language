@@ -1,5 +1,5 @@
 {
-    "scope": "source.lsl",
+    "scope": "meta.class.state.body.lsl",
     "completions":
     [
         { "trigger": "at_rot_target\tevent", "contents": "at_rot_target(integer ${1:handle}, rotation ${2:targetrot}, rotation ${3:ourrot})${LSL_SPACE_OR_NEWLINE}{\n\t$0\n}" },
