@@ -1,5 +1,5 @@
 {
-    "scope": "source.lsl, meta.function.user-defined.body.lsl, meta.event.body.lsl",
+    "scope": "source.lsl - meta.class.state.body, meta.function.user-defined.body.lsl, meta.event.body.lsl",
     "completions":
     [
         { "trigger": "float\tstorage type", "contents": "float" },
