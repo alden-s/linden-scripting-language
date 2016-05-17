@@ -6,11 +6,18 @@
 		<key>scope</key><string>source.lsl</string>
 		<key>settings</key>
 		<dict>
+			<key>decreaseIndentPattern</key><string>^\s*\}\s*$</string>
+			<key>increaseIndentPattern</key><string>^\s*\{\s*$</string>
+			<key>disableIndentNextLinePattern</key><string></string>
 			<key>shellVariables</key>
 			<array>
 				<dict>
 					<key>name</key><string>TM_COMMENT_START</string>
 					<key>value</key><string>// </string>
+				</dict>
+				<dict>
+					<key>name</key><string>TM_LINE_TERMINATOR</string>
+					<key>value</key><string>\{</string>
 				</dict>
 			</array>
 		</dict>
