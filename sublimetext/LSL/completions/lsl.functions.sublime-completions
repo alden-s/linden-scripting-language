@@ -1,5 +1,5 @@
 {
-    "scope": "meta.function.body.lsl, meta.event.body.lsl",
+    "scope": "meta.function.user-defined.body.lsl, meta.event.body.lsl",
     "completions":
     [
         { "trigger": "llAbs\t(int) func", "contents": "llAbs(${1:integer val})" },
