@@ -1,5 +1,5 @@
 {
-    "scope": "meta.function.body.lsl, meta.event.body.lsl",
+    "scope": "meta.function.user-defined.body.lsl, meta.event.body.lsl",
     "completions":
     [
         { "trigger": "print\t(float) logging", "contents": "print(${1:float val});" },
