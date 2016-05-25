@@ -9,18 +9,9 @@
 function(hljs) {
     return {
         case_insensitive: false,
-        aliases: [
-            'lsl',
-            'Linden Scripting Language',
-            'Linden Scripting',
-            'Linden Script',
-            'Second Life LSL',
-            'Second Life'
-        ],
+        aliases: ['lsl'],
         illegal: ':',
         contains: [
-            hljs.C_LINE_COMMENT_MODE,
-            hljs.C_BLOCK_COMMENT_MODE,
             {
                 className: 'string',
                 begin: '"',
@@ -32,6 +23,8 @@ function(hljs) {
                     { subLanguage: 'xml' }
                 ]
             },
+            hljs.C_LINE_COMMENT_MODE,
+            hljs.C_BLOCK_COMMENT_MODE,
             {
                 className: 'number',
                 begin: '(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)'
