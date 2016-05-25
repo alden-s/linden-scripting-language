@@ -18,7 +18,6 @@ function(hljs) {
                 end: '"',
                 contains: [
                     { begin: '\\[\\\\nt"\\]' },
-                    { subLanguage: 'html' },
                     { subLanguage: 'json' },
                     { subLanguage: 'xml' }
                 ]
