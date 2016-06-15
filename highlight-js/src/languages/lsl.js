@@ -26,13 +26,11 @@ function(hljs) {
                 className: 'comment',
                 begin: '//',
                 end: '$',
-                contains: []
             },
             {
                 className: 'comment',
                 begin: '/\\*',
                 end: '\\*/',
-                contains: []
             },
             {
                 className: 'number',
