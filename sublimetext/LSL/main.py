@@ -136,7 +136,7 @@ class LslCommand(sublime_plugin.EventListener):
         try:
             region = view.sel()[0]
             scope  = view.scope_name(region.a)
-        except Exception, e:
+        except Exception as e:
             return
 
         validScopes = []
