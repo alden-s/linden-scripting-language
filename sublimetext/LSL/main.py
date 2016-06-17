@@ -133,8 +133,11 @@ class LslCommand(sublime_plugin.EventListener):
 
     def show_tooltip(self, view):
 
-        region = view.sel()[0].a
-        scope  = view.scope_name(region)
+        try:
+            region = view.sel()[0]
+            scope  = view.scope_name(region.a)
+        except Exception, e:
+            return
 
         validScopes = []
         validScopes.append('source.lsl')
