@@ -29,6 +29,21 @@
                 <key>highlight</key><string>#f1e8a4</string>
                 <key>highlightForeground</key><string>#f1e8a4</string>
                 <key>tagsOptions</key><string>underline</string>
+                <key>popupCss</key><string><![CDATA[
+html {
+    background-color: #f2f0ec;
+    color: #2d2d2d;
+}
+.error, .deleted {
+    color: #820124;
+}
+.success, .inserted {
+    color: #1a4d1a;
+}
+.warning, .modified {
+    color: #cd4d26;
+}
+                ]]></string>
             </dict>
         </dict>
         <dict>
