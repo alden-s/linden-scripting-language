@@ -6,7 +6,6 @@ from time import time
 import webbrowser
 import xml.etree.ElementTree as etree
 
-Pref = None
 settings = {}
 KWDB = None
 SETTINGS_FILE = None
@@ -22,7 +21,6 @@ if 3080 <= int(sublime.version()):
 
 def plugin_loaded():
 
-    global Pref
     global settings
     global KWDB
     global SETTINGS_FILE
@@ -35,19 +33,10 @@ def plugin_loaded():
     INDENT_STYLE_ALLMAN = sublime.load_resource('Packages/LSL/metadata/LSL_indent_style.tmPreferences.allman')
     INDENT_STYLE_K_AND_R = sublime.load_resource('Packages/LSL/metadata/LSL_indent_style.tmPreferences.k_and_r')
 
-    class Pref:
-        def load(self):
-            Pref.next_run_time = time() + 0.0009 * 400
-
     try:
         settings = sublime.load_settings(SETTINGS_FILE)
     except Exception as e:
         print(e)
-
-    Pref = Pref()
-    Pref.load()
-
-    settings.add_on_change('reload', lambda:Pref.load())
 
     if not os.path.exists(INDENT_STYLE):
         with open(INDENT_STYLE, mode='w', newline='\n') as file:
@@ -103,63 +92,33 @@ class ChangeStyleCommand(sublime_plugin.WindowCommand):
 
         return self._is_checked
 
-class LslCommand(sublime_plugin.EventListener):
+class Lsl(sublime_plugin.EventListener):
 
-    def on_activated(self, view):
+    def on_navigate(self, link):
+        webbrowser.open_new_tab(link)
 
-        if 3080 <= int(sublime.version()):
-            self.run(view)
+    def on_hover(self, view, point, hover_zone):
 
-    def on_modified(self, view):
-
-        if 3080 <= int(sublime.version()):
-            self.run(view)
-
-    def on_selection_modified(self, view):
-
-        if 3080 <= int(sublime.version()):
-            self.run(view)
-
-    def run(self, view):
-
-        timeout_ms = 400
-        Pref.next_run_time = time() + 0.0009 * timeout_ms
-        sublime.set_timeout(lambda:self.run_after_delay(view), timeout_ms)
-
-    def run_after_delay(self, view):
-
-        if Pref.next_run_time <= time():
-            self.show_tooltip(view)
-
-    def show_tooltip(self, view):
-
-        try:
-            region = view.sel()[0]
-            scope  = view.scope_name(region.a)
-        except Exception as e:
+        if view.settings().get('is_widget'):
             return
 
-        validScopes = []
-        validScopes.append('source.lsl')
-
-        validScope_Found = False
-
-        for validScope in validScopes:
-            if sublime.score_selector(scope, validScope) != 0:
-                validScope_Found = True
-
-        if validScope_Found == False:
+        if not view.settings().get('show_definitions'):
             return
 
-        viewSettings = view.settings()
+        if hover_zone != sublime.HOVER_TEXT:
+            return
 
-        if viewSettings.get('is_widget'):
+        if not view.score_selector(point, 'source.lsl'):
+            return
+
+        word = view.substr(view.word(point))
+
+        if not word:
             return
 
         if not KWDB:
             return
 
-        word = view.substr(view.word(region))
         try:
             tooltipRows = []
             for result in KWDB.findall(".//*[@name='" + word + "']"):
@@ -174,7 +133,7 @@ class LslCommand(sublime_plugin.EventListener):
                     tooltipRows.append('**Value**: %s' % str(result.get('value')))
                 if result.get('status', None) is not None and result.get('status', 'normal') != 'normal':
                     tooltipRows.append(' ')
-                    tooltipRows.append('<body style="color:#fff;background-color:#820124;">**Status**: %s</body>' % result.get('status', 'normal'))
+                    tooltipRows.append('<body class="danger">**Status**: %s</body>' % result.get('status', 'normal'))
                 if result.get('delay', None) is not None:
                     tooltipRows.append(' ')
                     tooltipRows.append('**Delay**: %s' % str(result.get('delay')))
@@ -196,21 +155,14 @@ class LslCommand(sublime_plugin.EventListener):
 #               add grid info by splitting spaces and re-joining as markdown list
 #          seperate entries by horizontal line
 
-            if len(tooltipRows) == 0:
-                return
-
-            mdpopups.show_popup(view, '\n'.join(tooltipRows),
-                flags=sublime.COOPERATE_WITH_AUTO_COMPLETE,
-                location=-1, max_width=600, max_height=350,
-                on_navigate=self.on_navigate
-            )
-            return
+            if 0 < len(tooltipRows):
+                mdpopups.show_popup(view, '\n'.join(tooltipRows),
+                    flags=sublime.COOPERATE_WITH_AUTO_COMPLETE|sublime.HIDE_ON_MOUSE_MOVE_AWAY,
+                    location=point, max_width=1024,
+                    on_navigate=self.on_navigate
+                )
 
         except Exception as e:
             print(e)
 
         mdpopups.hide_popup(view)
-
-    def on_navigate(self, link):
-
-        webbrowser.open_new_tab(link)
