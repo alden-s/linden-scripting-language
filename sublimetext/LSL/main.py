@@ -161,6 +161,7 @@ class Lsl(sublime_plugin.EventListener):
                     location=point, max_width=1024,
                     on_navigate=self.on_navigate
                 )
+                return
 
         except Exception as e:
             print(e)
