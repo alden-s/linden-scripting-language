@@ -1,0 +1,5 @@
+{
+    "file_regex": "^(..[^:]*)::[^:]*::[^(]*\\(\\s*([0-9]+)",
+    "selector": "source.lsl",
+    "cmd": ["lslint", "-p", "${file}"]
+}
