@@ -491,7 +491,7 @@
         { "trigger": "PI\tfloat (3.141593)", "contents": "PI" },
         { "trigger": "PING_PONG\tint (0x8 = 8)", "contents": "PING_PONG" },
         { "trigger": "PI_BY_TWO\tfloat (1.570796)", "contents": "PI_BY_TWO" },
-        { "trigger": "PRIM_ALLOW_UNSIT\int (39)", "contents": "PRIM_ALLOW_UNSIT" },
+        { "trigger": "PRIM_ALLOW_UNSIT\tint (39)", "contents": "PRIM_ALLOW_UNSIT" },
         {
             "trigger": "PRIM_ALLOW_UNSIT\t…, integer flag, …",
             "contents": "PRIM_ALLOW_UNSIT, ${1:integer flag}, $0"
