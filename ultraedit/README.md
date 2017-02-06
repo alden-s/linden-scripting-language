@@ -1,4 +1,10 @@
-### Usage:
+## Contributing to UltraEdit
+
+The wordfiles can be found at:
+
+* <https://github.com/IDMComputerSolutions/wordfiles>
+
+## Usage:
 
 * Add the files before opening the editor:
     * Copy and paste [lsl.uew](UltraEdit/wordfiles/lsl.uew) to `...\UltraEdit\wordfiles\lsl.uew`. Make sure the first few characters [in the first line of lsl.uew](UltraEdit/wordfiles/lsl.uew#L1) are changed to the lowest unused number in your wordfiles (every wordfile has something like `L8` or `L13`). In my case it is `L16`.
@@ -11,10 +17,10 @@
     * Open a file with `*.lsl` extension or save your file with `*.lsl` extension.
     * Go to `View > View as (Highlighting File Type) > LSL`.
 
-### [LSL](http://wiki.secondlife.com/wiki/LSL_Portal) Syntax:
+## [LSL](http://wiki.secondlife.com/wiki/LSL_Portal) Syntax:
 
 ![LSL Syntax](_assets/lsl_syntax.png)
 
-### [LSL](http://wiki.secondlife.com/wiki/LSL_Portal) Autocompletion:
+## [LSL](http://wiki.secondlife.com/wiki/LSL_Portal) Autocompletion:
 
 ![LSL Autocompletion](_assets/lsl_autocompletion.gif)
