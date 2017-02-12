@@ -1,6 +1,7 @@
 %YAML 1.2
 ---
-# http://www.sublimetext.com/docs/3/syntax.html
+# https://www.sublimetext.com/docs/3/syntax.html
+# https://www.sublimetext.com/docs/3/scope_naming.html
 name: LSL
 comment: 'This is the Sublime Text Build 3092+ file for the grammar of the Linden Scripting Language of Second Life by Linden Labs.'
 hidden: false
