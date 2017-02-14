@@ -541,7 +541,7 @@ Ext:lsl
 llGetEnergy()[>END<]!$[FingerTextData FingerTextData]@#
 llGetEnv
 Ext:lsl
-llGetEnv($[![(lis)"agent_limit"|"dynamic_pathfinding"|"estate_id"|"estate_name"|"frame_number"|"region_cpu_ratio"|"region_idle"|"region_object_bonus"|"region_product_name"|"region_product_sku"|"region_start_time"|"sim_channel"|"sim_version"|"simulator_hostname"|string name]!])[>END<]!$[FingerTextData FingerTextData]@#
+llGetEnv($[![(lis)"agent_limit"|"dynamic_pathfinding"|"estate_id"|"estate_name"|"frame_number"|"region_cpu_ratio"|"region_idle"|"region_max_prims"|"region_object_bonus"|"region_product_name"|"region_product_sku"|"region_start_time"|"sim_channel"|"sim_version"|"simulator_hostname"|string name]!])[>END<]!$[FingerTextData FingerTextData]@#
 llGetExperienceDetails
 Ext:lsl
 llGetExperienceDetails($[![key experience_id]!])[>END<]!$[FingerTextData FingerTextData]@#
