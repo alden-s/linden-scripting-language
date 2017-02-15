@@ -17,9 +17,6 @@ In this repository you can find the syntax grammar, syntax highlighting and snip
     git clone git://github.com/buildersbrewery/linden-scripting-language.git
     ```
 
-* Download snapshots:
-  * [list of releases](https://github.com/buildersbrewery/linden-scripting-language/releases/)
-  * [list of tags](https://github.com/buildersbrewery/linden-scripting-language/tags/)
 * Check source:
   * [commits to master](https://github.com/buildersbrewery/linden-scripting-language/commits/master/)
   * [branches](https://github.com/buildersbrewery/linden-scripting-language/branches/)
