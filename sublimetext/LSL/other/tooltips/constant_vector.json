@@ -1,0 +1,29 @@
+[
+    {
+        "description":
+        {
+            "en_US": "<0.0, 0.0, 0.0>"
+        },
+        "name": "ZERO_VECTOR",
+        "type": "vector",
+        "value": "<0.0, 0.0, 0.0>"
+    },
+    {
+        "description":
+        {
+            "en_US": "Value returned by llDetectedTouchUV and llDetectedTouchST when the touch position is not valid"
+        },
+        "name": "TOUCH_INVALID_TEXCOORD",
+        "type": "vector",
+        "value": "<-1.0, -1.0, 0.0>"
+    },
+    {
+        "description":
+        {
+            "en_US": "Value returned by llDetectedTouchPos, llDetectedTouchNormal, and llDetectedTouchBinormal when the touch position is not valid"
+        },
+        "name": "TOUCH_INVALID_VECTOR",
+        "type": "vector",
+        "value": "<0.0, 0.0, 0.0>"
+    }
+]
