@@ -7,12 +7,14 @@ import sublime_plugin
 from time import time
 import webbrowser
 
+
 settings = {}
 TOOLTIP_DATA = None
 SETTINGS_FILE = None
 INDENT_STYLE = None
 INDENT_STYLE_ALLMAN = None
 INDENT_STYLE_K_AND_R = None
+
 
 def plugin_loaded():
 
@@ -61,22 +63,17 @@ class ChangeEditorSchemeCommand(sublime_plugin.WindowCommand):
     _is_checked = False
 
     def __init__(self, view):
-
         self._is_checked = settings.has('color_scheme')
 
     def run(self):
-
         if self._is_checked:
             settings.erase('color_scheme')
-            self._is_checked = False
         else:
             settings.set('color_scheme', 'Packages/LSL/other/LSL.hidden-tmTheme')
-            self._is_checked = True
-
         sublime.save_settings(SETTINGS_FILE)
+        self._is_checked = not self._is_checked
 
     def is_checked(self):
-
         return self._is_checked
 
 
@@ -85,24 +82,20 @@ class ChangeStyleCommand(sublime_plugin.WindowCommand):
     _is_checked = False
 
     def __init__(self, view):
-
         if os.path.exists(INDENT_STYLE):
             pl = plistlib.readPlist(INDENT_STYLE)
             self._is_checked = (pl['name'] == 'Indent Style - K & R')
 
     def run(self):
-
         if self._is_checked:
             with open(INDENT_STYLE, mode='w', newline='\n') as file:
                 file.write(INDENT_STYLE_ALLMAN)
         else:
             with open(INDENT_STYLE, mode='w', newline='\n') as file:
                 file.write(INDENT_STYLE_K_AND_R)
-
         self._is_checked = not self._is_checked
 
     def is_checked(self):
-
         return self._is_checked
 
 
@@ -136,6 +129,11 @@ class Lsl(sublime_plugin.EventListener):
         if TOOLTIP_DATA is None:
             return
 
+#  facelessuser/sublime-markdown-popups#26
+#
+#      view.settings().set('mdpopups.use_sublime_highlighter', True)
+#      view.settings().set('mdpopups.sublime_user_lang_map', { 'lsl': [['lsl'], ['LSL/syntaxes/LSL']] } )
+
         try:
             tooltipRows = []
             for result in TOOLTIP_DATA:
@@ -149,8 +147,8 @@ class Lsl(sublime_plugin.EventListener):
                         tooltipRows.append('**Value**: %s' % str(result['value']))
                     if 'version' in result:
                         tooltipRows.append(' ')
-                        tooltipRows.append('**Version**: %s' % result['version'])
-                    if result.get('status', None) is not None:
+                        tooltipRows.append('**SL server version**: %s' % result['version'])
+                    if 'status' in result:
                         tooltipRows.append(' ')
                         tooltipRows.append('<body class="danger">**Status**: %s</body>' % result['status'])
                     if 'delay' in result:
@@ -160,17 +158,24 @@ class Lsl(sublime_plugin.EventListener):
                         tooltipRows.append(' ')
                         tooltipRows.append('**Energy**: %s' % str(result['energy']))
                     if 'param' in result:
+                        tooltipRows.append(' ')
                         tooltipRows.append('#### Parameters')
                         if type(result['param']) is dict:
                             tooltipRows.append('* (%s) **%s**' % (result['param']['type'], result['param']['name']))
                         elif type(result['param']) is list:
                             for param in result['param']:
                                 tooltipRows.append('* (%s) **%s**' % (param['type'], param['name']))
-                    if result['description']['en_US'] != '':
+                    if 'description' in result:
                         tooltipRows.append(' ')
                         tooltipRows.append('#### Description')
                         tooltipRows.append(' ')
                         tooltipRows.append('%s' % result['description']['en_US'])
+                    if 'snippet' in result:
+                        tooltipRows.append('#### Snippet')
+                        tooltipRows.append(' ')
+                        tooltipRows.append('```lsl')
+                        tooltipRows.append('%s' % result['snippet'])
+                        tooltipRows.append('```')
             # TODO: seperate entries by horizontal line
 
             if 0 < len(tooltipRows):
@@ -178,8 +183,10 @@ class Lsl(sublime_plugin.EventListener):
                                     flags=(sublime.COOPERATE_WITH_AUTO_COMPLETE | sublime.HIDE_ON_MOUSE_MOVE_AWAY),
                                     location=point,
                                     wrapper_class='lsl',
+                                    max_width=1280,
+                                    max_height=960,
                                     on_navigate=self.on_navigate,
-                                    on_hide=self.on_hide
+                                    on_hide=self.on_hide(view)
                 )
                 return
 
