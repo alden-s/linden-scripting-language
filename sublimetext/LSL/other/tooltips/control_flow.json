@@ -1,0 +1,17 @@
+[
+    {
+        "name": "jump",
+        "description":
+        {
+            "en_US": "jump statement"
+        },
+        "snippet": "jump label;"
+    },
+    {
+        "description":
+        {
+            "en_US": "Leave current function or event handler while optionally passing back a value"
+        },
+        "name": "return"
+    }
+]
