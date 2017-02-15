@@ -1,0 +1,26 @@
+[
+    {
+        "name": "for",
+        "description":
+        {
+            "en_US": "for loop"
+        },
+        "snippet": "for (initializer; condition; iteration)\n{\n\t...\n}"
+    },
+    {
+        "name": "do",
+        "description":
+        {
+            "en_US": "do loop"
+        },
+        "snippet": "do\n{\n\t...\n}\nwhile (condition);"
+    },
+    {
+        "name": "while",
+        "description":
+        {
+            "en_US": "while loop"
+        },
+        "snippet": "while (condition)\n{\n\t...\n}"
+    }
+]
