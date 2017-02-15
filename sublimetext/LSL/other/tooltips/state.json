@@ -1,0 +1,16 @@
+[
+    {
+        "description":
+        {
+            "en_US": "Name of default state that all scripts must have"
+        },
+        "name": "default"
+    },
+    {
+        "description":
+        {
+            "en_US": "Keyword to indicate state block or state transition. State transitions within user-defined function declarations must be included within conditional blocks to work as intended."
+        },
+        "name": "state"
+    }
+]
