@@ -1,0 +1,6091 @@
+[
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If TRUE, object moves physically."
+        },
+        "name": "STATUS_PHYSICS",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If TRUE, object doesn't collide with other objects."
+        },
+        "name": "STATUS_PHANTOM",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If FALSE, object doesn't rotate around local X axis."
+        },
+        "name": "STATUS_ROTATE_X",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If FALSE, object doesn't rotate around local Y axis."
+        },
+        "name": "STATUS_ROTATE_Y",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If FALSE, object doesn't rotate around local Z axis."
+        },
+        "name": "STATUS_ROTATE_Z",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If TRUE, object can't cross region boundaries or move more than 10 meters from its start location."
+        },
+        "name": "STATUS_SANDBOX",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If TRUE, object can't be grabbed and physically dragged."
+        },
+        "name": "STATUS_BLOCK_GRAB",
+        "type": "integer",
+        "value": "0x40",
+        "version": "0.2.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If TRUE, the object can't be moved by grabs.\nThis flag applies to the entire linkset."
+        },
+        "name": "STATUS_BLOCK_GRAB_OBJECT",
+        "type": "integer",
+        "value": "0x400"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If TRUE, objects that reach the edge of the world just die\nrather than teleporting back to the owner."
+        },
+        "name": "STATUS_DIE_AT_EDGE",
+        "type": "integer",
+        "value": "0x80",
+        "version": "0.2.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If TRUE, script rezzed objects that reach the edge of the world are returned rather than killed.\nSTATUS_RETURN_AT_EDGE trumps STATUS_DIE_AT_EDGE if both are set."
+        },
+        "name": "STATUS_RETURN_AT_EDGE",
+        "type": "integer",
+        "value": "0x100",
+        "version": "1.5.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in the llSetStatus library function. If TRUE, object casts shadows on other objects."
+        },
+        "name": "STATUS_CAST_SHADOWS",
+        "type": "integer",
+        "value": "0x200"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in llSensor library function to look for other Agents (by Legacy name if filtered)"
+        },
+        "name": "AGENT",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in llSensor library function to look for other Agents, filtering by username"
+        },
+        "name": "AGENT_BY_USERNAME",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in llSensor library function to look for other Agents, filtering by legacy name"
+        },
+        "name": "AGENT_BY_LEGACY_NAME",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in llSensor library function to look for moving objects"
+        },
+        "name": "ACTIVE",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in llSensor library function to look for objects that aren't moving"
+        },
+        "name": "PASSIVE",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed in llSensor library function to look for scripted objects"
+        },
+        "name": "SCRIPTED",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent forward control"
+        },
+        "name": "CONTROL_FWD",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent back control"
+        },
+        "name": "CONTROL_BACK",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent left control"
+        },
+        "name": "CONTROL_LEFT",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent right control"
+        },
+        "name": "CONTROL_RIGHT",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent rotate left control"
+        },
+        "name": "CONTROL_ROT_LEFT",
+        "type": "integer",
+        "value": "0x100"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent rotate right control"
+        },
+        "name": "CONTROL_ROT_RIGHT",
+        "type": "integer",
+        "value": "0x200"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent up control"
+        },
+        "name": "CONTROL_UP",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent down control"
+        },
+        "name": "CONTROL_DOWN",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent left button control"
+        },
+        "name": "CONTROL_LBUTTON",
+        "type": "integer",
+        "value": "0x10000000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llTakeControls library function and used control event handler to test for agent left button control with the agent in mouse look"
+        },
+        "name": "CONTROL_ML_LBUTTON",
+        "type": "integer",
+        "value": "0x40000000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to take L$ from agent's account"
+        },
+        "name": "PERMISSION_DEBIT",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to take agent's controls"
+        },
+        "name": "PERMISSION_TAKE_CONTROLS",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "name": "PERMISSION_REMAP_CONTROLS",
+        "type": "integer",
+        "value": "0x8",
+        "status": "unimplemented"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to trigger animation on agent"
+        },
+        "name": "PERMISSION_TRIGGER_ANIMATION",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to attach/detach from agent"
+        },
+        "name": "PERMISSION_ATTACH",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "name": "PERMISSION_RELEASE_OWNERSHIP",
+        "type": "integer",
+        "value": "0x40",
+        "status": "unimplemented"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to change links"
+        },
+        "name": "PERMISSION_CHANGE_LINKS",
+        "type": "integer",
+        "value": "0x80"
+    },
+    {
+        "name": "PERMISSION_CHANGE_JOINTS",
+        "type": "integer",
+        "value": "0x100",
+        "status": "unimplemented"
+    },
+    {
+        "name": "PERMISSION_CHANGE_PERMISSIONS",
+        "type": "integer",
+        "value": "0x200",
+        "status": "unimplemented"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to track agent's camera"
+        },
+        "name": "PERMISSION_TRACK_CAMERA",
+        "type": "integer",
+        "value": "0x400"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to change agent's camera"
+        },
+        "name": "PERMISSION_CONTROL_CAMERA",
+        "type": "integer",
+        "value": "0x800",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to teleport an agent"
+        },
+        "name": "PERMISSION_TELEPORT",
+        "type": "integer",
+        "value": "0x1000"
+    },
+    {
+        "description":
+        {
+            "en_US": "A script with this permission does not notify the object owner when it modifies estate access rules via llManageEstateAccess"
+        },
+        "name": "PERMISSION_SILENT_ESTATE_MANAGEMENT",
+        "type": "integer",
+        "value": "0x4000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestPermissions library function to request permission to override animations"
+        },
+        "name": "PERMISSION_OVERRIDE_ANIMATIONS",
+        "type": "integer",
+        "value": "0x8000"
+    },
+    {
+        "name": "PERMISSION_RETURN_OBJECTS",
+        "type": "integer",
+        "value": "0x10000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Chat channel reserved for debug and error messages from scripts"
+        },
+        "name": "DEBUG_CHANNEL",
+        "type": "integer",
+        "value": "0x7FFFFFFF",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Chat channel that broadcasts to all nearby users"
+        },
+        "name": "PUBLIC_CHANNEL",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is flying"
+        },
+        "name": "AGENT_FLYING",
+        "type": "integer",
+        "value": "0x1",
+        "version": "0.4.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent has attachments"
+        },
+        "name": "AGENT_ATTACHMENTS",
+        "type": "integer",
+        "value": "0x2",
+        "version": "0.4.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent has scripted attachments"
+        },
+        "name": "AGENT_SCRIPTED",
+        "type": "integer",
+        "value": "0x4",
+        "version": "0.4.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is sitting"
+        },
+        "name": "AGENT_SITTING",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is sitting on an object"
+        },
+        "name": "AGENT_ON_OBJECT",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is in mouselook"
+        },
+        "name": "AGENT_MOUSELOOK",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is in away mode"
+        },
+        "name": "AGENT_AWAY",
+        "type": "integer",
+        "value": "0x40"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is walking"
+        },
+        "name": "AGENT_WALKING",
+        "type": "integer",
+        "value": "0x80"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is in the air"
+        },
+        "name": "AGENT_IN_AIR",
+        "type": "integer",
+        "value": "0x100"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is typing"
+        },
+        "name": "AGENT_TYPING",
+        "type": "integer",
+        "value": "0x200"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is crouching"
+        },
+        "name": "AGENT_CROUCHING",
+        "type": "integer",
+        "value": "0x400"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is busy"
+        },
+        "name": "AGENT_BUSY",
+        "type": "integer",
+        "value": "0x800"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent has 'Always Run' enabled"
+        },
+        "name": "AGENT_ALWAYS_RUN",
+        "type": "integer",
+        "value": "0x1000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetAgentInfo if the Agent is under autopilot control"
+        },
+        "name": "AGENT_AUTOPILOT",
+        "type": "integer",
+        "value": "0x2000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llGetAgentList to return only agents on the same parcel where the script is running"
+        },
+        "name": "AGENT_LIST_PARCEL",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llGetAgentList to return only agents on any parcel in the region where the parcel owner is the same as the owner of the parcel under the scripted object"
+        },
+        "name": "AGENT_LIST_PARCEL_OWNER",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llGetAgentList to return any/all agents in the region"
+        },
+        "name": "AGENT_LIST_REGION",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "name": "PSYS_PART_FLAGS",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "name": "PSYS_PART_START_COLOR",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "PSYS_PART_START_ALPHA",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "name": "PSYS_PART_START_SCALE",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "name": "PSYS_PART_END_COLOR",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "name": "PSYS_PART_END_ALPHA",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "name": "PSYS_PART_END_SCALE",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "name": "PSYS_PART_MAX_AGE",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "name": "PSYS_PART_INTERP_COLOR_MASK",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "name": "PSYS_PART_INTERP_SCALE_MASK",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "name": "PSYS_PART_BOUNCE_MASK",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "name": "PSYS_PART_WIND_MASK",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "name": "PSYS_PART_FOLLOW_SRC_MASK",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "name": "PSYS_PART_FOLLOW_VELOCITY_MASK",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "name": "PSYS_PART_TARGET_POS_MASK",
+        "type": "integer",
+        "value": "0x40"
+    },
+    {
+        "name": "PSYS_PART_TARGET_LINEAR_MASK",
+        "type": "integer",
+        "value": "0x80"
+    },
+    {
+        "name": "PSYS_PART_EMISSIVE_MASK",
+        "type": "integer",
+        "value": "0x100"
+    },
+    {
+        "name": "PSYS_PART_RIBBON_MASK",
+        "type": "integer",
+        "value": "0x400"
+    },
+    {
+        "name": "PSYS_SRC_PATTERN",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "name": "PSYS_PART_BF_ONE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "name": "PSYS_PART_BF_ZERO",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "PSYS_PART_BF_DEST_COLOR",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "name": "PSYS_PART_BF_SOURCE_COLOR",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "name": "PSYS_PART_BF_ONE_MINUS_DEST_COLOR",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "name": "PSYS_PART_BF_ONE_MINUS_SOURCE_COLOR",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "name": "PSYS_PART_BF_SOURCE_ALPHA",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "name": "PSYS_PART_BF_ONE_MINUS_SOURCE_ALPHA",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Deprecated -- Use PSYS_SRC_ANGLE_BEGIN"
+        },
+        "name": "PSYS_SRC_INNERANGLE",
+        "type": "integer",
+        "value": "10",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Deprecated -- Use PSYS_SRC_ANGLE_END"
+        },
+        "name": "PSYS_SRC_OUTERANGLE",
+        "type": "integer",
+        "value": "11",
+        "status": "deprecated"
+    },
+    {
+        "name": "PSYS_SRC_ANGLE_BEGIN",
+        "type": "integer",
+        "value": "22"
+    },
+    {
+        "name": "PSYS_SRC_ANGLE_END",
+        "type": "integer",
+        "value": "23"
+    },
+    {
+        "name": "PSYS_SRC_BURST_RATE",
+        "type": "integer",
+        "value": "13"
+    },
+    {
+        "name": "PSYS_SRC_BURST_PART_COUNT",
+        "type": "integer",
+        "value": "15"
+    },
+    {
+        "name": "PSYS_SRC_BURST_RADIUS",
+        "type": "integer",
+        "value": "16"
+    },
+    {
+        "name": "PSYS_SRC_BURST_SPEED_MIN",
+        "type": "integer",
+        "value": "17"
+    },
+    {
+        "name": "PSYS_SRC_BURST_SPEED_MAX",
+        "type": "integer",
+        "value": "18"
+    },
+    {
+        "name": "PSYS_SRC_MAX_AGE",
+        "type": "integer",
+        "value": "19"
+    },
+    {
+        "name": "PSYS_SRC_ACCEL",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "name": "PSYS_SRC_TEXTURE",
+        "type": "integer",
+        "value": "12"
+    },
+    {
+        "name": "PSYS_SRC_TARGET_KEY",
+        "type": "integer",
+        "value": "20"
+    },
+    {
+        "name": "PSYS_SRC_OMEGA",
+        "type": "integer",
+        "value": "21"
+    },
+    {
+        "name": "PSYS_SRC_PATTERN_DROP",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "PSYS_SRC_PATTERN_EXPLODE",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "name": "PSYS_SRC_PATTERN_ANGLE",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "name": "PSYS_SRC_PATTERN_ANGLE_CONE",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "name": "PSYS_SRC_PATTERN_ANGLE_CONE_EMPTY",
+        "type": "integer",
+        "value": "16"
+    },
+    {
+        "name": "PSYS_SRC_OBJ_REL_MASK",
+        "type": "integer",
+        "value": "1",
+        "status": "unimplemented"
+    },
+    {
+        "name": "PSYS_PART_BLEND_FUNC_SOURCE",
+        "type": "integer",
+        "value": "24"
+    },
+    {
+        "name": "PSYS_PART_BLEND_FUNC_DEST",
+        "type": "integer",
+        "value": "25"
+    },
+    {
+        "name": "PSYS_PART_START_GLOW",
+        "type": "integer",
+        "value": "26"
+    },
+    {
+        "name": "PSYS_PART_END_GLOW",
+        "type": "integer",
+        "value": "27"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetObjectDetails when passed an invalid object parameter type"
+        },
+        "name": "OBJECT_UNKNOWN_DETAIL",
+        "type": "integer",
+        "value": "-1",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get an object's name"
+        },
+        "name": "OBJECT_NAME",
+        "type": "integer",
+        "value": "1",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get an object's description"
+        },
+        "name": "OBJECT_DESC",
+        "type": "integer",
+        "value": "2",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get an object's position"
+        },
+        "name": "OBJECT_POS",
+        "type": "integer",
+        "value": "3",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get an object's rotation"
+        },
+        "name": "OBJECT_ROT",
+        "type": "integer",
+        "value": "4",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get an object's velocity"
+        },
+        "name": "OBJECT_VELOCITY",
+        "type": "integer",
+        "value": "5",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get an object's owner's key. Will be NULL_KEY if group owned."
+        },
+        "name": "OBJECT_OWNER",
+        "type": "integer",
+        "value": "6",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get an object's group's key"
+        },
+        "name": "OBJECT_GROUP",
+        "type": "integer",
+        "value": "7",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get an object's creator's key"
+        },
+        "name": "OBJECT_CREATOR",
+        "type": "integer",
+        "value": "8",
+        "version": "1.18.3(5)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get the number of running scripts attached to the object or agent"
+        },
+        "name": "OBJECT_RUNNING_SCRIPT_COUNT",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get the number of scripts, both running and stopped, attached to the object or agent"
+        },
+        "name": "OBJECT_TOTAL_SCRIPT_COUNT",
+        "type": "integer",
+        "value": "10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get the total amount of script memory allocated to the object or agent, in bytes"
+        },
+        "name": "OBJECT_SCRIPT_MEMORY",
+        "type": "integer",
+        "value": "11"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get the average script CPU time (in seconds) an object/avatar is using"
+        },
+        "name": "OBJECT_SCRIPT_TIME",
+        "type": "integer",
+        "value": "12"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get the prim equivalence (land impact) of the object"
+        },
+        "name": "OBJECT_PRIM_EQUIVALENCE",
+        "type": "integer",
+        "value": "13"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get the physics cost"
+        },
+        "name": "OBJECT_PHYSICS_COST",
+        "type": "integer",
+        "value": "16"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get the server cost"
+        },
+        "name": "OBJECT_SERVER_COST",
+        "type": "integer",
+        "value": "14"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetObjectDetails to get the streaming (download) cost"
+        },
+        "name": "OBJECT_STREAMING_COST",
+        "type": "integer",
+        "value": "15"
+    },
+    {
+        "description":
+        {
+            "en_US": "Units in seconds"
+        },
+        "name": "OBJECT_CHARACTER_TIME",
+        "type": "integer",
+        "value": "17"
+    },
+    {
+        "description":
+        {
+            "en_US": "Gets the id of the root prim of the object requested.\nIf id is an avatar, return the id of the root prim of the linkset the avatar is sitting on (or the avatar's own id if the avatar is not sitting on an object within the region)."
+        },
+        "name": "OBJECT_ROOT",
+        "type": "integer",
+        "value": "18"
+    },
+    {
+        "description":
+        {
+            "en_US": "Gets the attachment point to which the object is attached.\nReturns 0 if the object is not an attachment (or is an avatar, etc)."
+        },
+        "name": "OBJECT_ATTACHED_POINT",
+        "type": "integer",
+        "value": "19"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returns the pathfinding setting of any object in the region. It returns an integer matching one of the OPT_* constants."
+        },
+        "name": "OBJECT_PATHFINDING_TYPE",
+        "type": "integer",
+        "value": "20"
+    },
+    {
+        "description":
+        {
+            "en_US": "This is a flag used with llGetObjectDetails to get the Avatar_Rendering_Cost of an avatar, based on values reported by nearby viewers.\nIf no data is available, -1 is returned.\nThe maximum render weight stored by the simulator is 500000. When called against an object, 0 is returned."
+        },
+        "name": "OBJECT_RENDER_WEIGHT",
+        "type": "integer",
+        "value": "24"
+    },
+    {
+        "description":
+        {
+            "en_US": "This is a flag used with llGetObjectDetails to get hover height of the avatar.\nIf no data is available, 0.0 is returned."
+        },
+        "name": "OBJECT_HOVER_HEIGHT",
+        "type": "integer",
+        "value": "25",
+        "version": "15.04.08.300724"
+    },
+    {
+        "description":
+        {
+            "en_US": "This is a flag used with llGetObjectDetails to get the body type of the avatar, based on shape data.\nIf no data is available, -1.0 is returned.\nThis is normally between 0 and 1.0, with 0.5 and larger considered 'male'"
+        },
+        "name": "OBJECT_BODY_SHAPE_TYPE",
+        "type": "integer",
+        "value": "26",
+        "version": "15.04.08.300724"
+    },
+    {
+        "description":
+        {
+            "en_US": "Gets the object's last owner ID."
+        },
+        "name": "OBJECT_LAST_OWNER_ID",
+        "type": "integer",
+        "value": "27",
+        "version": "15.04.24.301279"
+    },
+    {
+        "description":
+        {
+            "en_US": "This is a flag used with llGetObjectDetails to get the click action.\n\nThe default is CLICK_ACTION_NONE."
+        },
+        "name": "OBJECT_CLICK_ACTION",
+        "type": "integer",
+        "value": "28",
+        "version": "15.09.14.305056"
+    },
+    {
+        "name": "OBJECT_OMEGA",
+        "type": "integer",
+        "value": "29",
+        "version": "15.12.01.308474"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned for avatars."
+        },
+        "name": "OPT_AVATAR",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned for pathfinding characters."
+        },
+        "name": "OPT_CHARACTER",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned for exclusion volumes."
+        },
+        "name": "OPT_EXCLUSION_VOLUME",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned for movable obstacles, movable phantoms, physical, and volumedetect objects."
+        },
+        "name": "OPT_LEGACY_LINKSET",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned for material volumes."
+        },
+        "name": "OPT_MATERIAL_VOLUME",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned for attachments, Linden trees, and grass."
+        },
+        "name": "OPT_OTHER",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned for static obstacles."
+        },
+        "name": "OPT_STATIC_OBSTACLE",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned for walkable objects."
+        },
+        "name": "OPT_WALKABLE",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "name": "VEHICLE_TYPE_NONE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "name": "VEHICLE_TYPE_SLED",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "VEHICLE_TYPE_CAR",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "name": "VEHICLE_TYPE_BOAT",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "name": "VEHICLE_TYPE_AIRPLANE",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "name": "VEHICLE_TYPE_BALLOON",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Rotation of vehicle axes relative to local frame"
+        },
+        "name": "VEHICLE_REFERENCE_FRAME",
+        "type": "integer",
+        "value": "44",
+        "version": "1.1.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "A vector of timescales for exponential decay of linear velocity along the three vehicle axes"
+        },
+        "name": "VEHICLE_LINEAR_FRICTION_TIMESCALE",
+        "type": "integer",
+        "value": "16"
+    },
+    {
+        "description":
+        {
+            "en_US": "A vector of timescales for exponential decay of angular velocity about the three vehicle axes"
+        },
+        "name": "VEHICLE_ANGULAR_FRICTION_TIMESCALE",
+        "type": "integer",
+        "value": "17"
+    },
+    {
+        "description":
+        {
+            "en_US": "The linear velocity that the vehicle will try to achieve"
+        },
+        "name": "VEHICLE_LINEAR_MOTOR_DIRECTION",
+        "type": "integer",
+        "value": "18"
+    },
+    {
+        "description":
+        {
+            "en_US": "An offset from the center of mass of the vehicle where the linear motor is applied"
+        },
+        "name": "VEHICLE_LINEAR_MOTOR_OFFSET",
+        "type": "integer",
+        "value": "20"
+    },
+    {
+        "description":
+        {
+            "en_US": "The angular velocity that the vehicle will try to achieve"
+        },
+        "name": "VEHICLE_ANGULAR_MOTOR_DIRECTION",
+        "type": "integer",
+        "value": "19"
+    },
+    {
+        "description":
+        {
+            "en_US": "The height the vehicle will try to hover"
+        },
+        "name": "VEHICLE_HOVER_HEIGHT",
+        "type": "integer",
+        "value": "24",
+        "version": "1.1.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "A slider between 0 (bouncy) and 1 (critically damped) hover behavior"
+        },
+        "name": "VEHICLE_HOVER_EFFICIENCY",
+        "type": "integer",
+        "value": "25"
+    },
+    {
+        "description":
+        {
+            "en_US": "The period of time for the vehicle to achieve its hover height"
+        },
+        "name": "VEHICLE_HOVER_TIMESCALE",
+        "type": "integer",
+        "value": "26"
+    },
+    {
+        "description":
+        {
+            "en_US": "A slider between 0 (no anti-gravity) and 1 (full anti-gravity)"
+        },
+        "name": "VEHICLE_BUOYANCY",
+        "type": "integer",
+        "value": "27"
+    },
+    {
+        "description":
+        {
+            "en_US": "A slider between 0 (no deflection) and 1 (maximum strength)"
+        },
+        "name": "VEHICLE_LINEAR_DEFLECTION_EFFICIENCY",
+        "type": "integer",
+        "value": "28"
+    },
+    {
+        "description":
+        {
+            "en_US": "The exponential timescale for the vehicle to redirect its velocity to be along its x-axis"
+        },
+        "name": "VEHICLE_LINEAR_DEFLECTION_TIMESCALE",
+        "type": "integer",
+        "value": "29"
+    },
+    {
+        "description":
+        {
+            "en_US": "The exponential timescale for the vehicle to achive its full linear motor velocity"
+        },
+        "name": "VEHICLE_LINEAR_MOTOR_TIMESCALE",
+        "type": "integer",
+        "value": "30"
+    },
+    {
+        "description":
+        {
+            "en_US": "The exponential timescale for the linear motor's effectiveness to decay toward zero"
+        },
+        "name": "VEHICLE_LINEAR_MOTOR_DECAY_TIMESCALE",
+        "type": "integer",
+        "value": "31"
+    },
+    {
+        "description":
+        {
+            "en_US": "A slider between 0 (no deflection) and 1 (maximum strength)"
+        },
+        "name": "VEHICLE_ANGULAR_DEFLECTION_EFFICIENCY",
+        "type": "integer",
+        "value": "32"
+    },
+    {
+        "description":
+        {
+            "en_US": "The exponential timescale for the vehicle to achieve full angular deflection"
+        },
+        "name": "VEHICLE_ANGULAR_DEFLECTION_TIMESCALE",
+        "type": "integer",
+        "value": "33"
+    },
+    {
+        "description":
+        {
+            "en_US": "The exponential timescale for the vehicle to achive its full angular motor velocity"
+        },
+        "name": "VEHICLE_ANGULAR_MOTOR_TIMESCALE",
+        "type": "integer",
+        "value": "34"
+    },
+    {
+        "description":
+        {
+            "en_US": "The exponential timescale for the angular motor's effectiveness to decay toward zero"
+        },
+        "name": "VEHICLE_ANGULAR_MOTOR_DECAY_TIMESCALE",
+        "type": "integer",
+        "value": "35"
+    },
+    {
+        "description":
+        {
+            "en_US": "A slider between 0 (bouncy) and 1 (critically damped) attraction of vehicle z-axis to world z-axis (vertical)"
+        },
+        "name": "VEHICLE_VERTICAL_ATTRACTION_EFFICIENCY",
+        "type": "integer",
+        "value": "36"
+    },
+    {
+        "description":
+        {
+            "en_US": "The exponential timescale for the vehicle to align its z-axis to the world z-axis (vertical)"
+        },
+        "name": "VEHICLE_VERTICAL_ATTRACTION_TIMESCALE",
+        "type": "integer",
+        "value": "37"
+    },
+    {
+        "description":
+        {
+            "en_US": "A slider between -1 (leans out of turns), 0 (no banking), and +1 (leans into turns)"
+        },
+        "name": "VEHICLE_BANKING_EFFICIENCY",
+        "type": "integer",
+        "value": "38"
+    },
+    {
+        "description":
+        {
+            "en_US": "A slider between 0 (static banking) and 1 (dynamic banking)"
+        },
+        "name": "VEHICLE_BANKING_MIX",
+        "type": "integer",
+        "value": "39"
+    },
+    {
+        "description":
+        {
+            "en_US": "The exponential timescale for the banking behavior to take full effect"
+        },
+        "name": "VEHICLE_BANKING_TIMESCALE",
+        "type": "integer",
+        "value": "40"
+    },
+    {
+        "description":
+        {
+            "en_US": "DEPRECATED - use VEHICLE_FLAG_NO_DEFLECTION_UP"
+        },
+        "name": "VEHICLE_FLAG_NO_FLY_UP",
+        "type": "integer",
+        "value": "0x1",
+        "version": "1.1.0",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prevents linear deflection along world-z axis"
+        },
+        "name": "VEHICLE_FLAG_NO_DEFLECTION_UP",
+        "type": "integer",
+        "value": "0x1",
+        "version": "1.1.5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Removes vertical attraction for changes in vehicle pitch"
+        },
+        "name": "VEHICLE_FLAG_LIMIT_ROLL_ONLY",
+        "type": "integer",
+        "value": "0x2",
+        "version": "1.1.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Hover only pays attention to water level"
+        },
+        "name": "VEHICLE_FLAG_HOVER_WATER_ONLY",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Hover only pays attention to terrain height"
+        },
+        "name": "VEHICLE_FLAG_HOVER_TERRAIN_ONLY",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Hover only pays attention to global height"
+        },
+        "name": "VEHICLE_FLAG_HOVER_GLOBAL_HEIGHT",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Hover only pushes up"
+        },
+        "name": "VEHICLE_FLAG_HOVER_UP_ONLY",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prevents ground vehicles from motoring into the sky"
+        },
+        "name": "VEHICLE_FLAG_LIMIT_MOTOR_UP",
+        "type": "integer",
+        "value": "0x40",
+        "version": "1.1.5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Makes vehicle try to turn toward mouselook direction"
+        },
+        "name": "VEHICLE_FLAG_MOUSELOOK_STEER",
+        "type": "integer",
+        "value": "0x80"
+    },
+    {
+        "description":
+        {
+            "en_US": "Makes vehicle try to turn toward mouselook direction assuming banking is enabled"
+        },
+        "name": "VEHICLE_FLAG_MOUSELOOK_BANK",
+        "type": "integer",
+        "value": "0x100"
+    },
+    {
+        "description":
+        {
+            "en_US": "Causes the camera look-at axis to NOT move when the vehicle rotates"
+        },
+        "name": "VEHICLE_FLAG_CAMERA_DECOUPLED",
+        "type": "integer",
+        "value": "0x200"
+    },
+    {
+        "description":
+        {
+            "en_US": "(-45 to 80) Adjusts the angular amount that the camera aims straight ahead vs. straight down, maintaining the same distance. Analogous to 'incidence'."
+        },
+        "name": "CAMERA_PITCH",
+        "type": "integer",
+        "value": "0",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(-10 to 10) A vector that adjusts the position of the camera focus position relative to the subject"
+        },
+        "name": "CAMERA_FOCUS_OFFSET",
+        "type": "integer",
+        "value": "1",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0.0 to 3.0) How much the camera lags as it tries to move towards its 'ideal' position"
+        },
+        "name": "CAMERA_POSITION_LAG",
+        "type": "integer",
+        "value": "5",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0.0 to 3.0) How much the camera lags as it tries to aim towards the subject"
+        },
+        "name": "CAMERA_FOCUS_LAG",
+        "type": "integer",
+        "value": "6",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0.5 to 10) Sets how far away the camera wants to be from its subject"
+        },
+        "name": "CAMERA_DISTANCE",
+        "type": "integer",
+        "value": "7",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0 to 180) Sets the angle in degrees within which the camera is not constrained by changes in subject rotation"
+        },
+        "name": "CAMERA_BEHINDNESS_ANGLE",
+        "type": "integer",
+        "value": "8",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0.0 to 3.0) Sets how strongly the camera is forced to stay behind the target if outside of behindness angle"
+        },
+        "name": "CAMERA_BEHINDNESS_LAG",
+        "type": "integer",
+        "value": "9",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0.0 to 4.0) Sets the radius of a sphere around the camera's ideal position within which it is not affected by subject motion"
+        },
+        "name": "CAMERA_POSITION_THRESHOLD",
+        "type": "integer",
+        "value": "10",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0.0 to 4.0) Sets the radius of a sphere around the camera's subject position within which its focus is not affected by subject motion"
+        },
+        "name": "CAMERA_FOCUS_THRESHOLD",
+        "type": "integer",
+        "value": "11",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0 or 1) Turns on or off scripted control of the camera"
+        },
+        "name": "CAMERA_ACTIVE",
+        "type": "integer",
+        "value": "12",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets the position of the camera"
+        },
+        "name": "CAMERA_POSITION",
+        "type": "integer",
+        "value": "13",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets the focus (target position) of the camera"
+        },
+        "name": "CAMERA_FOCUS",
+        "type": "integer",
+        "value": "17",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0 or 1) Locks the camera position so it will not move"
+        },
+        "name": "CAMERA_POSITION_LOCKED",
+        "type": "integer",
+        "value": "21",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "(0 or 1) Locks the camera focus so it will not move"
+        },
+        "name": "CAMERA_FOCUS_LOCKED",
+        "type": "integer",
+        "value": "22",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference textures"
+        },
+        "name": "INVENTORY_TEXTURE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference sounds"
+        },
+        "name": "INVENTORY_SOUND",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference objects"
+        },
+        "name": "INVENTORY_OBJECT",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference scripts"
+        },
+        "name": "INVENTORY_SCRIPT",
+        "type": "integer",
+        "value": "10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference landmarks"
+        },
+        "name": "INVENTORY_LANDMARK",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference clothing"
+        },
+        "name": "INVENTORY_CLOTHING",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference notecards"
+        },
+        "name": "INVENTORY_NOTECARD",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference body parts"
+        },
+        "name": "INVENTORY_BODYPART",
+        "type": "integer",
+        "value": "13"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference animations"
+        },
+        "name": "INVENTORY_ANIMATION",
+        "type": "integer",
+        "value": "20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference gestures"
+        },
+        "name": "INVENTORY_GESTURE",
+        "type": "integer",
+        "value": "21"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to task inventory library functions to reference all inventory items"
+        },
+        "name": "INVENTORY_ALL",
+        "type": "integer",
+        "value": "-1",
+        "version": "1.6.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llGetInventoryType when no item is found"
+        },
+        "name": "INVENTORY_NONE",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to chest"
+        },
+        "name": "ATTACH_CHEST",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to head"
+        },
+        "name": "ATTACH_HEAD",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left shoulder"
+        },
+        "name": "ATTACH_LSHOULDER",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right shoulder"
+        },
+        "name": "ATTACH_RSHOULDER",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left hand"
+        },
+        "name": "ATTACH_LHAND",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right hand"
+        },
+        "name": "ATTACH_RHAND",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left foot"
+        },
+        "name": "ATTACH_LFOOT",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right foot"
+        },
+        "name": "ATTACH_RFOOT",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to back"
+        },
+        "name": "ATTACH_BACK",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to pelvis"
+        },
+        "name": "ATTACH_PELVIS",
+        "type": "integer",
+        "value": "10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to mouth"
+        },
+        "name": "ATTACH_MOUTH",
+        "type": "integer",
+        "value": "11"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to chin"
+        },
+        "name": "ATTACH_CHIN",
+        "type": "integer",
+        "value": "12"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left ear"
+        },
+        "name": "ATTACH_LEAR",
+        "type": "integer",
+        "value": "13"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right ear"
+        },
+        "name": "ATTACH_REAR",
+        "type": "integer",
+        "value": "14"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left eye"
+        },
+        "name": "ATTACH_LEYE",
+        "type": "integer",
+        "value": "15"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right eye"
+        },
+        "name": "ATTACH_REYE",
+        "type": "integer",
+        "value": "16"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to nose"
+        },
+        "name": "ATTACH_NOSE",
+        "type": "integer",
+        "value": "17"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right upper arm"
+        },
+        "name": "ATTACH_RUARM",
+        "type": "integer",
+        "value": "18"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right lower arm"
+        },
+        "name": "ATTACH_RLARM",
+        "type": "integer",
+        "value": "19"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left upper arm"
+        },
+        "name": "ATTACH_LUARM",
+        "type": "integer",
+        "value": "20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left lower arm"
+        },
+        "name": "ATTACH_LLARM",
+        "type": "integer",
+        "value": "21"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right hip"
+        },
+        "name": "ATTACH_RHIP",
+        "type": "integer",
+        "value": "22"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right upper leg"
+        },
+        "name": "ATTACH_RULEG",
+        "type": "integer",
+        "value": "23"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right lower leg"
+        },
+        "name": "ATTACH_RLLEG",
+        "type": "integer",
+        "value": "24"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left hip"
+        },
+        "name": "ATTACH_LHIP",
+        "type": "integer",
+        "value": "25"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left upper leg"
+        },
+        "name": "ATTACH_LULEG",
+        "type": "integer",
+        "value": "26"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left lower leg"
+        },
+        "name": "ATTACH_LLLEG",
+        "type": "integer",
+        "value": "27"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to belly"
+        },
+        "name": "ATTACH_BELLY",
+        "type": "integer",
+        "value": "28"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to LEFT pectoral.\nDEPRECATED/MISNAMED - use ATTACH_LEFT_PEC or ATTACH_RIGHT_PEC."
+        },
+        "name": "ATTACH_RPEC",
+        "type": "integer",
+        "value": "29",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to RIGHT pectoral.\nDEPRECATED/MISNAMED - use ATTACH_LEFT_PEC or ATTACH_RIGHT_PEC."
+        },
+        "name": "ATTACH_LPEC",
+        "type": "integer",
+        "value": "30",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left pectoral"
+        },
+        "name": "ATTACH_LEFT_PEC",
+        "type": "integer",
+        "value": "29"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right pectoral"
+        },
+        "name": "ATTACH_RIGHT_PEC",
+        "type": "integer",
+        "value": "30"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to bottom HUD area"
+        },
+        "name": "ATTACH_HUD_BOTTOM",
+        "type": "integer",
+        "value": "37"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to bottom left HUD area"
+        },
+        "name": "ATTACH_HUD_BOTTOM_LEFT",
+        "type": "integer",
+        "value": "36"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to bottom right HUD area"
+        },
+        "name": "ATTACH_HUD_BOTTOM_RIGHT",
+        "type": "integer",
+        "value": "38"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to center 1 HUD area"
+        },
+        "name": "ATTACH_HUD_CENTER_1",
+        "type": "integer",
+        "value": "35"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to center 2 HUD area"
+        },
+        "name": "ATTACH_HUD_CENTER_2",
+        "type": "integer",
+        "value": "31"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to top center HUD area"
+        },
+        "name": "ATTACH_HUD_TOP_CENTER",
+        "type": "integer",
+        "value": "33"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to top left HUD area"
+        },
+        "name": "ATTACH_HUD_TOP_LEFT",
+        "type": "integer",
+        "value": "34"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to top right HUD area"
+        },
+        "name": "ATTACH_HUD_TOP_RIGHT",
+        "type": "integer",
+        "value": "32"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to neck"
+        },
+        "name": "ATTACH_NECK",
+        "type": "integer",
+        "value": "39"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to avatar center"
+        },
+        "name": "ATTACH_AVATAR_CENTER",
+        "type": "integer",
+        "value": "40"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left ring finger"
+        },
+        "name": "ATTACH_LHAND_RING1",
+        "type": "integer",
+        "value": "41",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right ring finger"
+        },
+        "name": "ATTACH_RHAND_RING1",
+        "type": "integer",
+        "value": "42",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to tail base"
+        },
+        "name": "ATTACH_TAIL_BASE",
+        "type": "integer",
+        "value": "43",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to tail tip"
+        },
+        "name": "ATTACH_TAIL_TIP",
+        "type": "integer",
+        "value": "44",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left wing"
+        },
+        "name": "ATTACH_LWING",
+        "type": "integer",
+        "value": "45",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right wing"
+        },
+        "name": "ATTACH_RWING",
+        "type": "integer",
+        "value": "46",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to jaw"
+        },
+        "name": "ATTACH_FACE_JAW",
+        "type": "integer",
+        "value": "47",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left ear (extended)"
+        },
+        "name": "ATTACH_FACE_LEAR",
+        "type": "integer",
+        "value": "48",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right ear (extended)"
+        },
+        "name": "ATTACH_FACE_REAR",
+        "type": "integer",
+        "value": "49",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left eye (extended)"
+        },
+        "name": "ATTACH_FACE_LEYE",
+        "type": "integer",
+        "value": "50",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right eye (extended)"
+        },
+        "name": "ATTACH_FACE_REYE",
+        "type": "integer",
+        "value": "51",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to tongue"
+        },
+        "name": "ATTACH_FACE_TOUNGE",
+        "type": "integer",
+        "value": "52",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to groin"
+        },
+        "name": "ATTACH_GROIN",
+        "type": "integer",
+        "value": "53",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to left hindfoot"
+        },
+        "name": "ATTACH_HIND_LFOOT",
+        "type": "integer",
+        "value": "54",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llAttachToAvatar to attach task to right hindfoot"
+        },
+        "name": "ATTACH_HIND_RFOOT",
+        "type": "integer",
+        "value": "55",
+        "version": "16.05.24.315768"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llModifyLand to level terrain"
+        },
+        "name": "LAND_LEVEL",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llModifyLand to raise terrain"
+        },
+        "name": "LAND_RAISE",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llModifyLand to lower terrain"
+        },
+        "name": "LAND_LOWER",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llModifyLand to smooth terrain"
+        },
+        "name": "LAND_SMOOTH",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llModifyLand to randomize terrain"
+        },
+        "name": "LAND_NOISE",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llModifyLand to revert terrain toward original state"
+        },
+        "name": "LAND_REVERT",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Deprecated, do not use. Use the value 0 to mean a 2x2 brush."
+        },
+        "name": "LAND_SMALL_BRUSH",
+        "type": "integer",
+        "value": "1",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Deprecated, do not use. Use the value 1 to mean a 4x4 brush."
+        },
+        "name": "LAND_MEDIUM_BRUSH",
+        "type": "integer",
+        "value": "2",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Deprecated, do not use. Use the value 2 to mean an 8x8 brush."
+        },
+        "name": "LAND_LARGE_BRUSH",
+        "type": "integer",
+        "value": "3",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestAgentData to get payment status of an agent"
+        },
+        "name": "DATA_PAYINFO",
+        "type": "integer",
+        "value": "8",
+        "version": "1.11.2(1)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestAgentData to determine if agent is online"
+        },
+        "name": "DATA_ONLINE",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestAgentData to get full agent name"
+        },
+        "name": "DATA_NAME",
+        "type": "integer",
+        "value": "2",
+        "version": "1.1.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestAgentData to get born on date as a string"
+        },
+        "name": "DATA_BORN",
+        "type": "integer",
+        "value": "3",
+        "version": "1.1.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestAgentData to get a comma separated sting of integer ratings. DEPRECATED - Ratings are no longer in use and using this value in a query always returns \"0, 0, 0, 0, 0, 0\"."
+        },
+        "name": "DATA_RATING",
+        "type": "integer",
+        "value": "4",
+        "version": "1.1.0",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestSimulatorData to get a string (cast to vector) of a simulator's global position"
+        },
+        "name": "DATA_SIM_POS",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestSimulatorData to get the status of a simulator"
+        },
+        "name": "DATA_SIM_STATUS",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to llRequestSimulatorData to get the rating of a simulator"
+        },
+        "name": "DATA_SIM_RATING",
+        "type": "integer",
+        "value": "7",
+        "version": "1.7.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llRequestAgentData to tell if Agent is of \"Payment Info On File\" status"
+        },
+        "name": "PAYMENT_INFO_ON_FILE",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llRequestAgentData to tell if Agent is of \"Payment Info Used\" status"
+        },
+        "name": "PAYMENT_INFO_USED",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Enable texture animation"
+        },
+        "name": "ANIM_ON",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Loop when animating textures"
+        },
+        "name": "LOOP",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Animate in the reverse direction"
+        },
+        "name": "REVERSE",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Animate forward, then reverse"
+        },
+        "name": "PING_PONG",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Textures slides, instead of stepping"
+        },
+        "name": "SMOOTH",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Rotates the texture, instead of using frames"
+        },
+        "name": "ROTATE",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Scales the texture, instead of using frames"
+        },
+        "name": "SCALE",
+        "type": "integer",
+        "value": "0x40"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to various texture and color library functions to modify all sides"
+        },
+        "name": "ALL_SIDES",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to various link functions to modify all blocks in the object"
+        },
+        "name": "LINK_SET",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to various link functions to modify only the root block (no effect on single block objects)"
+        },
+        "name": "LINK_ROOT",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to various link functions to modify all other blocks in the object"
+        },
+        "name": "LINK_ALL_OTHERS",
+        "type": "integer",
+        "value": "-2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to various link functions to modify all child blocks in the object"
+        },
+        "name": "LINK_ALL_CHILDREN",
+        "type": "integer",
+        "value": "-3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Passed to various link functions to modify only the calling block"
+        },
+        "name": "LINK_THIS",
+        "type": "integer",
+        "value": "-4",
+        "version": "1.6.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate change to task's inventory"
+        },
+        "name": "CHANGED_INVENTORY",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate change to task's color"
+        },
+        "name": "CHANGED_COLOR",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate change to task's shape parameters"
+        },
+        "name": "CHANGED_SHAPE",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate change to task's scale"
+        },
+        "name": "CHANGED_SCALE",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate change to task's texture"
+        },
+        "name": "CHANGED_TEXTURE",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate change to task's link status"
+        },
+        "name": "CHANGED_LINK",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate a user dropped an inventory item\nonto task that was allowed only by llAllowInventoryDrop function call"
+        },
+        "name": "CHANGED_ALLOWED_DROP",
+        "type": "integer",
+        "value": "0x40"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate change to task's owner ONLY when an object is sold as original or deeded to group"
+        },
+        "name": "CHANGED_OWNER",
+        "type": "integer",
+        "value": "0x80"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate the region has changed"
+        },
+        "name": "CHANGED_REGION",
+        "type": "integer",
+        "value": "0x100"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate teleport has completed"
+        },
+        "name": "CHANGED_TELEPORT",
+        "type": "integer",
+        "value": "0x200"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate the region has been restarted"
+        },
+        "name": "CHANGED_REGION_START",
+        "type": "integer",
+        "value": "0x400"
+    },
+    {
+        "description":
+        {
+            "en_US": "Parameter of changed event handler used to indicate that media has changed on a face of the task"
+        },
+        "name": "CHANGED_MEDIA",
+        "type": "integer",
+        "value": "0x800"
+    },
+    {
+        "description":
+        {
+            "en_US": "Indicates that the list entry is holding an integer"
+        },
+        "name": "TYPE_INTEGER",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Indicates that the list entry is holding an float"
+        },
+        "name": "TYPE_FLOAT",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Indicates that the list entry is holding an string"
+        },
+        "name": "TYPE_STRING",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Indicates that the list entry is holding an key"
+        },
+        "name": "TYPE_KEY",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Indicates that the list entry is holding an vector"
+        },
+        "name": "TYPE_VECTOR",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Indicates that the list entry is holding an rotation"
+        },
+        "name": "TYPE_ROTATION",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Indicates that this wasn't a valid list entry"
+        },
+        "name": "TYPE_INVALID",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Value of event_type in remote_event after successful llOpenRemoteDataChannel"
+        },
+        "name": "REMOTE_DATA_CHANNEL",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Value of event_type in remote_event if XML-RPC request is received"
+        },
+        "name": "REMOTE_DATA_REQUEST",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Value of event_type in remote_event if XML-RPC reply is received"
+        },
+        "name": "REMOTE_DATA_REPLY",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by PRIM_TYPE_BOX, PRIM_TYPE_CYLINDER, PRIM_TYPE_PRISM, PRIM_TYPE_SPHERE, PRIM_TYPE_TORUS, PRIM_TYPE_TUBE, or PRIM_TYPE_SCULPT and their arguments"
+        },
+        "name": "PRIM_TYPE",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by PRIM_MATERIAL_STONE, PRIM_MATERIAL_METAL, PRIM_MATERIAL_GLASS, PRIM_MATERIAL_WOOD, PRIM_MATERIAL_FLESH, PRIM_MATERIAL_PLASTIC, or PRIM_MATERIAL_RUBBER"
+        },
+        "name": "PRIM_MATERIAL",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets physics to TRUE or FALSE"
+        },
+        "name": "PRIM_PHYSICS",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by TRUE or FALSE, integer softness, float gravity, float friction, float wind, float tension, and vector force"
+        },
+        "name": "PRIM_FLEXIBLE",
+        "type": "integer",
+        "value": "21",
+        "version": "1.9.1.13"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by TRUE or FALSE, vector color, float intensity, float radius, float falloff"
+        },
+        "name": "PRIM_POINT_LIGHT",
+        "type": "integer",
+        "value": "23",
+        "version": "1.9.1.13"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets temporary on rez to TRUE or FALSE"
+        },
+        "name": "PRIM_TEMP_ON_REZ",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets phantom to TRUE or FALSE"
+        },
+        "name": "PRIM_PHANTOM",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "DEPRECATED. Takes 1 parameter, an integer, but has no effect when set and always returns 0 if used in llGetPrimitiveParams."
+        },
+        "name": "PRIM_CAST_SHADOWS",
+        "type": "integer",
+        "value": "24",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets prim's local position to a vector position, gets prim's world position"
+        },
+        "name": "PRIM_POSITION",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Gets/Sets primitive local (root-prim relative) position (vector position)"
+        },
+        "name": "PRIM_POS_LOCAL",
+        "type": "integer",
+        "value": "33"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets primitive size to a vector size"
+        },
+        "name": "PRIM_SIZE",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Gets primitive absolute rotation. Sets absolute rotation for root, and local rotation offset by root's rotation for children."
+        },
+        "name": "PRIM_ROTATION",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Gets/Sets primitive local (root-prim relative) rotation"
+        },
+        "name": "PRIM_ROT_LOCAL",
+        "type": "integer",
+        "value": "29"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by an integer face, string name, vector repeats, vector offsets,\nand float rotation in radians"
+        },
+        "name": "PRIM_TEXTURE",
+        "type": "integer",
+        "value": "17"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by an integer face, vector color, and float alpha"
+        },
+        "name": "PRIM_COLOR",
+        "type": "integer",
+        "value": "18"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by an integer face, one of PRIM_SHINY_NONE, PRIM_SHINY_LOW,\nPRIM_SHINY_MEDIUM, or PRIM_SHINY_HIGH,\nand one of PRIM_BUMP_NONE, PRIM_BUMP_BRIGHT, PRIM_BUMP_DARK, etc"
+        },
+        "name": "PRIM_BUMP_SHINY",
+        "type": "integer",
+        "value": "19"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by an integer face, and TRUE or FALSE"
+        },
+        "name": "PRIM_FULLBRIGHT",
+        "type": "integer",
+        "value": "20",
+        "version": "1.7.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by an integer face, and one of PRIM_TEXGEN_DEFAULT or PRIM_TEXGEN_PLANAR"
+        },
+        "name": "PRIM_TEXGEN",
+        "type": "integer",
+        "value": "22"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by an integer face, and a float from 0.0 to 1.0 specifying glow amount"
+        },
+        "name": "PRIM_GLOW",
+        "type": "integer",
+        "value": "25",
+        "version": "1.20.15"
+    },
+    {
+        "description":
+        {
+            "en_US": "For floating text. Followed by a string text, vector color, and float alpha."
+        },
+        "name": "PRIM_TEXT",
+        "type": "integer",
+        "value": "26"
+    },
+    {
+        "description":
+        {
+            "en_US": "For primitive name. Followed by a string."
+        },
+        "name": "PRIM_NAME",
+        "type": "integer",
+        "value": "27"
+    },
+    {
+        "description":
+        {
+            "en_US": "For primitive description. Followed by a string."
+        },
+        "name": "PRIM_DESC",
+        "type": "integer",
+        "value": "28"
+    },
+    {
+        "description":
+        {
+            "en_US": "For primitive target omega. Followed by vector axis, float spinrate, float gain."
+        },
+        "name": "PRIM_OMEGA",
+        "type": "integer",
+        "value": "32"
+    },
+    {
+        "description":
+        {
+            "en_US": "Will cause subsequent parameters to affect the prim which link number parameter follows this flag, independently of the original prim(s) being affected. Compatible with all PrimitiveParams functions."
+        },
+        "name": "PRIM_LINK_TARGET",
+        "type": "integer",
+        "value": "34"
+    },
+    {
+        "description":
+        {
+            "en_US": "For primitive physics shape type. Followed with either PRIM_PHYSICS_SHAPE_PRIM, PRIM_PHYSICS_SHAPE_NONE or PRIM_PHYSICS_SHAPE_CONVEX."
+        },
+        "name": "PRIM_PHYSICS_SHAPE_TYPE",
+        "type": "integer",
+        "value": "30"
+    },
+    {
+        "description":
+        {
+            "en_US": "Get and set the 'slice' parameter of all shapes. Takes a vector parameter of the form <start_slice, end_slice, 0>."
+        },
+        "name": "PRIM_SLICE",
+        "type": "integer",
+        "value": "35"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by integer hole shape, vector cut, float hollow, vector twist,\nvector top size, and vector top shear"
+        },
+        "name": "PRIM_TYPE_BOX",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by integer hole shape, vector cut, float hollow, vector twist,\nvector top size, and vector top shear"
+        },
+        "name": "PRIM_TYPE_CYLINDER",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by integer hole shape, vector cut, float hollow, vector twist,\nvector top size, and vector top shear"
+        },
+        "name": "PRIM_TYPE_PRISM",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by integer hole shape, vector cut, float hollow, vector twist,\nand vector dimple"
+        },
+        "name": "PRIM_TYPE_SPHERE",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by integer hole shape, vector cut, float hollow, vector twist,\nvector hole size, vector top shear, vector advanced cut, vector taper,\nfloat revolutions, float radius offset, and float skew"
+        },
+        "name": "PRIM_TYPE_TORUS",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by integer hole shape, vector cut, float hollow, vector twist,\nvector hole size, vector top shear, vector advanced cut, vector taper,\nfloat revolutions, float radius offset, and float skew"
+        },
+        "name": "PRIM_TYPE_TUBE",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by integer hole shape, vector cut, float hollow, vector twist,\nvector hole size, vector top shear, vector advanced cut, vector taper,\nfloat revolutions, float radius offset, and float skew"
+        },
+        "name": "PRIM_TYPE_RING",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Followed by a key/string texture uuid, and one of PRIM_SCULPT_TYPE_SPHERE, PRIM_SCULPT_TYPE_TORUS, PRIM_SCULPT_TYPE_PLANE, or PRIM_SCULPT_TYPE_CYLINDER"
+        },
+        "name": "PRIM_TYPE_SCULPT",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets hole type to match the prim type"
+        },
+        "name": "PRIM_HOLE_DEFAULT",
+        "type": "integer",
+        "value": "0x0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets hole type to square"
+        },
+        "name": "PRIM_HOLE_SQUARE",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets hole type to circle"
+        },
+        "name": "PRIM_HOLE_CIRCLE",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets hole type to triangle"
+        },
+        "name": "PRIM_HOLE_TRIANGLE",
+        "type": "integer",
+        "value": "0x30"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets material to stone"
+        },
+        "name": "PRIM_MATERIAL_STONE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets material to metal"
+        },
+        "name": "PRIM_MATERIAL_METAL",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets material to glass"
+        },
+        "name": "PRIM_MATERIAL_GLASS",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets material to wood"
+        },
+        "name": "PRIM_MATERIAL_WOOD",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets material to flesh"
+        },
+        "name": "PRIM_MATERIAL_FLESH",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets material to plastic"
+        },
+        "name": "PRIM_MATERIAL_PLASTIC",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets material to rubber"
+        },
+        "name": "PRIM_MATERIAL_RUBBER",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Sets material to light. DEPRECATED - use PRIM_FULLBRIGHT instead."
+        },
+        "name": "PRIM_MATERIAL_LIGHT",
+        "type": "integer",
+        "value": "7",
+        "status": "deprecated"
+    },
+    {
+        "description":
+        {
+            "en_US": "No shininess"
+        },
+        "name": "PRIM_SHINY_NONE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Low shininess"
+        },
+        "name": "PRIM_SHINY_LOW",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Medium shininess"
+        },
+        "name": "PRIM_SHINY_MEDIUM",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "High shininess"
+        },
+        "name": "PRIM_SHINY_HIGH",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "No bump map"
+        },
+        "name": "PRIM_BUMP_NONE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Generate bump map from highlights"
+        },
+        "name": "PRIM_BUMP_BRIGHT",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Generate bump map from lowlights"
+        },
+        "name": "PRIM_BUMP_DARK",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Wood bump map"
+        },
+        "name": "PRIM_BUMP_WOOD",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Bark bump map"
+        },
+        "name": "PRIM_BUMP_BARK",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Brick bump map"
+        },
+        "name": "PRIM_BUMP_BRICKS",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Checker bump map"
+        },
+        "name": "PRIM_BUMP_CHECKER",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Concrete bump map"
+        },
+        "name": "PRIM_BUMP_CONCRETE",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Tile bump map"
+        },
+        "name": "PRIM_BUMP_TILE",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Stone bump map"
+        },
+        "name": "PRIM_BUMP_STONE",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Disk bump map"
+        },
+        "name": "PRIM_BUMP_DISKS",
+        "type": "integer",
+        "value": "10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Gravel bump map"
+        },
+        "name": "PRIM_BUMP_GRAVEL",
+        "type": "integer",
+        "value": "11"
+    },
+    {
+        "description":
+        {
+            "en_US": "Blob bump map"
+        },
+        "name": "PRIM_BUMP_BLOBS",
+        "type": "integer",
+        "value": "12"
+    },
+    {
+        "description":
+        {
+            "en_US": "Siding bump map"
+        },
+        "name": "PRIM_BUMP_SIDING",
+        "type": "integer",
+        "value": "13"
+    },
+    {
+        "description":
+        {
+            "en_US": "Large tile bump map"
+        },
+        "name": "PRIM_BUMP_LARGETILE",
+        "type": "integer",
+        "value": "14"
+    },
+    {
+        "description":
+        {
+            "en_US": "Stucco bump map"
+        },
+        "name": "PRIM_BUMP_STUCCO",
+        "type": "integer",
+        "value": "15"
+    },
+    {
+        "description":
+        {
+            "en_US": "Suction cup bump map"
+        },
+        "name": "PRIM_BUMP_SUCTION",
+        "type": "integer",
+        "value": "16"
+    },
+    {
+        "description":
+        {
+            "en_US": "Weave bump map"
+        },
+        "name": "PRIM_BUMP_WEAVE",
+        "type": "integer",
+        "value": "17"
+    },
+    {
+        "description":
+        {
+            "en_US": "Default texture mapping"
+        },
+        "name": "PRIM_TEXGEN_DEFAULT",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Planar texture mapping"
+        },
+        "name": "PRIM_TEXGEN_PLANAR",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Stitch edges in a sphere-like way"
+        },
+        "name": "PRIM_SCULPT_TYPE_SPHERE",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Stitch edges in a torus-like way"
+        },
+        "name": "PRIM_SCULPT_TYPE_TORUS",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Do not stitch edges"
+        },
+        "name": "PRIM_SCULPT_TYPE_PLANE",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Stitch edges in a cylinder-like way"
+        },
+        "name": "PRIM_SCULPT_TYPE_CYLINDER",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Mask used to determine stitching type"
+        },
+        "name": "PRIM_SCULPT_TYPE_MASK",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag to specify that the surface normals should be inverted"
+        },
+        "name": "PRIM_SCULPT_FLAG_INVERT",
+        "type": "integer",
+        "value": "0x40"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag to specify that the prim should be reflected along X axis"
+        },
+        "name": "PRIM_SCULPT_FLAG_MIRROR",
+        "type": "integer",
+        "value": "0x80"
+    },
+    {
+        "description":
+        {
+            "en_US": "Use the normal prim shape for physics (this is the default for all non-mesh objects)"
+        },
+        "name": "PRIM_PHYSICS_SHAPE_PRIM",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Use the convex hull of the prim shape for physics (this is the default for mesh objects)"
+        },
+        "name": "PRIM_PHYSICS_SHAPE_CONVEX",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Ignore this prim in the physics shape. This cannot be applied to the root prim."
+        },
+        "name": "PRIM_PHYSICS_SHAPE_NONE",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "For use with llSetPhysicsMaterial() as a bitwise value in its material_bits parameter, to set the density"
+        },
+        "name": "DENSITY",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "For use with llSetPhysicsMaterial as a bitwise value in its material_bits parameter, to set the friction"
+        },
+        "name": "FRICTION",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "For use with llSetPhysicsMaterial as a bitwise value in its material_bits parameter, to set the restitution"
+        },
+        "name": "RESTITUTION",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "For use with llSetPhysicsMaterial as a bitwise value in its material_bits parameter, to set the gravity multiplier"
+        },
+        "name": "GRAVITY_MULTIPLIER",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Base permissions"
+        },
+        "name": "MASK_BASE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Owner permissions"
+        },
+        "name": "MASK_OWNER",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Group permissions"
+        },
+        "name": "MASK_GROUP",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Everyone permissions"
+        },
+        "name": "MASK_EVERYONE",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Next owner permissions"
+        },
+        "name": "MASK_NEXT",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Transfer permission"
+        },
+        "name": "PERM_TRANSFER",
+        "type": "integer",
+        "value": "0x00002000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Modify permission"
+        },
+        "name": "PERM_MODIFY",
+        "type": "integer",
+        "value": "0x00004000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Copy permission"
+        },
+        "name": "PERM_COPY",
+        "type": "integer",
+        "value": "0x00008000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Move permission"
+        },
+        "name": "PERM_MOVE",
+        "type": "integer",
+        "value": "0x00080000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Move/Modify/Copy/Transfer permissions"
+        },
+        "name": "PERM_ALL",
+        "type": "integer",
+        "value": "0x7FFFFFFF"
+    },
+    {
+        "description":
+        {
+            "en_US": "Stop media stream"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_STOP",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Pause media stream"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_PAUSE",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Play media stream"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_PLAY",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Loop media stream"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_LOOP",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Get or set the parcel's media loop duration"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_LOOP_SET",
+        "type": "integer",
+        "value": "13"
+    },
+    {
+        "description":
+        {
+            "en_US": "Get or set the parcel's media texture"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_TEXTURE",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Get or set the parcel's media url"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_URL",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Get or set the parcel's media mimetype"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_TYPE",
+        "type": "integer",
+        "value": "10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Get or set the parcel's media description"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_DESC",
+        "type": "integer",
+        "value": "12"
+    },
+    {
+        "description":
+        {
+            "en_US": "Set media stream to specific time"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_TIME",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Get or set the parcel's media pixel resolution"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_SIZE",
+        "type": "integer",
+        "value": "11"
+    },
+    {
+        "description":
+        {
+            "en_US": "Allows media stream commands to apply to only one agent"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_AGENT",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Unloads the media stream"
+        },
+        "name": "PARCEL_MEDIA_COMMAND_UNLOAD",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Auto aligns the media stream to the texture size. May cause a performance hit and loss of some visual quality."
+        },
+        "name": "PARCEL_MEDIA_COMMAND_AUTO_ALIGN",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetPayPrice to hide a button"
+        },
+        "name": "PAY_HIDE",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetPayPrice to use the default price for a button"
+        },
+        "name": "PAY_DEFAULT",
+        "type": "integer",
+        "value": "-2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the largest number in a list"
+        },
+        "name": "LIST_STAT_MAX",
+        "type": "integer",
+        "value": "2",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the smallest number in a list"
+        },
+        "name": "LIST_STAT_MIN",
+        "type": "integer",
+        "value": "1",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the mean of the numbers in a list"
+        },
+        "name": "LIST_STAT_MEAN",
+        "type": "integer",
+        "value": "3",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the median of the numbers in a list"
+        },
+        "name": "LIST_STAT_MEDIAN",
+        "type": "integer",
+        "value": "4",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the standard deviation of the numbers in a list"
+        },
+        "name": "LIST_STAT_STD_DEV",
+        "type": "integer",
+        "value": "5",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the sum of the numbers in a list"
+        },
+        "name": "LIST_STAT_SUM",
+        "type": "integer",
+        "value": "6",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the sum of the squares of the numbers in a list"
+        },
+        "name": "LIST_STAT_SUM_SQUARES",
+        "type": "integer",
+        "value": "7",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find how many numbers are in a list"
+        },
+        "name": "LIST_STAT_NUM_COUNT",
+        "type": "integer",
+        "value": "8",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the geometric mean of the numbers in a list (all numbers must be > 0)"
+        },
+        "name": "LIST_STAT_GEOMETRIC_MEAN",
+        "type": "integer",
+        "value": "9",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the harmonic mean of the numbers in a list (all numbers must be <> 0)"
+        },
+        "name": "LIST_STAT_HARMONIC_MEAN",
+        "type": "integer",
+        "value": "100",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llListStatistics to find the range of the numbers in a list"
+        },
+        "name": "LIST_STAT_RANGE",
+        "type": "integer",
+        "value": "0",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows flying"
+        },
+        "name": "PARCEL_FLAG_ALLOW_FLY",
+        "type": "integer",
+        "value": "0x00000001",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows group scripts"
+        },
+        "name": "PARCEL_FLAG_ALLOW_GROUP_SCRIPTS",
+        "type": "integer",
+        "value": "0x02000000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows outside scripts"
+        },
+        "name": "PARCEL_FLAG_ALLOW_SCRIPTS",
+        "type": "integer",
+        "value": "0x00000002",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows landmarks to be created"
+        },
+        "name": "PARCEL_FLAG_ALLOW_LANDMARK",
+        "type": "integer",
+        "value": "0x00000008",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows anyone to terraform the land"
+        },
+        "name": "PARCEL_FLAG_ALLOW_TERRAFORM",
+        "type": "integer",
+        "value": "0x00000010",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows damage"
+        },
+        "name": "PARCEL_FLAG_ALLOW_DAMAGE",
+        "type": "integer",
+        "value": "0x00000020",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows anyone to create objects"
+        },
+        "name": "PARCEL_FLAG_ALLOW_CREATE_OBJECTS",
+        "type": "integer",
+        "value": "0x00000040",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows group members or objects to create objects"
+        },
+        "name": "PARCEL_FLAG_ALLOW_CREATE_GROUP_OBJECTS",
+        "type": "integer",
+        "value": "0x04000000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel limits access to a group"
+        },
+        "name": "PARCEL_FLAG_USE_ACCESS_GROUP",
+        "type": "integer",
+        "value": "0x00000100",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel limits access to a list of residents"
+        },
+        "name": "PARCEL_FLAG_USE_ACCESS_LIST",
+        "type": "integer",
+        "value": "0x00000200",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel uses a ban list"
+        },
+        "name": "PARCEL_FLAG_USE_BAN_LIST",
+        "type": "integer",
+        "value": "0x00000400",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows passes to be purchased"
+        },
+        "name": "PARCEL_FLAG_USE_LAND_PASS_LIST",
+        "type": "integer",
+        "value": "0x00000800",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel restricts spacialized sound to the parcel"
+        },
+        "name": "PARCEL_FLAG_LOCAL_SOUND_ONLY",
+        "type": "integer",
+        "value": "0x00008000",
+        "version": "1.9.1.9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel restricts llPushObject calls"
+        },
+        "name": "PARCEL_FLAG_RESTRICT_PUSHOBJECT",
+        "type": "integer",
+        "value": "0x00200000",
+        "version": "1.11.2(1)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel allows all objects to enter"
+        },
+        "name": "PARCEL_FLAG_ALLOW_ALL_OBJECT_ENTRY",
+        "type": "integer",
+        "value": "0x08000000",
+        "version": "1.15.0(2)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelFlags to find if a parcel only allows group (and owner) objects to enter"
+        },
+        "name": "PARCEL_FLAG_ALLOW_GROUP_OBJECT_ENTRY",
+        "type": "integer",
+        "value": "0x10000000",
+        "version": "1.15.0(2)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region is entirely damage enabled"
+        },
+        "name": "REGION_FLAG_ALLOW_DAMAGE",
+        "type": "integer",
+        "value": "0x00000001",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region has a fixed sun position"
+        },
+        "name": "REGION_FLAG_FIXED_SUN",
+        "type": "integer",
+        "value": "0x00000010",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region terraforming disabled"
+        },
+        "name": "REGION_FLAG_BLOCK_TERRAFORM",
+        "type": "integer",
+        "value": "0x00000040",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region is a sandbox"
+        },
+        "name": "REGION_FLAG_SANDBOX",
+        "type": "integer",
+        "value": "0x00000100",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region has disabled collisions"
+        },
+        "name": "REGION_FLAG_DISABLE_COLLISIONS",
+        "type": "integer",
+        "value": "0x00001000",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region has disabled physics"
+        },
+        "name": "REGION_FLAG_DISABLE_PHYSICS",
+        "type": "integer",
+        "value": "0x00004000",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region blocks flying"
+        },
+        "name": "REGION_FLAG_BLOCK_FLY",
+        "type": "integer",
+        "value": "0x00080000",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region allows direct teleports"
+        },
+        "name": "REGION_FLAG_ALLOW_DIRECT_TELEPORT",
+        "type": "integer",
+        "value": "0x00100000",
+        "version": "1.9.0(15)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetRegionFlags to find if a region restricts llPushObject calls"
+        },
+        "name": "REGION_FLAG_RESTRICT_PUSHOBJECT",
+        "type": "integer",
+        "value": "0x00400000",
+        "version": "1.11.2(1)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llHTTPRequest to specify the method, such as \"GET\" or \"POST\""
+        },
+        "name": "HTTP_METHOD",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llHTTPRequest to specify the MIME type, defaults to \"text/plain\""
+        },
+        "name": "HTTP_MIMETYPE",
+        "type": "integer",
+        "value": "1",
+        "version": "1.10.4(0)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llHTTPRequest to specify the maximum reponse body to return"
+        },
+        "name": "HTTP_BODY_MAXLENGTH",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llHTTPRequest to specify SSL certificate verification"
+        },
+        "name": "HTTP_VERIFY_CERT",
+        "type": "integer",
+        "value": "3",
+        "version": "1.10.4(0)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with http_response to indicate truncation point in bytes"
+        },
+        "name": "HTTP_BODY_TRUNCATED",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with http_response to indicate truncation point in bytes"
+        },
+        "name": "HTTP_CUSTOM_HEADER",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llHTTPRequest to toggle errors on outgoing requests throttling hit"
+        },
+        "name": "HTTP_VERBOSE_THROTTLE",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelPrimCount to get the total number of prims on the parcel"
+        },
+        "name": "PARCEL_COUNT_TOTAL",
+        "type": "integer",
+        "value": "0",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelPrimCount to get the number of prims on the parcel owned by the owner"
+        },
+        "name": "PARCEL_COUNT_OWNER",
+        "type": "integer",
+        "value": "1",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelPrimCount to get the number of prims on the parcel owned by the group"
+        },
+        "name": "PARCEL_COUNT_GROUP",
+        "type": "integer",
+        "value": "2",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelPrimCount to get the number of prims on the parcel owned by others"
+        },
+        "name": "PARCEL_COUNT_OTHER",
+        "type": "integer",
+        "value": "3",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelPrimCount to get the number of prims on the parcel currently selected or sat upon"
+        },
+        "name": "PARCEL_COUNT_SELECTED",
+        "type": "integer",
+        "value": "4",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelPrimCount to get the number of prims on the parcel that are temp on rez"
+        },
+        "name": "PARCEL_COUNT_TEMP",
+        "type": "integer",
+        "value": "5",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelDetails to get the parcel name"
+        },
+        "name": "PARCEL_DETAILS_NAME",
+        "type": "integer",
+        "value": "0",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelDetails to get the parcel description"
+        },
+        "name": "PARCEL_DETAILS_DESC",
+        "type": "integer",
+        "value": "1",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelDetails to get the parcel owner id"
+        },
+        "name": "PARCEL_DETAILS_OWNER",
+        "type": "integer",
+        "value": "2",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelDetails to get the parcel group id"
+        },
+        "name": "PARCEL_DETAILS_GROUP",
+        "type": "integer",
+        "value": "3",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelDetails to get the parcel area in square meters"
+        },
+        "name": "PARCEL_DETAILS_AREA",
+        "type": "integer",
+        "value": "4",
+        "version": "1.13.0(8)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelDetails to get the parcel id"
+        },
+        "name": "PARCEL_DETAILS_ID",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "name": "PARCEL_DETAILS_CLAIMDATE",
+        "type": "integer",
+        "value": "10",
+        "grid": "os"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llGetParcelDetails to get the avatars visibility setting"
+        },
+        "name": "PARCEL_DETAILS_SEE_AVATARS",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llStringTrim to trim leading spaces from a string"
+        },
+        "name": "STRING_TRIM_HEAD",
+        "type": "integer",
+        "value": "0x1",
+        "version": "1.15.0(2)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llStringTrim to trim trailing spaces from a string"
+        },
+        "name": "STRING_TRIM_TAIL",
+        "type": "integer",
+        "value": "0x2",
+        "version": "1.15.0(2)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llStringTrim to trim both leading and trailing spaces from a string"
+        },
+        "name": "STRING_TRIM",
+        "type": "integer",
+        "value": "0x3",
+        "version": "1.15.0(2)"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to disable the click action"
+        },
+        "name": "CLICK_ACTION_NONE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to set touch as the default action when object is clicked"
+        },
+        "name": "CLICK_ACTION_TOUCH",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to set sit as the default action when object is clicked"
+        },
+        "name": "CLICK_ACTION_SIT",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to set buy as the default action when object is clicked"
+        },
+        "name": "CLICK_ACTION_BUY",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to set pay as the default action when object is clicked"
+        },
+        "name": "CLICK_ACTION_PAY",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to set open as the default action when object is clicked"
+        },
+        "name": "CLICK_ACTION_OPEN",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to set play as the default action when object is clicked"
+        },
+        "name": "CLICK_ACTION_PLAY",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to set open-media as the default action when object is clicked"
+        },
+        "name": "CLICK_ACTION_OPEN_MEDIA",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetClickAction to set zoom in as the default action when object is clicked"
+        },
+        "name": "CLICK_ACTION_ZOOM",
+        "type": "integer",
+        "value": "7",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Value returned by llDetectedTouchFace when the touch position is not valid"
+        },
+        "name": "TOUCH_INVALID_FACE",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to enable the default alt image for media"
+        },
+        "name": "PRIM_MEDIA_ALT_IMAGE_ENABLE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine the controls shown for media"
+        },
+        "name": "PRIM_MEDIA_CONTROLS",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to navigate/access the current URL"
+        },
+        "name": "PRIM_MEDIA_CURRENT_URL",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to access the home URL"
+        },
+        "name": "PRIM_MEDIA_HOME_URL",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine if media should auto-loop (if applicable)"
+        },
+        "name": "PRIM_MEDIA_AUTO_LOOP",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine if media should start playing as soon as it is created"
+        },
+        "name": "PRIM_MEDIA_AUTO_PLAY",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine if media should scale to fit the face it is on"
+        },
+        "name": "PRIM_MEDIA_AUTO_SCALE",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine if the user would zoom in when viewing media"
+        },
+        "name": "PRIM_MEDIA_AUTO_ZOOM",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine whether the user interacts with media or not when she first clicks it (versus selection)"
+        },
+        "name": "PRIM_MEDIA_FIRST_CLICK_INTERACT",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to access the media's width in pixels"
+        },
+        "name": "PRIM_MEDIA_WIDTH_PIXELS",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to access the media's height in pixels"
+        },
+        "name": "PRIM_MEDIA_HEIGHT_PIXELS",
+        "type": "integer",
+        "value": "10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine if the domain whitelist is enabled"
+        },
+        "name": "PRIM_MEDIA_WHITELIST_ENABLE",
+        "type": "integer",
+        "value": "11"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to access the media's list of allowable URL prefixes to navigate to"
+        },
+        "name": "PRIM_MEDIA_WHITELIST",
+        "type": "integer",
+        "value": "12"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine the permissions for who can interact with the media"
+        },
+        "name": "PRIM_MEDIA_PERMS_INTERACT",
+        "type": "integer",
+        "value": "13"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams to determine the permissions for who has controls"
+        },
+        "name": "PRIM_MEDIA_PERMS_CONTROL",
+        "type": "integer",
+        "value": "14"
+    },
+    {
+        "description":
+        {
+            "en_US": "The value of the largest media param"
+        },
+        "name": "PRIM_MEDIA_PARAM_MAX",
+        "type": "integer",
+        "value": "14"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, a PRIM_MEDIA_CONTROLS value meaning \"standard controls\""
+        },
+        "name": "PRIM_MEDIA_CONTROLS_STANDARD",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, a PRIM_MEDIA_CONTROLS value meaning \"mini controls\""
+        },
+        "name": "PRIM_MEDIA_CONTROLS_MINI",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, a PRIM_MEDIA_PERMS_INTERACT or PRIM_MEDIA_PERMS_CONTROL bit, no permissions"
+        },
+        "name": "PRIM_MEDIA_PERM_NONE",
+        "type": "integer",
+        "value": "0x0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, a PRIM_MEDIA_PERMS_INTERACT or PRIM_MEDIA_PERMS_CONTROL bit, owner permissions"
+        },
+        "name": "PRIM_MEDIA_PERM_OWNER",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, a PRIM_MEDIA_PERMS_INTERACT or PRIM_MEDIA_PERMS_CONTROL bit, group permissions"
+        },
+        "name": "PRIM_MEDIA_PERM_GROUP",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, a PRIM_MEDIA_PERMS_INTERACT or PRIM_MEDIA_PERMS_CONTROL bit, anyone has permissions"
+        },
+        "name": "PRIM_MEDIA_PERM_ANYONE",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, the maximum length of PRIM_MEDIA_CURRENT_URL or PRIM_MEDIA_HOME_URL"
+        },
+        "name": "PRIM_MEDIA_MAX_URL_LENGTH",
+        "type": "integer",
+        "value": "1024"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, the maximum length, in bytes, of PRIM_MEDIA_WHITELIST"
+        },
+        "name": "PRIM_MEDIA_MAX_WHITELIST_SIZE",
+        "type": "integer",
+        "value": "1024"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, the maximum number of items allowed in PRIM_MEDIA_WHITELIST"
+        },
+        "name": "PRIM_MEDIA_MAX_WHITELIST_COUNT",
+        "type": "integer",
+        "value": "64"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, the maximum width allowed in PRIM_MEDIA_WIDTH_PIXELS"
+        },
+        "name": "PRIM_MEDIA_MAX_WIDTH_PIXELS",
+        "type": "integer",
+        "value": "2048"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with ll{Get,Set}PrimMediaParams, the maximum width allowed in PRIM_MEDIA_HEIGHT_PIXELS"
+        },
+        "name": "PRIM_MEDIA_MAX_HEIGHT_PIXELS",
+        "type": "integer",
+        "value": "2048"
+    },
+    {
+        "description":
+        {
+            "en_US": "Result of llSetPrimMediaParams function call was success"
+        },
+        "name": "STATUS_OK",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Result of llSetPrimMediaParams function call was success"
+        },
+        "name": "LSL_STATUS_OK",
+        "type": "integer",
+        "value": "0",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "llSetPrimMediaParams function was called with malformed params"
+        },
+        "name": "STATUS_MALFORMED_PARAMS",
+        "type": "integer",
+        "value": "1000"
+    },
+    {
+        "description":
+        {
+            "en_US": "llSetPrimMediaParams function was called with malformed params"
+        },
+        "name": "LSL_STATUS_MALFORMED_PARAMS",
+        "type": "integer",
+        "value": "1000",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Argument(s) passed to llSetPrimMediaParams function had a type mismatch"
+        },
+        "name": "STATUS_TYPE_MISMATCH",
+        "type": "integer",
+        "value": "1001"
+    },
+    {
+        "description":
+        {
+            "en_US": "Argument(s) passed to llSetPrimMediaParams function had a type mismatch"
+        },
+        "name": "LSL_STATUS_TYPE_MISMATCH",
+        "type": "integer",
+        "value": "1001",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Argument(s) passed to llSetPrimMediaParams function had a bounds error"
+        },
+        "name": "STATUS_BOUNDS_ERROR",
+        "type": "integer",
+        "value": "1002"
+    },
+    {
+        "description":
+        {
+            "en_US": "Argument(s) passed to llSetPrimMediaParams function had a bounds error"
+        },
+        "name": "LSL_STATUS_BOUNDS_ERROR",
+        "type": "integer",
+        "value": "1002",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "llSetPrimMediaParams reported that the object or other item was not found"
+        },
+        "name": "STATUS_NOT_FOUND",
+        "type": "integer",
+        "value": "1003"
+    },
+    {
+        "description":
+        {
+            "en_US": "llSetPrimMediaParams reported that the object or other item was not found"
+        },
+        "name": "LSL_STATUS_NOT_FOUND",
+        "type": "integer",
+        "value": "1003",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Feature not supported in llSetPrimMediaParams"
+        },
+        "name": "STATUS_NOT_SUPPORTED",
+        "type": "integer",
+        "value": "1004"
+    },
+    {
+        "description":
+        {
+            "en_US": "Feature not supported in llSetPrimMediaParams"
+        },
+        "name": "LSL_STATUS_NOT_SUPPORTED",
+        "type": "integer",
+        "value": "1004",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "An internal error occurred in llSetPrimMediaParams"
+        },
+        "name": "STATUS_INTERNAL_ERROR",
+        "type": "integer",
+        "value": "1999"
+    },
+    {
+        "description":
+        {
+            "en_US": "An internal error occurred in llSetPrimMediaParams"
+        },
+        "name": "LSL_STATUS_INTERNAL_ERROR",
+        "type": "integer",
+        "value": "1999",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "URL failed to pass whitelist in llSetPrimMediaParams"
+        },
+        "name": "STATUS_WHITELIST_FAILED",
+        "type": "integer",
+        "value": "2001"
+    },
+    {
+        "description":
+        {
+            "en_US": "URL failed to pass whitelist in llSetPrimMediaParams"
+        },
+        "name": "LSL_STATUS_WHITELIST_FAILED",
+        "type": "integer",
+        "value": "2001",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate text contents"
+        },
+        "name": "CONTENT_TYPE_TEXT",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate HTML contents"
+        },
+        "name": "CONTENT_TYPE_HTML",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate XML contents"
+        },
+        "name": "CONTENT_TYPE_XML",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate XHTML contents"
+        },
+        "name": "CONTENT_TYPE_XHTML",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate Atom Syndication Format contents"
+        },
+        "name": "CONTENT_TYPE_ATOM",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate JSON (JavaScript Object Notation) contents"
+        },
+        "name": "CONTENT_TYPE_JSON",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate LLSD (Linden Lab Serialized Data) contents"
+        },
+        "name": "CONTENT_TYPE_LLSD",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate form data contents"
+        },
+        "name": "CONTENT_TYPE_FORM",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llSetContentType to indicate RSS contents"
+        },
+        "name": "CONTENT_TYPE_RSS",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, followed by one of KFM_CMD_STOP, KFM_CMD_PLAY, KFM_CMD_PAUSE. Note that KFM_COMMAND must be the only option in the list, and cannot be specified in the same function call that sets the keyframes list."
+        },
+        "name": "KFM_COMMAND",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used to specify the playback mode, followed by one of KFM_FORWARD, KFM_LOOP, KFM_PING_PONG or KFM_REVERSE"
+        },
+        "name": "KFM_MODE",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, followed by a bitwise combination of KFM_TRANSLATION and KFM_ROTATION. If you specify one or the other, you should only include translations or rotations in your keyframe list."
+        },
+        "name": "KFM_DATA",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_MODE to specify the forward playback mode"
+        },
+        "name": "KFM_FORWARD",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_MODE to specify the loop playback mode"
+        },
+        "name": "KFM_LOOP",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_MODE to specify the ping pong playback mode"
+        },
+        "name": "KFM_PING_PONG",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_MODE to specify the reverse playback mode"
+        },
+        "name": "KFM_REVERSE",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_DATA, possibly as a bitwise combination with KFM_TRANSLATION"
+        },
+        "name": "KFM_ROTATION",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_DATA, possibly as a bitwise combination with KFM_ROTATION"
+        },
+        "name": "KFM_TRANSLATION",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_COMMAND to play the motion"
+        },
+        "name": "KFM_CMD_PLAY",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_COMMAND to stop the motion"
+        },
+        "name": "KFM_CMD_STOP",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llSetKeyframedMotion, used after KFM_COMMAND to pause the motion"
+        },
+        "name": "KFM_CMD_PAUSE",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "This constant has no use for keyframed motion."
+        },
+        "name": "KFM_CMD_SET_MODE",
+        "type": "integer",
+        "value": "3",
+        "status": "unimplemented"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to add an agent to this estate's allowed residents list"
+        },
+        "name": "ESTATE_ACCESS_ALLOWED_AGENT_ADD",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to add an agent to this estate's allowed residents list"
+        },
+        "name": "ESTATE_ACCESS_ALLOWED_AGENT_ADD",
+        "type": "integer",
+        "value": "0",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to remove an agent from this estate's allowed residents list"
+        },
+        "name": "ESTATE_ACCESS_ALLOWED_AGENT_REMOVE",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to remove an agent from this estate's allowed residents list"
+        },
+        "name": "ESTATE_ACCESS_ALLOWED_AGENT_REMOVE",
+        "type": "integer",
+        "value": "1",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to add a group to this estate's allowed groups list"
+        },
+        "name": "ESTATE_ACCESS_ALLOWED_GROUP_ADD",
+        "type": "integer",
+        "value": "0x10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to add a group to this estate's allowed groups list"
+        },
+        "name": "ESTATE_ACCESS_ALLOWED_GROUP_ADD",
+        "type": "integer",
+        "value": "2",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to remove a group from this estate's allowed groups list"
+        },
+        "name": "ESTATE_ACCESS_ALLOWED_GROUP_REMOVE",
+        "type": "integer",
+        "value": "0x20"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to remove a group from this estate's allowed groups list"
+        },
+        "name": "ESTATE_ACCESS_ALLOWED_GROUP_REMOVE",
+        "type": "integer",
+        "value": "3",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to add an agent to this estate's banned residents list"
+        },
+        "name": "ESTATE_ACCESS_BANNED_AGENT_ADD",
+        "type": "integer",
+        "value": "0x40"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to add an agent to this estate's banned residents list"
+        },
+        "name": "ESTATE_ACCESS_BANNED_AGENT_ADD",
+        "type": "integer",
+        "value": "4",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to remove an agent from this estate's banned residents list"
+        },
+        "name": "ESTATE_ACCESS_BANNED_AGENT_REMOVE",
+        "type": "integer",
+        "value": "0x80"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llManageEstateAccess to remove an agent from this estate's banned residents list"
+        },
+        "name": "ESTATE_ACCESS_BANNED_AGENT_REMOVE",
+        "type": "integer",
+        "value": "5",
+        "grid": "os aa"
+    },
+    {
+        "description":
+        {
+            "en_US": "Disables memory profiling when passed to llScriptProfiler"
+        },
+        "name": "PROFILE_NONE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Enables memory profiling when passed to llScriptProfiler"
+        },
+        "name": "PROFILE_SCRIPT_MEMORY",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llCastRay when the raycast failed for an unspecified reason"
+        },
+        "name": "RCERR_UNKNOWN",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llCastRay when the raycast failed because simulator performance is low"
+        },
+        "name": "RCERR_SIM_PERF_LOW",
+        "type": "integer",
+        "value": "-2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llCastRay when the raycast failed because the parcel or agent has exceeded the maximum time allowed for raycasting"
+        },
+        "name": "RCERR_CAST_TIME_EXCEEDED",
+        "type": "integer",
+        "value": "-3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returned by llCastRay when the raycast failed because the parcel or agent has exceeded the maximum time allowed for raycasting"
+        },
+        "name": "RCERR_CAST_TIME_EXCEEDED",
+        "type": "integer",
+        "value": "3",
+        "grid": "os"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llCastRay used to ignore specific types of objects, followed with a bitwise combination of RC_REJECT_AGENTS, RC_REJECT_PHYSICAL, RC_REJECT_NONPHYSICAL and RC_REJECT_LAND"
+        },
+        "name": "RC_REJECT_TYPES",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llCastRay followed with TRUE to detect phantom AND volume detect objects, FASLE otherwise"
+        },
+        "name": "RC_DETECT_PHANTOM",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llCastRay followed with a bitwise combination of RC_GET_NORMAL, RC_GET_ROOT_KEY and RC_GET_LINK_NUM"
+        },
+        "name": "RC_DATA_FLAGS",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Option for llCastRay followed with an integer specifying the maximum number of hits to return (must be <= 256)"
+        },
+        "name": "RC_MAX_HITS",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag used in the RC_REJECT_TYPES mask to reject agents in llCastRay"
+        },
+        "name": "RC_REJECT_AGENTS",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag used in the RC_REJECT_TYPES mask to reject physical objects in llCastRay"
+        },
+        "name": "RC_REJECT_PHYSICAL",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag used in the RC_REJECT_TYPES mask to reject non-physical objects in llCastRay"
+        },
+        "name": "RC_REJECT_NONPHYSICAL",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag used in the RC_REJECT_TYPES mask to reject land in llCastRay"
+        },
+        "name": "RC_REJECT_LAND",
+        "type": "integer",
+        "value": "0x8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag used in the RC_DATA_FLAGS mask to get hit normals in llCastRay results"
+        },
+        "name": "RC_GET_NORMAL",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag used in the RC_DATA_FLAGS mask to get root keys in llCastRay results"
+        },
+        "name": "RC_GET_ROOT_KEY",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Flag used in the RC_DATA_FLAGS mask to get link numbers in llCastRay results"
+        },
+        "name": "RC_GET_LINK_NUM",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "name": "REQUIRE_LINE_OF_SIGHT",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "name": "PURSUIT_FUZZ_FACTOR",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "name": "PURSUIT_INTERCEPT",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "name": "PURSUIT_GOAL_TOLERANCE",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "name": "PURSUIT_OFFSET",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "FORCE_DIRECT_PATH",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "AVOID_CHARACTERS",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "AVOID_DYNAMIC_OBSTACLES",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "name": "AVOID_NONE",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Triggered when an llEvade character thinks it has hidden from its pursuer"
+        },
+        "name": "PU_EVADE_HIDDEN",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "description":
+        {
+            "en_US": "Triggered when an llEvade character switches from hiding to running"
+        },
+        "name": "PU_EVADE_SPOTTED",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "description":
+        {
+            "en_US": "Goal is not on the navigation-mesh and cannot be reached"
+        },
+        "name": "PU_FAILURE_INVALID_GOAL",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Character cannot navigate from the current location - e.g., the character is off the navmesh or too high above it"
+        },
+        "name": "PU_FAILURE_INVALID_START",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "There's no good place for the character to go - e.g., it is patrolling and all the patrol points are now unreachable"
+        },
+        "name": "PU_FAILURE_NO_VALID_DESTINATION",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Unknown failure"
+        },
+        "name": "PU_FAILURE_OTHER",
+        "type": "integer",
+        "value": "1000000"
+    },
+    {
+        "description":
+        {
+            "en_US": "Target (for llPursue or llEvade) can no longer be tracked - e.g., it left the region or is an avatar that is now more than about 30m outside the region"
+        },
+        "name": "PU_FAILURE_TARGET_GONE",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Goal is no longer reachable for some reason - e.g., an obstacle blocks the path"
+        },
+        "name": "PU_FAILURE_UNREACHABLE",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Character has reached the goal and will stop or choose a new goal (if wandering)"
+        },
+        "name": "PU_GOAL_REACHED",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Character is near current goal"
+        },
+        "name": "PU_SLOWDOWN_DISTANCE_REACHED",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Triggered if no navmesh is available for the region"
+        },
+        "name": "PU_FAILURE_NO_NAVMESH",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "Triggered when a character enters a region with dynamic pathfinding disabled"
+        },
+        "name": "PU_FAILURE_DYNAMIC_PATHFINDING_DISABLED",
+        "type": "integer",
+        "value": "10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Triggered when a character failed to enter a parcel because it is not allowed to enter, e.g. because the parcel is already full or because object entry was disabled after the navmesh was baked"
+        },
+        "name": "PU_FAILURE_PARCEL_UNREACHABLE",
+        "type": "integer",
+        "value": "11"
+    },
+    {
+        "description":
+        {
+            "en_US": "One of TRAVERSAL_TYPE_FAST, TRAVERSAL_TYPE_SLOW, and TRAVERSAL_TYPE_NONE."
+        },
+        "name": "TRAVERSAL_TYPE",
+        "type": "integer",
+        "value": "7"
+    },
+    {
+        "name": "TRAVERSAL_TYPE_SLOW",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "name": "TRAVERSAL_TYPE_FAST",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "TRAVERSAL_TYPE_NONE",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Allows you to specify that a character should not try to avoid other characters, should not try to avoid dynamic obstacles (relatively fast moving objects and avatars), or both."
+        },
+        "name": "CHARACTER_AVOIDANCE_MODE",
+        "type": "integer",
+        "value": "5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Makes the character jump. Requires an additional parameter, the height to jump, between 0.1m and 2.0m. This must be provided as the first element of the llExecCharacterCmd option list."
+        },
+        "name": "CHARACTER_CMD_JUMP",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "CHARACTER_CMD_SMOOTH_STOP",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Stops any current pathfinding operation."
+        },
+        "name": "CHARACTER_CMD_STOP",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Speed of pursuit in meters per second."
+        },
+        "name": "CHARACTER_DESIRED_SPEED",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "The character's maximum speed while turning about the Z axis.\n\nNote that this is only loosely enforced."
+        },
+        "name": "CHARACTER_DESIRED_TURN_SPEED",
+        "type": "integer",
+        "value": "12"
+    },
+    {
+        "description":
+        {
+            "en_US": "Set collision capsule length - cannot be less than two times the radius."
+        },
+        "name": "CHARACTER_LENGTH",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "The character's maximum acceleration rate."
+        },
+        "name": "CHARACTER_MAX_ACCEL",
+        "type": "integer",
+        "value": "8"
+    },
+    {
+        "description":
+        {
+            "en_US": "The character's maximum deceleration rate."
+        },
+        "name": "CHARACTER_MAX_DECEL",
+        "type": "integer",
+        "value": "9"
+    },
+    {
+        "description":
+        {
+            "en_US": "The character's maximum speed."
+        },
+        "name": "CHARACTER_MAX_SPEED",
+        "type": "integer",
+        "value": "13"
+    },
+    {
+        "description":
+        {
+            "en_US": "The character's turn radius when travelling at CHARACTER_MAX_TURN_SPEED."
+        },
+        "name": "CHARACTER_MAX_TURN_RADIUS",
+        "type": "integer",
+        "value": "10"
+    },
+    {
+        "description":
+        {
+            "en_US": "Valid options are: VERTICAL, HORIZONTAL."
+        },
+        "name": "CHARACTER_ORIENTATION",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "description":
+        {
+            "en_US": "Set collision capsule radius."
+        },
+        "name": "CHARACTER_RADIUS",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Specifies which walk-ability coefficient will be used by this character."
+        },
+        "name": "CHARACTER_TYPE",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used for character types that you prefer move in a way consistent with humanoids."
+        },
+        "name": "CHARACTER_TYPE_A",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used for character types that you prefer move in a way consistent with wild animals or off road vehicles."
+        },
+        "name": "CHARACTER_TYPE_B",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used for mechanical character types or road going vehicles."
+        },
+        "name": "CHARACTER_TYPE_C",
+        "type": "integer",
+        "value": "2"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used for character types that are not consistent with the A, B, or C type."
+        },
+        "name": "CHARACTER_TYPE_D",
+        "type": "integer",
+        "value": "3"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used to set no specific character type."
+        },
+        "name": "CHARACTER_TYPE_NONE",
+        "type": "integer",
+        "value": "4"
+    },
+    {
+        "name": "GCNP_RADIUS",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "name": "GCNP_STATIC",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "name": "NPC",
+        "type": "integer",
+        "value": "0x20",
+        "grid": "os"
+    },
+    {
+        "description":
+        {
+            "en_US": "Constant to indicate that the orientation of the capsule for a Pathfinding character is horizontal."
+        },
+        "name": "HORIZONTAL",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Constant to indicate that the orientation of the capsule for a Pathfinding character is vertical."
+        },
+        "name": "VERTICAL",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "name": "PATROL_PAUSE_AT_WAYPOINTS",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "name": "WANDER_PAUSE_AT_WAYPOINTS",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "If set to false, character will not attempt to catch up on lost time when pathfinding performance is low, potentially providing more reliable movement (albeit while potentially appearing to be more stuttery). Default is true to match pre-existing behavior."
+        },
+        "name": "CHARACTER_ACCOUNT_FOR_SKIPPED_FRAMES",
+        "type": "integer",
+        "value": "14"
+    },
+    {
+        "description":
+        {
+            "en_US": "Determines whether a character can leave its starting parcel.\nTakes a boolean parameter. If TRUE, the character cannot voluntarilly leave the parcel, but can return to it."
+        },
+        "name": "CHARACTER_STAY_WITHIN_PARCEL",
+        "type": "integer",
+        "value": "15"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returns the percentage of pathfinding characters skipped each frame, averaged over the last minute.\nThe returned value corresponds to the \"Characters Updated\" stat in the viewer's Statistics Bar."
+        },
+        "name": "SIM_STAT_PCT_CHARS_STEPPED",
+        "type": "integer",
+        "value": "0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Allows enabling/disbling of the \"Pragma: no-cache\" header.\n\nUsage: [HTTP_PRAGMA_NO_CACHE, integer SendHeader]. When SendHeader is TRUE, the \"Pragma: no-cache\" header is sent by the script. This matches the default behavior. When SendHeader is FALSE, no \"Pragma\" header is sent by the script."
+        },
+        "name": "HTTP_PRAGMA_NO_CACHE",
+        "type": "integer",
+        "value": "6"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returns boolean, detailing if physics is enabled or disabled on the object.\nIf id is an avatar or attachment, 0 is returned."
+        },
+        "name": "OBJECT_PHYSICS",
+        "type": "integer",
+        "value": "21"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returns boolean, detailing if phantom is enabled or disabled on the object.\nIf id is an avatar or attachment, 0 is returned."
+        },
+        "name": "OBJECT_PHANTOM",
+        "type": "integer",
+        "value": "22"
+    },
+    {
+        "description":
+        {
+            "en_US": "Returns boolean, detailing if temporary is enabled or disabled on the object."
+        },
+        "name": "OBJECT_TEMP_ON_REZ",
+        "type": "integer",
+        "value": "23"
+    },
+    {
+        "name": "JSON_APPEND",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "name": "OBJECT_RETURN_PARCEL",
+        "type": "integer",
+        "value": "0x1"
+    },
+    {
+        "name": "OBJECT_RETURN_PARCEL_OWNER",
+        "type": "integer",
+        "value": "0x2"
+    },
+    {
+        "name": "OBJECT_RETURN_REGION",
+        "type": "integer",
+        "value": "0x4"
+    },
+    {
+        "name": "ERR_GENERIC",
+        "type": "integer",
+        "value": "-1"
+    },
+    {
+        "name": "ERR_PARCEL_PERMISSIONS",
+        "type": "integer",
+        "value": "-2"
+    },
+    {
+        "name": "ERR_MALFORMED_PARAMS",
+        "type": "integer",
+        "value": "-3"
+    },
+    {
+        "name": "ERR_RUNTIME_PERMISSIONS",
+        "type": "integer",
+        "value": "-4"
+    },
+    {
+        "name": "ERR_THROTTLED",
+        "type": "integer",
+        "value": "-5"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prim parameter for materials using integer face, string texture, vector repeats, vector offsets, float rotation_in_radians"
+        },
+        "name": "PRIM_NORMAL",
+        "type": "integer",
+        "value": "37",
+        "version": "14.06.20.291351"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prim parameter for materials using integer face, string texture, vector repeats, vector offsets, float rotation_in_radians, vector color, integer glossy, integer environment"
+        },
+        "name": "PRIM_SPECULAR",
+        "type": "integer",
+        "value": "36",
+        "version": "14.06.20.291351"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prim parameter for materials using integer face, integer alpha_mode, integer alpha_cutoff.\nDefines how the alpha channel of the diffuse texture should be rendered.\nValid options for alpha_mode are PRIM_ALPHA_MODE_BLEND, _NONE, _MASK, and _EMISSIVE.\nalpha_cutoff is used only for PRIM_ALPHA_MODE_MASK."
+        },
+        "name": "PRIM_ALPHA_MODE",
+        "type": "integer",
+        "value": "38",
+        "version": "14.06.20.291351"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prim parameter setting for PRIM_ALPHA_MODE.\nIndicates that the diffuse texture's alpha channel should be ignored."
+        },
+        "name": "PRIM_ALPHA_MODE_NONE",
+        "type": "integer",
+        "value": "0",
+        "version": "14.06.20.291351"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prim parameter setting for PRIM_ALPHA_MODE.\nIndicates that the diffuse texture's alpha channel should be rendered as alpha-blended."
+        },
+        "name": "PRIM_ALPHA_MODE_BLEND",
+        "type": "integer",
+        "value": "1",
+        "version": "14.06.20.291351"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prim parameter setting for PRIM_ALPHA_MODE.\nIndicates that the diffuse texture's alpha channel should be rendered as fully opaque for alpha values above alpha_cutoff and fully transparent otherwise."
+        },
+        "name": "PRIM_ALPHA_MODE_MASK",
+        "type": "integer",
+        "value": "2",
+        "version": "14.06.20.291351"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prim parameter setting for PRIM_ALPHA_MODE.\nIndicates that the diffuse texture's alpha channel should be rendered as an emissivity mask."
+        },
+        "name": "PRIM_ALPHA_MODE_EMISSIVE",
+        "type": "integer",
+        "value": "3",
+        "version": "14.06.20.291351"
+    },
+    {
+        "description":
+        {
+            "en_US": "No error was detected."
+        },
+        "name": "XP_ERROR_NONE",
+        "type": "integer",
+        "value": "0",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The call failed due to too many recent calls."
+        },
+        "name": "XP_ERROR_THROTTLED",
+        "type": "integer",
+        "value": "1",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The region currently has experiences disabled."
+        },
+        "name": "XP_ERROR_EXPERIENCES_DISABLED",
+        "type": "integer",
+        "value": "2",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "One of the string arguments was too big to fit in the key-value store."
+        },
+        "name": "XP_ERROR_INVALID_PARAMETERS",
+        "type": "integer",
+        "value": "3",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "This experience is not allowed to run by the requested agent."
+        },
+        "name": "XP_ERROR_NOT_PERMITTED",
+        "type": "integer",
+        "value": "4",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "This script is not associated with an experience."
+        },
+        "name": "XP_ERROR_NO_EXPERIENCE",
+        "type": "integer",
+        "value": "5",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The sim was unable to verify the validity of the experience. Retrying after a short wait is advised."
+        },
+        "name": "XP_ERROR_NOT_FOUND",
+        "type": "integer",
+        "value": "6",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The script is associated with an experience that no longer exists."
+        },
+        "name": "XP_ERROR_INVALID_EXPERIENCE",
+        "type": "integer",
+        "value": "7",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The experience owner has temporarily disabled the experience."
+        },
+        "name": "XP_ERROR_EXPERIENCE_DISABLED",
+        "type": "integer",
+        "value": "8",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The experience has been suspended by Linden Customer Support."
+        },
+        "name": "XP_ERROR_EXPERIENCE_SUSPENDED",
+        "type": "integer",
+        "value": "9",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "Other unknown error."
+        },
+        "name": "XP_ERROR_UNKNOWN_ERROR",
+        "type": "integer",
+        "value": "10",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "An attempted write data to the key-value store failed due to the data quota being met."
+        },
+        "name": "XP_ERROR_QUOTA_EXCEEDED",
+        "type": "integer",
+        "value": "11",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The key-value store is currently disabled on this region."
+        },
+        "name": "XP_ERROR_STORE_DISABLED",
+        "type": "integer",
+        "value": "12",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "Unable to communicate with the key-value store."
+        },
+        "name": "XP_ERROR_STORAGE_EXCEPTION",
+        "type": "integer",
+        "value": "13",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The requested key does not exist."
+        },
+        "name": "XP_ERROR_KEY_NOT_FOUND",
+        "type": "integer",
+        "value": "14",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "A checked update failed due to an out of date request."
+        },
+        "name": "XP_ERROR_RETRY_UPDATE",
+        "type": "integer",
+        "value": "15",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "The content rating of the experience exceeds that of the region."
+        },
+        "name": "XP_ERROR_MATURITY_EXCEEDED",
+        "type": "integer",
+        "value": "16",
+        "version": "14.07.18.292162"
+    },
+    {
+        "description":
+        {
+            "en_US": "This experience is not allowed to run on the current region."
+        },
+        "name": "XP_ERROR_NOT_PERMITTED_LAND",
+        "type": "integer",
+        "value": "17",
+        "version": "15.01.23.298475"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llPassTouches to only pass touches to the root if the touch event was not handled."
+        },
+        "name": "PASS_IF_NOT_HANDLED",
+        "type": "integer",
+        "value": "0",
+        "version": "1.40.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llPassTouches to always pass touches to the root regardless of whether the touch event was handled or not."
+        },
+        "name": "PASS_ALWAYS",
+        "type": "integer",
+        "value": "1",
+        "version": "1.40.0"
+    },
+    {
+        "description":
+        {
+            "en_US": "Used with llPassTouches to never pass touches to the root."
+        },
+        "name": "PASS_NEVER",
+        "type": "integer",
+        "value": "2",
+        "version": "1.40.0"
+    },
+    {
+        "name": "OBJECT_PRIM_COUNT",
+        "type": "integer",
+        "value": "30",
+        "version": "16.01.05.309639"
+    },
+    {
+        "name": "OBJECT_TOTAL_INVENTORY_COUNT",
+        "type": "integer",
+        "value": "31",
+        "version": "16.01.05.309639"
+    },
+    {
+        "name": "OBJECT_REZZER_KEY",
+        "type": "integer",
+        "value": "32",
+        "version": "16.01.19.310114"
+    }
+]
