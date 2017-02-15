@@ -9,8 +9,8 @@ In this repository you can find the syntax grammar, syntax highlighting and snip
 ### Quick start
 
 * Download:
-  * [latest release as *.zip](https://github.com/buildersbrewery/linden-scripting-language/archive/master.zip)
-  * [latest release as *.tar.gz](https://github.com/buildersbrewery/linden-scripting-language/archive/master.tar.gz)
+  * [current snapshot of `master` as `*.zip`](https://github.com/buildersbrewery/linden-scripting-language/archive/master.zip)
+  * [current snapshot of `master` as `*.tar.gz`](https://github.com/buildersbrewery/linden-scripting-language/archive/master.tar.gz)
 * Clone the repo:
 
     ```bash
