@@ -1,0 +1,13 @@
+[
+    {
+        "name": "event",
+        "status": "unimplemented"
+    },
+    {
+        "description":
+        {
+            "en_US": "Prints a parameter of any type to an internal server log."
+        },
+        "name": "print"
+    }
+]
