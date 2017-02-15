@@ -1,0 +1,20 @@
+[
+    {
+        "description":
+        {
+            "en_US": "Integer constant for Boolean operations"
+        },
+        "name": "TRUE",
+        "type": "integer",
+        "value": "1"
+    },
+    {
+        "description":
+        {
+            "en_US": "Integer constant for Boolean operations"
+        },
+        "name": "FALSE",
+        "type": "integer",
+        "value": "0"
+    }
+]
