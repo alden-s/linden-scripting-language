@@ -1,28 +1,23 @@
+import json
+import mdpopups
 import os
 import plistlib
 import sublime
 import sublime_plugin
 from time import time
 import webbrowser
-import xml.etree.ElementTree as etree
 
 settings = {}
-KWDB = None
+TOOLTIP_DATA = None
 SETTINGS_FILE = None
 INDENT_STYLE = None
 INDENT_STYLE_ALLMAN = None
 INDENT_STYLE_K_AND_R = None
 
-if sublime.version().startswith('2'):
-    plugin_loaded()
-
-if 3080 <= int(sublime.version()):
-    import mdpopups
-
 def plugin_loaded():
 
     global settings
-    global KWDB
+    global TOOLTIP_DATA
     global SETTINGS_FILE
     global INDENT_STYLE
     global INDENT_STYLE_ALLMAN
@@ -42,8 +37,24 @@ def plugin_loaded():
         with open(INDENT_STYLE, mode='w', newline='\n') as file:
             file.write(INDENT_STYLE_ALLMAN)
 
-    kwdbAsString = sublime.load_resource('Packages/LSL/other/kwdb/kwdb.xml')
-    KWDB = etree.fromstring(kwdbAsString)
+    try:
+        TOOLTIP_DATA = json.loads(sublime.load_resource('Packages/LSL/other/tooltips/constant_float.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/constant_integer.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/constant_integer_boolean.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/constant_rotation.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/constant_string.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/constant_vector.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/control_conditional.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/control_flow.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/control_loop.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/event.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/function.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/keyword.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/state.json'))
+        TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/storage_type.json'))
+    except Exception as e:
+        print(e)
+
 
 class ChangeEditorSchemeCommand(sublime_plugin.WindowCommand):
 
@@ -57,15 +68,17 @@ class ChangeEditorSchemeCommand(sublime_plugin.WindowCommand):
 
         if self._is_checked:
             settings.erase('color_scheme')
+            self._is_checked = False
         else:
             settings.set('color_scheme', 'Packages/LSL/other/LSL.hidden-tmTheme')
-        self._is_checked = not self._is_checked
+            self._is_checked = True
 
         sublime.save_settings(SETTINGS_FILE)
 
     def is_checked(self):
 
         return self._is_checked
+
 
 class ChangeStyleCommand(sublime_plugin.WindowCommand):
 
@@ -92,10 +105,14 @@ class ChangeStyleCommand(sublime_plugin.WindowCommand):
 
         return self._is_checked
 
+
 class Lsl(sublime_plugin.EventListener):
 
     def on_navigate(self, link):
         webbrowser.open_new_tab(link)
+
+    def on_hide(self, view):
+        mdpopups.hide_popup(view)
 
     def on_hover(self, view, point, hover_zone):
 
@@ -116,50 +133,53 @@ class Lsl(sublime_plugin.EventListener):
         if not word:
             return
 
-        if not KWDB:
+        if TOOLTIP_DATA is None:
             return
 
         try:
             tooltipRows = []
-            for result in KWDB.findall(".//*[@name='" + word + "']"):
-                if result.tag == 'param':
-                    continue
-                if result.tag == 'function' or result.tag == 'constant':
-                    tooltipRows.append('### (%s) <a href="https://wiki.secondlife.com/w/index.php?title=Special:Search&go=Go&search=%s">%s</a>' % (result.get('type', 'void'), result.get('name'), result.get('name')))
-                else:
-                    tooltipRows.append('### <a href="https://wiki.secondlife.com/w/index.php?title=Special:Search&go=Go&search=%s">%s</a>' % (result.get('name'), result.get('name')))
-                if result.tag == 'constant':
-                    tooltipRows.append(' ')
-                    tooltipRows.append('**Value**: %s' % str(result.get('value')))
-                if result.get('status', None) is not None and result.get('status', 'normal') != 'normal':
-                    tooltipRows.append(' ')
-                    tooltipRows.append('<body class="danger">**Status**: %s</body>' % result.get('status', 'normal'))
-                if result.get('delay', None) is not None:
-                    tooltipRows.append(' ')
-                    tooltipRows.append('**Delay**: %s' % str(result.get('delay')))
-                if result.get('energy', None) is not None:
-                    tooltipRows.append(' ')
-                    tooltipRows.append('**Energy**: %s' % str(result.get('energy')))
-                if result.tag == 'function' or result.tag == 'event':
-                    if result.findall('./param') != []:
+            for result in TOOLTIP_DATA:
+                if result.get('name', None) == word:
+                    if 'type' in result or result['name'].startswith('ll'):
+                        tooltipRows.append('### (%s) <a href="https://wiki.secondlife.com/w/index.php?title=Special:Search&go=Go&search=%s">%s</a>' % (result.get('type', 'void'), result['name'], result['name']))
+                    else:
+                        tooltipRows.append('### <a href="https://wiki.secondlife.com/w/index.php?title=Special:Search&go=Go&search=%s">%s</a>' % (result['name'], result['name']))
+                    if 'value' in result:
                         tooltipRows.append(' ')
+                        tooltipRows.append('**Value**: %s' % str(result['value']))
+                    if 'version' in result:
+                        tooltipRows.append(' ')
+                        tooltipRows.append('**Version**: %s' % result['version'])
+                    if result.get('status', None) is not None:
+                        tooltipRows.append(' ')
+                        tooltipRows.append('<body class="danger">**Status**: %s</body>' % result['status'])
+                    if 'delay' in result:
+                        tooltipRows.append(' ')
+                        tooltipRows.append('**Delay**: %s' % str(result['delay']))
+                    if 'energy' in result:
+                        tooltipRows.append(' ')
+                        tooltipRows.append('**Energy**: %s' % str(result['energy']))
+                    if 'param' in result:
                         tooltipRows.append('#### Parameters')
-                        for param in result.iter('param'):
-                            tooltipRows.append('* (%s) **%s**' % (param.get('type'), param.get('name')))
-                if result.find('description').text is not None:
-                    tooltipRows.append(' ')
-                    tooltipRows.append('#### Description')
-                    tooltipRows.append(' ')
-                    tooltipRows.append('%s' % result.find('description').text.strip())
-#               add version info
-#               add grid info by splitting spaces and re-joining as markdown list
-#          seperate entries by horizontal line
+                        if type(result['param']) is dict:
+                            tooltipRows.append('* (%s) **%s**' % (result['param']['type'], result['param']['name']))
+                        elif type(result['param']) is list:
+                            for param in result['param']:
+                                tooltipRows.append('* (%s) **%s**' % (param['type'], param['name']))
+                    if result['description']['en_US'] != '':
+                        tooltipRows.append(' ')
+                        tooltipRows.append('#### Description')
+                        tooltipRows.append(' ')
+                        tooltipRows.append('%s' % result['description']['en_US'])
+            # TODO: seperate entries by horizontal line
 
             if 0 < len(tooltipRows):
                 mdpopups.show_popup(view, '\n'.join(tooltipRows),
-                    flags=sublime.COOPERATE_WITH_AUTO_COMPLETE|sublime.HIDE_ON_MOUSE_MOVE_AWAY,
-                    location=point, max_width=1024,
-                    on_navigate=self.on_navigate
+                                    flags=(sublime.COOPERATE_WITH_AUTO_COMPLETE | sublime.HIDE_ON_MOUSE_MOVE_AWAY),
+                                    location=point,
+                                    wrapper_class='lsl',
+                                    on_navigate=self.on_navigate,
+                                    on_hide=self.on_hide
                 )
                 return
 
