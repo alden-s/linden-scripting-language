@@ -1,0 +1,56 @@
+[
+    {
+        "description":
+        {
+            "en_US": "3.1415926535897932384626433832795"
+        },
+        "name": "PI",
+        "type": "float",
+        "value": "3.14159265"
+    },
+    {
+        "description":
+        {
+            "en_US": "6.283185307179586476925286766559"
+        },
+        "name": "TWO_PI",
+        "type": "float",
+        "value": "6.2831853"
+    },
+    {
+        "description":
+        {
+            "en_US": "1.5707963267948966192313216916398"
+        },
+        "name": "PI_BY_TWO",
+        "type": "float",
+        "value": "1.57079632"
+    },
+    {
+        "description":
+        {
+            "en_US": "To convert from degrees to radians"
+        },
+        "name": "DEG_TO_RAD",
+        "type": "float",
+        "value": "0.017453292"
+    },
+    {
+        "description":
+        {
+            "en_US": "To convert from radians to degrees"
+        },
+        "name": "RAD_TO_DEG",
+        "type": "float",
+        "value": "57.295779"
+    },
+    {
+        "description":
+        {
+            "en_US": "1.4142135623730950488016887242097"
+        },
+        "name": "SQRT2",
+        "type": "float",
+        "value": "1.4142135"
+    }
+]
