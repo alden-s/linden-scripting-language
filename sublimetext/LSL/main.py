@@ -14,6 +14,7 @@ SETTINGS_FILE = None
 INDENT_STYLE = None
 INDENT_STYLE_ALLMAN = None
 INDENT_STYLE_K_AND_R = None
+SL_WIKI_LINK = None
 
 
 def plugin_loaded():
@@ -24,11 +25,13 @@ def plugin_loaded():
     global INDENT_STYLE
     global INDENT_STYLE_ALLMAN
     global INDENT_STYLE_K_AND_R
+    global SL_WIKI
 
     SETTINGS_FILE = 'LSL.sublime-settings'
     INDENT_STYLE = os.path.join(sublime.packages_path(), 'User', 'LSL_indent_style.tmPreferences')
     INDENT_STYLE_ALLMAN = sublime.load_resource('Packages/LSL/metadata/LSL_indent_style.tmPreferences.allman')
     INDENT_STYLE_K_AND_R = sublime.load_resource('Packages/LSL/metadata/LSL_indent_style.tmPreferences.k_and_r')
+    SL_WIKI = 'https://wiki.secondlife.com/w/index.php?title=Special:Search&go=Go&search='
 
     try:
         settings = sublime.load_settings(SETTINGS_FILE)
@@ -56,6 +59,13 @@ def plugin_loaded():
         TOOLTIP_DATA += json.loads(sublime.load_resource('Packages/LSL/other/tooltips/storage_type.json'))
     except Exception as e:
         print(e)
+
+# TODO: add to "mdpopups.sublime_user_lang_map", not replace it
+#
+#       pref = sublime.load_settings('Preferences.sublime-settings')
+#       pref.set('mdpopups.use_sublime_highlighter', True)
+#       pref.set('mdpopups.sublime_user_lang_map', { 'lsl': [['lsl'], ['LSL/syntaxes/LSL']] } )
+#       sublime.save_settings(pref)
 
 
 class ChangeEditorSchemeCommand(sublime_plugin.WindowCommand):
@@ -134,9 +144,9 @@ class Lsl(sublime_plugin.EventListener):
             for result in TOOLTIP_DATA:
                 if result.get('name', None) == word:
                     if 'type' in result or result['name'].startswith('ll'):
-                        tooltipRows.append('### (%s) <a href="https://wiki.secondlife.com/w/index.php?title=Special:Search&go=Go&search=%s">%s</a>' % (result.get('type', 'void'), result['name'], result['name']))
+                        tooltipRows.append('### (%s) <a href="%s%s">%s</a>' % (result.get('type', 'void'), SL_WIKI, result['name'], result['name']))
                     else:
-                        tooltipRows.append('### <a href="https://wiki.secondlife.com/w/index.php?title=Special:Search&go=Go&search=%s">%s</a>' % (result['name'], result['name']))
+                        tooltipRows.append('### <a href="%s%s">%s</a>' % (SL_WIKI, result['name'], result['name']))
                     if 'value' in result:
                         tooltipRows.append(' ')
                         tooltipRows.append('**Value**: %s' % str(result['value']))
@@ -165,14 +175,13 @@ class Lsl(sublime_plugin.EventListener):
                         tooltipRows.append('#### Description')
                         tooltipRows.append(' ')
                         tooltipRows.append('%s' % result['description']['en_US'])
-                    if 'snippet' in result:
-                        tooltipRows.append('#### Snippet')
-                        tooltipRows.append(' ')
-                        tooltipRows.append('```lsl')
-                        tooltipRows.append('%s' % result['snippet'])
-                        tooltipRows.append('```')
-            # TODO: seperate entries by horizontal line
-
+                    if 'snippets' in result:
+                        tooltipRows.append('#### Snippets')
+                        for snippet in result['snippets']:
+                            tooltipRows.append(' ')
+                            tooltipRows.append('```lsl')
+                            tooltipRows.append('%s' % snippet)
+                            tooltipRows.append('```')
             if 0 < len(tooltipRows):
                 mdpopups.show_popup(view, '\n'.join(tooltipRows),
                                     flags=(sublime.COOPERATE_WITH_AUTO_COMPLETE | sublime.HIDE_ON_MOUSE_MOVE_AWAY),
@@ -184,7 +193,6 @@ class Lsl(sublime_plugin.EventListener):
                                     on_hide=self.on_hide(view)
                 )
                 return
-
         except Exception as e:
             print(e)
 
