@@ -6,7 +6,11 @@
         },
         "name": "ZERO_VECTOR",
         "type": "vector",
-        "value": "<0.0, 0.0, 0.0>"
+        "value": "<0.0, 0.0, 0.0>",
+        "snippets":
+        [
+            "default\n{\n\ttouch_end(integer num_detected)\n\t{\n\t\tkey agent = llDetectedKey(num_detected);\n\t\tvector size = llGetAgentSize(agent);\n\n//      (size != ZERO_VECTOR) for agents (not objects) in the same sim\n\t\tif (size)\n\t\t{\n\t\t\tllRegionSayTo(agent, PUBLIC_CHANNEL, \"Your size: \" + (string)size);\n\t\t}\n\t}\n}"
+        ]
     },
     {
         "description":
