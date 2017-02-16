@@ -129,11 +129,6 @@ class Lsl(sublime_plugin.EventListener):
         if TOOLTIP_DATA is None:
             return
 
-#  facelessuser/sublime-markdown-popups#26
-#
-#      view.settings().set('mdpopups.use_sublime_highlighter', True)
-#      view.settings().set('mdpopups.sublime_user_lang_map', { 'lsl': [['lsl'], ['LSL/syntaxes/LSL']] } )
-
         try:
             tooltipRows = []
             for result in TOOLTIP_DATA:
