@@ -1,3 +1,15 @@
 {
-//  "color_scheme": "Packages/LSL/other/LSL.hidden-tmTheme"
+    "mdpopups.sublime_user_lang_map":
+    {
+        "lsl":
+        [
+            [
+                "lsl"
+            ],
+            [
+                "LSL/syntaxes/LSL"
+            ]
+        ]
+    },
+    "mdpopups.use_sublime_highlighter": true
 }
