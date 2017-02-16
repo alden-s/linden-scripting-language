@@ -5,7 +5,10 @@
         {
             "en_US": "if statement"
         },
-        "snippet": "if (condition)\n{\n\t...\n}"
+        "snippets":
+        [
+            "default\n{\n\tstate_entry()\n\t{\n\t\tif (/* condition */)\n\t\t{\n\t\t\t// statements\n\t\t}\n\t\telse if (/* condition */)\n\t\t{\n\t\t\t// statements\n\t\t}\n\t\telse\n\t\t{\n\t\t\t// statements\n\t\t}\n\t}\n}"
+        ]
     },
     {
         "name": "else",
@@ -13,6 +16,9 @@
         {
             "en_US": "else clause"
         },
-        "snippet": "if (condition)\n{\n\t...\n}\nelse if (condition)\n{\n\t...\n}\nelse\n{\n\t...\n}"
+        "snippets":
+        [
+            "default\n{\n\tstate_entry()\n\t{\n\t\tif (/* condition */)\n\t\t{\n\t\t\t// statements\n\t\t}\n\t\telse if (/* condition */)\n\t\t{\n\t\t\t// statements\n\t\t}\n\t\telse\n\t\t{\n\t\t\t// statements\n\t\t}\n\t}\n}"
+        ]
     }
 ]
