@@ -5,7 +5,10 @@
         {
             "en_US": "for loop"
         },
-        "snippet": "for (initializer; condition; iteration)\n{\n\t...\n}"
+        "snippets":
+        [
+            "default\n{\n\tstate_entry()\n\t{\n\t\tfor (initializer; condition; iteration)\n\t\t{\n\t\t\t// statements\n\t\t}\n\t}\n}"
+        ]
     },
     {
         "name": "do",
@@ -13,7 +16,10 @@
         {
             "en_US": "do loop"
         },
-        "snippet": "do\n{\n\t...\n}\nwhile (condition);"
+        "snippets":
+        [
+            "default\n{\n\tstate_entry()\n\t{\n\t\tdo\n\t\t{\n\t\t\t// statements\n\t\t}\n\t\twhile (condition);\n\t}\n}"
+        ]
     },
     {
         "name": "while",
@@ -21,6 +27,9 @@
         {
             "en_US": "while loop"
         },
-        "snippet": "while (condition)\n{\n\t...\n}"
+        "snippets":
+        [
+            "default\n{\n\tstate_entry()\n\t{\n\t\twhile (condition)\n\t\t{\n\t\t\t// statements\n\t\t}\n\t}\n}"
+        ]
     }
 ]
