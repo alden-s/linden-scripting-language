@@ -4,13 +4,21 @@
         {
             "en_US": "Name of default state that all scripts must have"
         },
-        "name": "default"
+        "name": "default",
+        "snippets":
+        [
+            "default {\n\tstate_entry() {\n\t\tllSay(PUBLIC_CHANNEL, \"Entered default state.\");\n\t}\n\n\ttouch_end(integer num_detected) {\n\t\tstate other;\n\t}\n}\n\nstate other {\n\tstate_entry() {\n\t\tllSay(PUBLIC_CHANNEL, \"Entering other state.\");\n\t}\n\n\ttouch_end(integer num_detected) {\n\t\tstate default;\n\t}\n}"
+        ]
     },
     {
         "description":
         {
             "en_US": "Keyword to indicate state block or state transition. State transitions within user-defined function declarations must be included within conditional blocks to work as intended."
         },
-        "name": "state"
+        "name": "state",
+        "snippets":
+        [
+            "default {\n\tstate_entry() {\n\t\tllSay(PUBLIC_CHANNEL, \"Entered default state.\");\n\t}\n\n\ttouch_end(integer num_detected) {\n\t\tstate other;\n\t}\n}\n\nstate other {\n\tstate_entry() {\n\t\tllSay(PUBLIC_CHANNEL, \"Entering other state.\");\n\t}\n\n\ttouch_end(integer num_detected) {\n\t\tstate default;\n\t}\n}"
+        ]
     }
 ]
