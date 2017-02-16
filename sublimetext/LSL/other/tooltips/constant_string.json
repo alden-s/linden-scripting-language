@@ -6,7 +6,12 @@
         },
         "name": "NULL_KEY",
         "type": "string",
-        "value": "00000000-0000-0000-0000-000000000000"
+        "value": "\"00000000-0000-0000-0000-000000000000\"",
+        "snippets":
+        [
+            "integer isKey(key in)\n{\n\tif(in)\n\t{\n\t\treturn 2;\n\t}\n\n\treturn (in == NULL_KEY);\n}//returns 2 if it's a valid key, 1 if it's NULL_KEY",
+            "// NULL_KEY itself is evaluated as FALSE only when it is casted as a key.\ndefault\n{\n\tstate_entry()\n\t{\n\t\t// NULL_KEY is TRUE\n\t\tif (NULL_KEY) { llOwnerSay(\"NULL_KEY is TRUE\");  }\n\t\telse          { llOwnerSay(\"NULL_KEY is FALSE\"); }\n\n\t\t// Casted NULL_KEY is FALSE \n\t\tif ((key) NULL_KEY) { llOwnerSay(\"Casted NULL_KEY is TRUE\");  }\n\t\telse                { llOwnerSay(\"Casted NULL_KEY is FALSE\"); }\n\t}\n}"
+        ]
     },
     {
         "description":
@@ -15,7 +20,11 @@
         },
         "name": "EOF",
         "type": "string",
-        "value": "\n\n\n"
+        "value": "\"\\n\\n\\n\"",
+        "snippets":
+        [
+            "integer line;\nstring card = \"~config\";\nkey ncQuery;\n \ndefault {\n\tstate_entry() {\n\t\tif (llGetInventoryType(card) != INVENTORY_NONE) {\n\t\t\tncQuery = llGetNotecardLine(card, line = 0);\n\t\t} else {\n\t\t\tllSay(PUBLIC_CHANNEL,\"The \\\"\" + card + \"\\\" notecard is missing! Cannot proceed!\");\n\t\t}\n\t}\n\n\tdataserver(key query_id, string data) {\n\t\tif (query_id == ncQuery) {\n\t\t\tif (data == EOF) {\n\t\t\t\tstate ready;\n\t\t\t} else {\n\t\t\t\t// process data ...\n\t\t\t\tncQuery = llGetNotecardLine(card, ++line);\n\t\t\t}\n\t\t}\n\t}\n}\n \nstate ready {\n\tstate_entry() {\n\t\tllOwnerSay(\"I'm ready for action!\");\n\t}\n}"
+        ]
     },
     {
         "description":
@@ -24,7 +33,7 @@
         },
         "name": "TEXTURE_BLANK",
         "type": "string",
-        "value": "5748decc-f629-461c-9a36-a35a221fe21f"
+        "value": "\"5748decc-f629-461c-9a36-a35a221fe21f\""
     },
     {
         "description":
@@ -33,7 +42,7 @@
         },
         "name": "TEXTURE_DEFAULT",
         "type": "string",
-        "value": "89556747-24cb-43ed-920b-47caed15465f"
+        "value": "\"89556747-24cb-43ed-920b-47caed15465f\""
     },
     {
         "description":
@@ -42,7 +51,7 @@
         },
         "name": "TEXTURE_MEDIA",
         "type": "string",
-        "value": "8b5fec65-8d8d-9dc5-cda8-8fdf2716e361"
+        "value": "\"8b5fec65-8d8d-9dc5-cda8-8fdf2716e361\""
     },
     {
         "description":
@@ -51,7 +60,7 @@
         },
         "name": "TEXTURE_PLYWOOD",
         "type": "string",
-        "value": "89556747-24cb-43ed-920b-47caed15465f"
+        "value": "\"89556747-24cb-43ed-920b-47caed15465f\""
     },
     {
         "description":
@@ -60,7 +69,7 @@
         },
         "name": "TEXTURE_TRANSPARENT",
         "type": "string",
-        "value": "8dcd4a48-2d37-4909-9f78-f7a9eb4ef903"
+        "value": "\"8dcd4a48-2d37-4909-9f78-f7a9eb4ef903\""
     },
     {
         "description":
@@ -69,7 +78,7 @@
         },
         "name": "URL_REQUEST_GRANTED",
         "type": "string",
-        "value": "URL_REQUEST_GRANTED"
+        "value": "\"URL_REQUEST_GRANTED\""
     },
     {
         "description":
@@ -78,51 +87,51 @@
         },
         "name": "URL_REQUEST_DENIED",
         "type": "string",
-        "value": "URL_REQUEST_DENIED"
+        "value": "\"URL_REQUEST_DENIED\""
     },
     {
         "name": "JSON_INVALID",
         "type": "string",
-        "value": "﷐"
+        "value": "\"﷐\""
     },
     {
         "name": "JSON_OBJECT",
         "type": "string",
-        "value": "﷑"
+        "value": "\"﷑\""
     },
     {
         "name": "JSON_ARRAY",
         "type": "string",
-        "value": "﷒"
+        "value": "\"﷒\""
     },
     {
         "name": "JSON_NUMBER",
         "type": "string",
-        "value": "﷓"
+        "value": "\"﷓\""
     },
     {
         "name": "JSON_STRING",
         "type": "string",
-        "value": "﷔"
+        "value": "\"﷔\""
     },
     {
         "name": "JSON_NULL",
         "type": "string",
-        "value": "﷕"
+        "value": "\"﷕\""
     },
     {
         "name": "JSON_TRUE",
         "type": "string",
-        "value": "﷖"
+        "value": "\"﷖\""
     },
     {
         "name": "JSON_FALSE",
         "type": "string",
-        "value": "﷗"
+        "value": "\"﷗\""
     },
     {
         "name": "JSON_DELETE",
         "type": "string",
-        "value": "﷘"
+        "value": "\"﷘\""
     }
 ]
