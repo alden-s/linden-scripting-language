@@ -4644,7 +4644,7 @@
         },
         "llListen": {
             "prefix": "llListen",
-            "body": "llListen(${integer channel}, ${string name}, ${key id}, ${string msg})",
+            "body": "llListen(${integer channel|PUBLIC_CHANNEL|DEBUG_CHANNEL}, ${string name}, ${key id}, ${string msg})",
             "description": "(int) func"
         },
         "llListenControl": {
@@ -4834,12 +4834,12 @@
         },
         "llRegionSay": {
             "prefix": "llRegionSay",
-            "body": "llRegionSay(${integer channel}, ${string msg});",
+            "body": "llRegionSay(${integer channel|DEBUG_CHANNEL}, ${string msg});",
             "description": "(void) func"
         },
         "llRegionSayTo": {
             "prefix": "llRegionSayTo",
-            "body": "llRegionSayTo(${key target}, ${integer channel}, ${string msg});",
+            "body": "llRegionSayTo(${key target}, ${integer channel|PUBLIC_CHANNEL}, ${string msg});",
             "description": "(void) func"
         },
         "llReleaseControls": {
@@ -5049,7 +5049,7 @@
         },
         "llSay": {
             "prefix": "llSay",
-            "body": "llSay(${integer channel}, ${string msg});",
+            "body": "llSay(${integer channel|PUBLIC_CHANNEL|DEBUG_CHANNEL}, ${string msg});",
             "description": "(void) func"
         },
         "llScaleByFactor": {
@@ -5364,7 +5364,7 @@
         },
         "llShout": {
             "prefix": "llShout",
-            "body": "llShout(${integer channel}, ${string msg});",
+            "body": "llShout(${integer channel|PUBLIC_CHANNEL|DEBUG_CHANNEL}, ${string msg});",
             "description": "(void) func"
         },
         "llSin": {
@@ -5484,7 +5484,7 @@
         },
         "llTextBox": {
             "prefix": "llTextBox",
-            "body": "llTextBox(${key avatar}, ${string message}, ${integer chat_channel});",
+            "body": "llTextBox(${key avatar}, ${string message}, ${integer chat_channel|PUBLIC_CHANNEL|DEBUG_CHANNEL});",
             "description": "(void) func"
         },
         "llToLower": {
@@ -5564,7 +5564,7 @@
         },
         "llWhisper": {
             "prefix": "llWhisper",
-            "body": "llWhisper(${integer channel}, ${string msg});",
+            "body": "llWhisper(${integer channel|PUBLIC_CHANNEL|DEBUG_CHANNEL}, ${string msg});",
             "description": "(void) func"
         },
         "llWind": {
@@ -5665,7 +5665,7 @@
             "body": [
                 "at_rot_target(integer ${handle}, rotation ${targetrot}, rotation ${ourrot})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5674,7 +5674,7 @@
             "body": [
                 "at_target(integer ${tnum}, vector ${targetpos}, vector ${ourpos})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5683,7 +5683,7 @@
             "body": [
                 "attach(key ${id})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5692,7 +5692,7 @@
             "body": [
                 "changed(integer ${change})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5701,7 +5701,7 @@
             "body": [
                 "collision(integer ${num_detected})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5710,7 +5710,7 @@
             "body": [
                 "collision_end(integer ${num_detected})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5719,7 +5719,7 @@
             "body": [
                 "collision_start(integer ${num_detected})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5728,7 +5728,7 @@
             "body": [
                 "control(key ${id}, integer ${level}, integer ${edge})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5737,7 +5737,7 @@
             "body": [
                 "dataserver(key ${query_id}, string ${data})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5746,7 +5746,7 @@
             "body": [
                 "email(string ${time}, string ${address}, string ${subject}, string ${4:message}, integer ${5:num_left})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5755,7 +5755,7 @@
             "body": [
                 "experience_permissions(key ${agent_id})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5764,7 +5764,7 @@
             "body": [
                 "experience_permissions_denied(key ${agent_id}, integer ${reason})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5773,7 +5773,7 @@
             "body": [
                 "http_request(key ${request_id}, string ${method}, string ${body})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5782,7 +5782,7 @@
             "body": [
                 "http_response(key ${request_id}, integer ${status}, list ${metadata}, string ${4:body})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5791,7 +5791,7 @@
             "body": [
                 "land_collision(vector ${pos})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5800,7 +5800,7 @@
             "body": [
                 "land_collision_end(vector ${pos})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5809,7 +5809,7 @@
             "body": [
                 "land_collision_start(vector ${pos})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5818,7 +5818,7 @@
             "body": [
                 "link_message(integer ${sender_num}, integer ${num}, string ${str}, key ${4:id})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5827,7 +5827,7 @@
             "body": [
                 "listen(integer ${channel}, string ${name}, key ${id}, string ${4:message})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5836,7 +5836,7 @@
             "body": [
                 "money(key ${id}, integer ${amount})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5845,7 +5845,7 @@
             "body": [
                 "moving_end()",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5854,7 +5854,7 @@
             "body": [
                 "moving_start()",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5863,7 +5863,7 @@
             "body": [
                 "no_sensor()",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5872,7 +5872,7 @@
             "body": [
                 "not_at_rot_target()",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5881,7 +5881,7 @@
             "body": [
                 "not_at_target()",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5890,7 +5890,7 @@
             "body": [
                 "object_rez(key ${id})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5899,7 +5899,7 @@
             "body": [
                 "on_rez(integer ${start_param})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5908,7 +5908,7 @@
             "body": [
                 "path_update(integer ${type}, list ${reserved})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5917,7 +5917,7 @@
             "body": [
                 "remote_data(integer ${event_type}, key ${channel}, key ${message_id}, string ${4:sender}, integer ${5:idata}, string ${6:sdata})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5926,7 +5926,7 @@
             "body": [
                 "run_time_permissions(integer ${perm})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5935,7 +5935,7 @@
             "body": [
                 "sensor(integer ${num_detected})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5944,7 +5944,7 @@
             "body": [
                 "state_entry()",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5953,7 +5953,7 @@
             "body": [
                 "state_exit()",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5962,7 +5962,7 @@
             "body": [
                 "timer()",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5971,7 +5971,7 @@
             "body": [
                 "touch(integer ${num_detected})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5980,7 +5980,7 @@
             "body": [
                 "touch_end(integer ${num_detected})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5989,7 +5989,7 @@
             "body": [
                 "touch_start(integer ${num_detected})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -5998,7 +5998,7 @@
             "body": [
                 "transaction_result(key ${id}, integer ${success}, string ${data})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -6008,7 +6008,7 @@
             "body": [
                 "default",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -6017,7 +6017,7 @@
             "body": [
                 "state ${other}",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -6027,7 +6027,7 @@
             "body": [
                 "else",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -6036,7 +6036,7 @@
             "body": [
                 "do",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}",
                 "while (${condition});"
             ]
@@ -6046,7 +6046,7 @@
             "body": [
                 "if (${condition})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -6055,7 +6055,7 @@
             "body": [
                 "for (${start}; ${condition}; ${step})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         },
@@ -6072,7 +6072,7 @@
             "body": [
                 "while (${condition})",
                 "{",
-                "    $0",
+                "    ${0:$TM_SELECTED_TEXT}",
                 "}"
             ]
         }
