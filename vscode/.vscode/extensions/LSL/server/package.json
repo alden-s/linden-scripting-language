@@ -1,0 +1,21 @@
+{
+    "name": "lsl-server",
+    "description": "LSL server",
+    "version": "0.0.0",
+    "author": "buildersbrewery",
+//  "license": "___",
+    "engines": {
+        "node": "*"
+    },
+    "dependencies": {
+        "vscode-languageserver": "^2.6.3"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.52",
+        "typescript": "^2.1.4"
+    },
+    "scripts": {
+        "compile": "tsc -p .",
+        "watch": "tsc --watch -p ."
+    }
+}
