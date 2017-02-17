@@ -1,15 +1,32 @@
 {
     "name": "LSL",
-    "publisher": "buildersbrewery",
+    "displayName": "LSL",
+    "version": "0.0.0",
+//  "license": "___",
     "description": "LSL for vscode",
+    "publisher": "buildersbrewery",
+//  "icon": "path/to/icon.png",
+    "galleryBanner": {
+        "color": "#000000",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/buildersbrewery/linden-scripting-language.git"
+    },
+    "bugs": {
+        "url": "https://github.com/buildersbrewery/linden-scripting-language/issues"
+    },
+    "homepage": "https://github.com/buildersbrewery/linden-scripting-language#readme",
     "categories": [
         "Languages"
     ],
-    "version": "0.0.0",
     "engines": {
-        "vscode": ">=0.9.1"
+        "vscode": "^1.4.0"
     },
-//  "extensionDependencies": [],
+    "extensionDependencies": [
+        "vscode.lsl"
+    ],
     "dependencies": {
         "vscode-languageclient": "^2.6.3"
     },
@@ -20,7 +37,7 @@
         "type": "object",
         "title": "LSL configuration",
         "properties": {
-            "lsl.maxNumberOfProblems": {
+            "lsl-server.maxNumberOfProblems": {
                 "type": "number",
                 "default": 100,
                 "description": "Controls the maximum number of problems produced by the server."
@@ -48,13 +65,7 @@
                 "extensions": [
                     ".lsl"
                 ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "commands": [
-            {
-                "command": "lsl.build",
-                "title": "Build"
+                "configuration": "./syntaxes/lsl.configuration.json"
             }
         ],
         "snippets": [
@@ -66,9 +77,30 @@
         "themes": [
             {
                 "label": "Linden Lab Viewer Theme",
-                "uiTheme": "vs-light",
+                "uiTheme": "vs",
                 "path": "./themes/LSL.tmTheme"
             }
         ]
+    },
+    "menus": {
+        "editor/context": [
+            {
+                "command": "extension.build",
+                "when": "editorLangId == lsl"
+            }
+        ]
+    },
+    "commands": [
+        {
+            "command": "extension.build",
+            "title": "Build",
+            "category": "LSL"
+        }
+    ],
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -p ./client && cd server && npm run compile && cd ..",
+        "update-vscode": "node ./node_modules/vscode/bin/install",
+        "postinstall": "node ./node_modules/vscode/bin/install && cd server && npm install"
     }
 }
