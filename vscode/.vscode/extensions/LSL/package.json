@@ -1,11 +1,32 @@
 {
     "name": "LSL",
+    "publisher": "buildersbrewery",
+    "description": "LSL for vscode",
+    "categories": [
+        "Languages"
+    ],
     "version": "0.0.0",
     "engines": {
         "vscode": ">=0.9.1"
     },
 //  "extensionDependencies": [],
-    "publisher": "none",
+    "dependencies": {
+        "vscode-languageclient": "^2.6.3"
+    },
+    "activationEvents": [
+        "onLanguage:lsl"
+    ],
+    "configuration": {
+        "type": "object",
+        "title": "LSL configuration",
+        "properties": {
+            "lsl.maxNumberOfProblems": {
+                "type": "number",
+                "default": 100,
+                "description": "Controls the maximum number of problems produced by the server."
+            }
+        }
+    },
     "contributes": {
         "grammars": [
             {
@@ -26,7 +47,20 @@
                 ],
                 "extensions": [
                     ".lsl"
-                ]
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "lsl.build",
+                "title": "Build"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl.json"
             }
         ],
         "themes": [
