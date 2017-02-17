@@ -94,7 +94,11 @@
         {
             "command": "extension.build",
             "title": "Build",
-            "category": "LSL"
+            "category": "LSL",
+            "icon": {
+//              "light": "./icons/lsl.light.png",
+//              "dark": "./icons/lsl.dark.png"
+            }
         }
     ],
     "scripts": {
