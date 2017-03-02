@@ -4,6 +4,9 @@ import sublime_plugin
 import os
 import plistlib
 
+from . import __pkg_name__
+
+
 settings = {}
 SETTINGS_FILE = None
 INDENT_STYLE = None
