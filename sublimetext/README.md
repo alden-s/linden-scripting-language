@@ -15,8 +15,8 @@ Make sure you are running **Build 3080 or later**.
 
 Install the following packages:
 
-* [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3)
+* [`SublimeLinter/SublimeLinter3`](https://github.com/SublimeLinter/SublimeLinter3)
 
-And make sure `lslint` is in your PATH:
+and make sure `lslint` is in your PATH:
 
 * [`makopo/lslint`](https://github.com/makopo/lslint)
