@@ -14,30 +14,46 @@ INDENT_STYLE_ALLMAN = None
 INDENT_STYLE_K_AND_R = None
 
 
-def plugin_loaded():
+def status_msg(msg):
+    sublime.status_message( __pkg_name__ + ': ' + msg)
+
+
+def load_settings(reload=False):
 
     global settings
     global SETTINGS_FILE
+
+    SETTINGS_FILE = __pkg_name__ + '.sublime-settings'
+
+    try:
+        settings = sublime.load_settings(SETTINGS_FILE)
+        settings.clear_on_change('reload')
+        settings.add_on_change('reload', lambda: load_settings(reload=True))
+    except Exception as e:
+        print(e)
+
+    if reload:
+        status_msg('Reloaded settings on change.')
+
+
+def plugin_loaded():
+
     global INDENT_STYLE
     global INDENT_STYLE_ALLMAN
     global INDENT_STYLE_K_AND_R
 
-    SETTINGS_FILE = __pkg_name__ + '.sublime-settings'
     INDENT_STYLE = os.path.join(sublime.packages_path(), 'User', 'LSL_indent_style.tmPreferences')
-    INDENT_STYLE_ALLMAN = sublime.load_resource('Packages/' + __pkg_name__ + '/metadata/LSL_indent_style.tmPreferences.allman')
-    INDENT_STYLE_K_AND_R = sublime.load_resource('Packages/' + __pkg_name__ + '/metadata/LSL_indent_style.tmPreferences.k_and_r')
+    INDENT_STYLE_ALLMAN = sublime.load_resource('Packages/' + __pkg_name__ + '/metadata/LSL_indent_style.allman.xml')
+    INDENT_STYLE_K_AND_R = sublime.load_resource('Packages/' + __pkg_name__ + '/metadata/LSL_indent_style.k_and_r.xml')
 
     if not os.path.exists(INDENT_STYLE):
         with open(INDENT_STYLE, mode='w', newline='\n') as file:
             file.write(INDENT_STYLE_ALLMAN)
 
-    try:
-        settings = sublime.load_settings(SETTINGS_FILE)
-    except Exception as e:
-        print(e)
+    load_settings()
 
 
-class LslChangeSchemeCommand(sublime_plugin.TextCommand):
+class LslChangeSchemeCommand(sublime_plugin.WindowCommand):
 
     _is_checked = False
 
@@ -45,6 +61,7 @@ class LslChangeSchemeCommand(sublime_plugin.TextCommand):
         self._is_checked = settings.has('color_scheme')
 
     def run(self):
+        global settings
         if self._is_checked:
             settings.erase('color_scheme')
         else:
@@ -56,7 +73,7 @@ class LslChangeSchemeCommand(sublime_plugin.TextCommand):
         return self._is_checked
 
 
-class LslChangeIndentCommand(sublime_plugin.TextCommand):
+class LslChangeIndentCommand(sublime_plugin.WindowCommand):
 
     _is_checked = False
 
