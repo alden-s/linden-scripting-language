@@ -43,8 +43,8 @@ def plugin_loaded():
     global INDENT_STYLE_K_AND_R
 
     INDENT_STYLE = os.path.join(sublime.packages_path(), 'User', 'LSL_indent_style.tmPreferences')
-    INDENT_STYLE_ALLMAN = sublime.load_resource('Packages/' + __pkg_name__ + '/metadata/LSL_indent_style.allman.xml')
-    INDENT_STYLE_K_AND_R = sublime.load_resource('Packages/' + __pkg_name__ + '/metadata/LSL_indent_style.k_and_r.xml')
+    INDENT_STYLE_ALLMAN = sublime.load_resource('Packages/' + __pkg_name__ + '/metadata/LSL_indent_style.allman.txt')
+    INDENT_STYLE_K_AND_R = sublime.load_resource('Packages/' + __pkg_name__ + '/metadata/LSL_indent_style.k_and_r.txt')
 
     if not os.path.exists(INDENT_STYLE):
         with open(INDENT_STYLE, mode='w', newline='\n') as file:
