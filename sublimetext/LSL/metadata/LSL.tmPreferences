@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
         <key>name</key><string>general</string>
@@ -8,6 +7,8 @@
         <dict>
             <key>decreaseIndentPattern</key><string>^\s*\}\s*$</string>
             <key>increaseIndentPattern</key><string>^\s*\{\s*$</string>
+            <key>indentNexLinePattern</key><string>>^(?!.*[;{]\s*//).*[^\s;{}]\s*$</string>
+            <key>unIndentedLinePattern</key><string>^\s*(//.*)?$</string>
             <key>disableIndentNextLinePattern</key><string></string>
             <key>shellVariables</key>
             <array>
@@ -27,12 +28,25 @@
                     <key>name</key><string>TM_LINE_TERMINATOR</string>
                     <key>value</key><string>\{</string>
                 </dict>
+                <dict>
+                    <key>name</key><string>TM_COMPLETION_sort</string>
+                    <key>value</key><string>true</string>
+                </dict>
+                <dict>
+                    <key>name</key><string>TM_COMPLETION_unique</string>
+                    <key>value</key><string>true</string>
+                </dict>
+                <dict>
+                    <key>name</key><string>LSL_SPACE_OR_NEWLINE</string>
+                    <key>value</key><string><![CDATA[
+]]></string>
+                </dict>
             </array>
         </dict>
     </dict>
     <dict>
         <key>name</key><string>spellcheck</string>
-        <key>scope</key><string>punctuation.definition.comment.lsl, string.quoted.double.lsl</string>
+        <key>scope</key><string>string.quoted.double.lsl, comment.line.double-slash.lsl, comment.block.lsl</string>
         <key>settings</key>
         <dict>
             <key>spellChecking</key><integer>1</integer>
