@@ -9,11 +9,18 @@ import webbrowser
 from . import __pkg_name__
 
 
-TOOLTIP_DATA = None
 SL_WIKI = None
+TOOLTIP_DATA = None
 
 
 def plugin_loaded():
+
+    # TODO: add to "mdpopups.sublime_user_lang_map", not replace it
+    #
+    # pref = sublime.load_settings('Preferences.sublime-settings')
+    # pref.set('mdpopups.use_sublime_highlighter', True)
+    # pref.set('mdpopups.sublime_user_lang_map', { 'lsl': [['lsl'], ['LSL/syntaxes/LSL']] } )
+    # sublime.save_settings(pref)
 
     global SL_WIKI
     global TOOLTIP_DATA
@@ -38,12 +45,6 @@ def plugin_loaded():
     except Exception as e:
         print(e)
 
-#   TODO: add to "mdpopups.sublime_user_lang_map", not replace it
-#
-#   pref = sublime.load_settings('Preferences.sublime-settings')
-#   pref.set('mdpopups.use_sublime_highlighter', True)
-#   pref.set('mdpopups.sublime_user_lang_map', { 'lsl': [['lsl'], ['LSL/syntaxes/LSL']] } )
-#   sublime.save_settings(pref)
 
 class Lsl(sublime_plugin.EventListener):
 
