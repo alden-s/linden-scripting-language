@@ -1,5 +1,6 @@
+import sublime
 from SublimeLinter.lint import Linter, util
-
+import os
 
 class Lslint(Linter):
 
@@ -24,3 +25,13 @@ class Lslint(Linter):
     inline_settings = None
     inline_overrides = None
     comment_re = None
+    
+    @classmethod
+    def which(cls, cmd):
+        if sublime.platform() == 'linux':
+            return os.path.join(sublime.packages_path(), 'LSL', 'bin', 'lslint', 'linux', 'lslint')
+        elif sublime.platform() == 'osx':
+            return os.path.join(sublime.packages_path(), 'LSL', 'bin', 'lslint', 'osx', 'lslint')
+        else:
+            # add differentiation for XP, x86 and x86_x64
+            return os.path.join(sublime.packages_path(), 'LSL', 'bin', 'lslint', 'windows', 'lslint.exe')
