@@ -1,3 +1,15 @@
+;;; lsl-mode.el --- lsl-mode -- Major mode for LSL (Linden Scripting Language).
+
+;;; Commentary:
+;;;
+;;; Major mode for editing LSL (Linden Scripting Language) files.
+;;;
+;;; See
+;;; https://github.com/buildersbrewery/linden-scripting-language/tree/master/emacs
+;;; for more details.
+
+;;; Code:
+
 (require 'thingatpt )
 
 (defvar lsl-mode-version)
@@ -12,17 +24,18 @@
 
 0 = no automatic formatting
 1 = formating style like LSL client
-2 = formatting style as in c-mode"
+2 = formatting style as in `c-mode'"
   :type '(integer)
   :group 'lsl-mode)
 
 (defcustom lsl-reference-url "https://wiki.secondlife.com/w/index.php?search="
+  "URL for LSL reference guide."
   :type '(string)
   :group 'lsl-mode)
 
-(defvar lsl-mode-hook nil "Standard hook for lsl-mode.")
+(defvar lsl-mode-hook nil "Standard hook for `lsl-mode'.")
 
-(defvar lsl-mode-map nil "Keymap for lsl-mode")
+(defvar lsl-mode-map nil "Keymap for `lsl-mode'.")
 
 (when (not lsl-mode-map)
   (setq lsl-mode-map (make-sparse-keymap))
@@ -53,7 +66,7 @@
     (modify-syntax-entry ?& "." synTable)
     (modify-syntax-entry ?| "." synTable)
     synTable)
-  "Syntax table for 'lsl-mode'.")
+  "Syntax table for `lsl-mode'.")
 
 (defun lsl-copy-all ()
   (interactive)
@@ -136,6 +149,7 @@
 (put 'lsl-kwdList 'risky-local-variable t)
 
 (defun lsl-complete-symbol ()
+  "Complete LSL symbol at `point'."
   (interactive)
   (let ((posEnd (point))
          (meat (thing-at-point 'symbol))
@@ -197,3 +211,5 @@
   (run-mode-hooks 'lsl-mode-hook))
 
 (provide 'lsl-mode)
+
+;;; lsl-mode.el ends here
