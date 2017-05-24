@@ -39,33 +39,33 @@
         </dict>
         <key>invalid-broken</key>
         <dict>
-            <key>name</key><string>\b(?:LAND_(?:LARGE|MEDIUM|SMALL)_BRUSH)\b</string>
-            <key>match</key><string>invalid.broken.lsl</string>
+            <key>name</key><string>invalid.broken.lsl</string>
+            <key>match</key><string>\b(?:LAND_(?:LARGE|MEDIUM|SMALL)_BRUSH)\b</string>
         </dict>
         <key>invalid-deprecated</key>
         <dict>
-            <key>name</key><string>\b(?:ATTACH_[LR]PEC|DATA_RATING|OBJECT_ATTACHMENT_(?:GEOMETRY_BYTES|SURFACE_AREA)|PRIM_(?:CAST_SHADOWS|MATERIAL_LIGHT|TYPE_LEGACY)|PSYS_SRC_(?:INNER|OUTER)ANGLE|VEHICLE_FLAG_NO_FLY_UP|ll(?:ClearExperiencePermissions|Cloud|GetExperienceList|Make(?:Explosion|Fountain|Smoke|Fire)|RemoteDataSetRegion|Sound(?:Preload)?|XorBase64Strings(?:Correct)?))\b</string>
-            <key>match</key><string>invalid.deprecated.lsl</string>
+            <key>name</key><string>invalid.deprecated.lsl</string>
+            <key>match</key><string>\b(?:ATTACH_[LR]PEC|DATA_RATING|OBJECT_ATTACHMENT_(?:GEOMETRY_BYTES|SURFACE_AREA)|PRIM_(?:CAST_SHADOWS|MATERIAL_LIGHT|TYPE_LEGACY)|PSYS_SRC_(?:INNER|OUTER)ANGLE|VEHICLE_FLAG_NO_FLY_UP|ll(?:ClearExperiencePermissions|Cloud|GetExperienceList|Make(?:Explosion|Fountain|Smoke|Fire)|RemoteDataSetRegion|Sound(?:Preload)?|XorBase64Strings(?:Correct)?))\b</string>
         </dict>
         <key>invalid-illegal</key>
         <dict>
-            <key>name</key><string>\b(?:event)\b</string>
-            <key>match</key><string>invalid.illegal.lsl</string>
+            <key>name</key><string>invalid.illegal.lsl</string>
+            <key>match</key><string>\b(?:event)\b</string>
         </dict>
         <key>invalid-unimplemented</key>
         <dict>
-            <key>name</key><string>\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|KFM_CMD_SET_MODE|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|XP_ERROR_REQUEST_PERM_TIMEOUT|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b</string>
-            <key>match</key><string>invalid.unimplemented.lsl</string>
+            <key>name</key><string>invalid.unimplemented.lsl</string>
+            <key>match</key><string>\b(?:CHARACTER_(?:MAX_ANGULAR_(?:ACCEL|SPEED)|TURN_SPEED_MULTIPLIER)|KFM_CMD_SET_MODE|PERMISSION_(?:CHANGE_(?:JOINTS|PERMISSIONS)|EXPERIENCE|RELEASE_OWNERSHIP|REMAP_CONTROLS)|PRIM_PHYSICS_MATERIAL|PSYS_SRC_OBJ_REL_MASK|XP_ERROR_REQUEST_PERM_TIMEOUT|ll(?:CollisionSprite|(?:Stop)?PointAt|(?:(?:Refresh|Set)Prim)URL|(?:Take|Release)Camera|RemoteLoadScript))\b</string>
         </dict>
         <key>reserved-godmode</key>
         <dict>
-            <key>name</key><string>\b(?:ll(?:GodLikeRezObject|Set(?:Inventory|Object)PermMask))\b</string>
-            <key>match</key><string>reserved.godmode.lsl</string>
+            <key>name</key><string>reserved.godmode.lsl</string>
+            <key>match</key><string>\b(?:ll(?:GodLikeRezObject|Set(?:Inventory|Object)PermMask))\b</string>
         </dict>
         <key>reserved-log</key>
         <dict>
-            <key>name</key><string>\b(?:print)\b</string>
-            <key>match</key><string>reserved.log.lsl</string>
+            <key>name</key><string>reserved.log.lsl</string>
+            <key>match</key><string>\b(?:print)\b</string>
         </dict>
         <key>begin_end</key>
         <dict>
