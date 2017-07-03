@@ -13,10 +13,6 @@ Make sure you are running **Build 3080 or later**.
 
 ### Linters
 
-Install the following packages:
+Install the following package:
 
 * [`SublimeLinter/SublimeLinter3`](https://github.com/SublimeLinter/SublimeLinter3)
-
-and make sure `lslint` is in your PATH:
-
-* [`makopo/lslint`](https://github.com/makopo/lslint)
