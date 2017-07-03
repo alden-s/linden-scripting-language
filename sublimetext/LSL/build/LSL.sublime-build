@@ -1,5 +1,61 @@
 {
     "file_regex": "^(..[^:]*)::[^:]*::[^(]*\\(\\s*([0-9]+)",
     "selector": "source.lsl",
-    "cmd": ["lslint", "-p", "${file}"]
+    "linux":
+    {
+        "cmd":
+        [
+            "${packages}/LSL/bin/lslint/linux/lslint",
+            "-p",
+            "${file}"
+        ]
+    },
+    "osx":
+    {
+        "cmd":
+        [
+            "${packages}/LSL/bin/lslint/osx/lslint",
+            "-p",
+            "${file}"
+        ]
+    },
+    "windows":
+    {
+        "cmd":
+        [
+            "${packages}\\LSL\\bin\\lslint\\windows\\lslint.exe",
+            "-p",
+            "${file}"
+        ]
+    },
+    "variants":
+    [
+        {
+            "name": "lslint (x32)",
+            "cmd":
+            [
+                "${packages}\\LSL\\bin\\lslint\\windows32\\lslint.exe",
+                "-p",
+                "${file}"
+            ]
+        },
+        {
+            "name": "lslint (x64)",
+            "cmd":
+            [
+                "${packages}\\LSL\\bin\\lslint\\windows64\\lslint.exe",
+                "-p",
+                "${file}"
+            ]
+        },
+        {
+            "name": "lslint (x32 for Windows XP)",
+            "cmd":
+            [
+                "${packages}\\LSL\\bin\\lslint\\windows\\lslint.exe",
+                "-p",
+                "${file}"
+            ]
+        }
+    ]
 }
