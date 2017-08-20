@@ -175,6 +175,7 @@
 (setq lsl-constants nil)
 (setq lsl-events nil)
 (setq lsl-functions nil)
+(defvar c-basic-offset)
 
 (defun lsl-mode ()
   (interactive)
