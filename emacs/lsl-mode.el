@@ -52,8 +52,8 @@
     (define-key menuMap [copy-all] '("Copy whole buffer" . lsl-copy-all))
     (define-key menuMap [lookup-onlne-doc] '("Lookup ref on current word" . lsl-lookup-lsl-ref))
     (define-key menuMap [keyword-completion] '("Keyword Completion" . lsl-complete-symbol))))
-
-(defvar lsl-mode-syntax-table
+(
+defvar lsl-mode-syntax-table
   (let ((synTable (make-syntax-table)))
     (modify-syntax-entry ?\/ ". 12b" synTable)
     (modify-syntax-entry ?\n "> b" synTable)
@@ -165,9 +165,7 @@
            (insert maxMatchResult))
           (t (message "Making completion list...")
              (with-output-to-temp-buffer "*Completions*"
-               (display-completion-list
-                (all-completions meat lsl-kwdList)
-                meat))
+               (display-completion-list (all-completions meat lsl-kwdList))) ;;; meat
              (message "Making completion list...%s" "done")))))
 
 (setq lsl-keywords nil)
